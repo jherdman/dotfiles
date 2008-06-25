@@ -1,0 +1,14 @@
+startup_message off
+defscrollback 1024
+vbell off
+
+shell -$SHELL
+
+hardstatus alwayslastline "%{gk}[ %{G}%H %{g}] %{wk}%?%-Lw%?%{r}(%{W}%n*%f %t%?(%u)%?%{r})%{w}%?%+Lw%?%?]"
+
+screen -t work     0
+screen -t server   1
+screen -t console  2
+screen -t testing  3 
+
+select 0
