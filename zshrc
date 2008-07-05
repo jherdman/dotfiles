@@ -1,5 +1,6 @@
 # Shell constants
-export PROMPT="$(print '%{\e[0;33m%}$:%{\e[0;32m%}(%~)%{\e[0m%}') "
+#export PROMPT="$(print '%{\e[0;33m%}$:%{\e[0;32m%}(%~)%{\e[0m%}') "
+export PROMPT="$(print '%{\e[0;32m%}%~%{\e[0;33m%}$:%{\e[0m%}') "
 export EDITOR="nano -w"
 export CLICOLOR='true'
 export LSCOLORS='GxFxCxDxBxEGEDABAGACAD'
