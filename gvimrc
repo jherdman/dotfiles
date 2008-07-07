@@ -1,5 +1,5 @@
 " Color scheme
-colorscheme rdark
+colorscheme slate
 
 " GUI font stuff
 set guifont=Panic\ Sans:h14
