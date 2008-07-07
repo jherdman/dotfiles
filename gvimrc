@@ -1,5 +1,5 @@
 " Color scheme
-colorscheme mint
+colorscheme rdark
 
 " GUI font stuff
 set guifont=Panic\ Sans:h14
