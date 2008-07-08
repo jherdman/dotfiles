@@ -34,6 +34,9 @@ alias gvim='mvim "$@"'
 alias gst='git status "$@"'
 alias gb='git branch "$@"'
 
+# Auto-pushd. This pushes any directory you visit to the stack
+setopt autopushd pushdminus pushdsilent pushdtohome pushdignoredups
+
 # ZSH specific declarations
 
 function authme {
