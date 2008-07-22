@@ -28,6 +28,7 @@ alias qlf='qlmanage -p "$@" >& /dev/null'
 alias qgit='open /Applications/qgit.app "$@"'
 alias ls="ls -G"
 alias gvim='mvim "$@"'
+alias clean_svn='find ./ -name ".svn" | xargs rm -Rf'
 
 # Git aliases
 
