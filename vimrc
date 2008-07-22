@@ -36,8 +36,3 @@ map <F4> :split
 " Catch common typos
 nmap :W :w
 nmap :Q :q
-
-" Set the swap directory to /tmp/swap_files so all temp files 
-" go there instead of the directory I happen to be in
-set directory=/Users/jherdman/.swap_files
-
