@@ -15,6 +15,7 @@ export MANPATH
 export EDITOR=vim
 export PAGER=less
 export HEWITT_PROXY='http://proxycacheF.hewitt.com:3128'
+export HEWITT_SVNURL='svn://10.212.100.90/svn'
 
 # Aliases
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
