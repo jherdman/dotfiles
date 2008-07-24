@@ -1,10 +1,3 @@
-desc 'Install merb-plugins'
-task 'merb:install:plugins' do
-  cd("merb-plugins")
-  sh("rake install")
-  cd("..")
-end
-
 desc 'Clone a copy of all 3 of the Merb repositories'
 task 'merb:clone' do
   if File.exists?("merb") then
@@ -14,14 +7,14 @@ task 'merb:clone' do
   require("fileutils")
   mkdir("merb")
   cd("merb")
-  ["core", "more", "plugins"].collect { |r| "merb-#{r}" }.each do |r|
+  ["extlib", "core", "more", "plugins"].collect { |r| "merb-#{r}" }.each do |r|
     sh("git clone git://github.com/wycats/#{r}.git")
   end
 end
 
 desc 'Update your local Merb repositories.  Run from inside the top-level merb directory.'
 task 'merb:update' do
-  repos = ["core", "more", "plugins"].collect { |r| "merb-#{r}" }
+  repos = ["extlib", "core", "more", "plugins"].collect { |r| "merb-#{r}" }
   repos.each do |r|
     unless File.exists?(r) then
       puts("#{r} missing ... did you use merb:clone to set this up?")
@@ -41,7 +34,7 @@ desc 'Uninstall all RubyGems related to Merb'
 task 'merb:gems:wipe' do
   windows = PLATFORM =~ /win32|cygwin/ rescue nil
   sudo = windows ? ("") : ("sudo")
-  ["merb", "merb-core", "merb-more", "merb-action-args", "merb-assets", "merb-builder", "merb-cache", "merb-freezer", "merb-gen", "merb-haml", "merb-mailer", "merb-parts", "merb_activerecord", "merb_helpers", "merb_sequel", "merb_param_protection", "merb_test_unit", "merb_stories"].each do |gem|
+  ["merb", "merb-extlib", "merb-core", "merb-more", "merb-action-args", "merb-assets", "merb-builder", "merb-cache", "merb-freezer", "merb-gen", "merb-haml", "merb-mailer", "merb-parts", "merb_activerecord", "merb_helpers", "merb_sequel", "merb_param_protection", "merb_test_unit", "merb_stories"].each do |gem|
     sh("#{sudo} gem uninstall #{gem} --all --ignore-dependencies --executables; true")
   end
 end
@@ -53,6 +46,9 @@ end
 
 desc 'Install merb-core'
 task 'merb:install:core' do
+  cd("merb-extlib")
+  sh("rake install")
+  cd("..")
   cd("merb-core")
   sh("rake install")
   cd("..")
@@ -61,6 +57,13 @@ end
 desc 'Install merb-more'
 task 'merb:install:more' do
   cd("merb-more")
+  sh("rake install")
+  cd("..")
+end
+
+desc 'Install merb-plugins'
+task 'merb:install:plugins' do
+  cd("merb-plugins")
   sh("rake install")
   cd("..")
 end
