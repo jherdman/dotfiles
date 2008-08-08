@@ -1,21 +1,14 @@
-desc 'Install merb-plugins'
-task 'merb:install:plugins' do
-  cd("merb-plugins")
-  sh("rake install")
-  cd("..")
-end
-
-desc 'Remove these merb-dev sake tasks.  Including this one.'
-task 'merb:sake:uninstall' do
-  sh("sake -u merb:gems:wipe merb:clone merb:gems:refresh merb:install merb:install:core merb:install:more merb:install:plugins merb:sake:refresh merb:update merb:sake:uninstall")
-end
-
 task 'merb:check_outside_merb_dir' do
   require("fileutils")
   unless File.exists?("merb") then
     puts("Error : Can't see 'merb' dir.  Are you in the right place?  You should be in the parent dir of 'merb'.")
     exit
   end
+end
+
+desc 'Install merb-core, merb-more, and merb-plugins'
+task 'merb:install:all', :needs => [ 'merb:check_outside_merb_dir', 'merb:install:core', 'merb:install:more', 'merb:install:plugins' ] do
+  # do nothing
 end
 
 desc 'Clone/Update all Merb repos. Will put them in the "merb" dir.'
@@ -65,11 +58,6 @@ task 'merb:gems:refresh', :needs => [ 'merb:check_outside_merb_dir', 'merb:updat
 
 end
 
-desc 'Install merb-core, merb-more, and merb-plugins'
-task 'merb:install:all', :needs => [ 'merb:check_outside_merb_dir', 'merb:install:core', 'merb:install:more', 'merb:install:plugins' ] do
-
-end
-
 desc 'Install merb-core and merb-extlib'
 task 'merb:install:core' do
   puts("\nInstalling merb-more and merb-extlib...")
@@ -84,8 +72,20 @@ task 'merb:install:more' do
   sh("cd merb/merb-more && rake install && cd ../..")
 end
 
+desc 'Install merb-plugins'
+task 'merb:install:plugins' do
+  puts("\nInstalling merb-plugins...")
+  sh("cd merb/merb-plugins && rake install && cd ../..")
+end
+
 desc 'Remove and reinstall Merb sake recipes'
 task 'merb:sake:refresh', :needs => [ 'merb:sake:uninstall' ] do
   puts("\nInstalling merb-dev sake tasks...")
   sh("sake -i http://merbivore.com/merb-dev.sake")
+end
+
+desc 'Remove all merb:* sake tasks. Including this one.'
+task 'merb:sake:uninstall' do
+  puts("\nUninstalling merb-dev sake tasks...")
+  sh("sake -u merb:check_outside_merb_dir merb:gems:wipe merb:clone merb:gems:refresh merb:install merb:install:all merb:install:core merb:install:more merb:install:plugins merb:sake:refresh merb:update merb:sake:uninstall")
 end
