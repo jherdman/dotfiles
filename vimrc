@@ -17,7 +17,7 @@ augroup myfiletypes
 augroup END
 
 " Color scheme
-colorscheme slate
+colorscheme wombat
 
 " Make things pretty
 set ruler
