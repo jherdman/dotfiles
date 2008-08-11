@@ -1,6 +1,6 @@
 # Shell constants
 #export PROMPT="$(print '%{\e[0;33m%}$:%{\e[0;32m%}(%~)%{\e[0m%}') "
-export PROMPT="$(print '%{\e[0;32m%}%~%{\e[0;33m%}$%{\e[0m%}') "
+export PROMPT="$(print '%{\e[1;34m%}%m:%{\e[1;32m%}%~%{\e[0;33m%}$%{\e[0m%}') "
 export EDITOR="nano -w"
 export CLICOLOR='true'
 export LSCOLORS='GxFxCxDxBxEGEDABAGACAD'
@@ -44,7 +44,6 @@ setopt autopushd pushdminus pushdsilent pushdtohome pushdignoredups
 function authme {
   ssh $* 'cat >>.ssh/authorized_keys' <~/.ssh/id_dsa.pub
 }
-
 
 autoload colors ; colors
 autoload -U compinit
