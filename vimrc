@@ -36,3 +36,8 @@ map <F4> :split
 " Catch common typos
 nmap :W :w
 nmap :Q :q
+
+" Insert pairs of common braces
+imap { {}<ESC>i
+imap ( ()<ESC>i
+imap [ []<ESC>i
