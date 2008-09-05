@@ -11,7 +11,6 @@ endif
 
 let colors_name = "wombat"
 
-
 " Vim >= 7.0 specific colors
 if version >= 700
   hi CursorLine guibg=#2d2d2d
