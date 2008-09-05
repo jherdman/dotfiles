@@ -10,7 +10,7 @@ augroup myfiletypes
   autocmd!
   
   " Ruby-type files will use
-  autocmd FileType ruby,eruby set ai sw=2 sts=2 et
+  autocmd FileType ruby,eruby,rake set ai sw=2 sts=2 et
 
   " YAML
   au BufNewFile,BufRead *.yaml, *.yml so ~/.vim/syntax/yaml.vim set ai sw=2 sts=2 et
@@ -36,8 +36,3 @@ map <F4> :split
 " Catch common typos
 nmap :W :w
 nmap :Q :q
-
-" Insert pairs of common braces
-imap { {}<ESC>i
-imap ( ()<ESC>i
-imap [ []<ESC>i

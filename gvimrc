@@ -1,5 +1,5 @@
 " Color scheme
-colorscheme wombat
+colorscheme rdark
 
 " GUI font stuff
 set guifont=Panic\ Sans:h14
