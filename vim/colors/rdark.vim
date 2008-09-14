@@ -39,7 +39,7 @@ hi IncSearch guibg=#2e3436 guifg=#fcaf3e
 hi StatusLine guifg=#2e3436 guibg=#babdb6 gui=none
 hi StatusLineNC guifg=#2e3436 guibg=#888a85 gui=none
 hi VertSplit guifg=#555753 guibg=#888a85 gui=none
-hi Visual guibg=#000000
+hi Visual guibg=#ffffbb guifg=#000000 gui=none
 hi MoreMsg guifg=#729fcf
 hi Question guifg=#8ae234 gui=none
 hi WildMenu guifg=#eeeeec guibg=#0e1416
