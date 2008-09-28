@@ -1,0 +1,17 @@
+
+1z0z=/Users/jherdman/Sites CD=. {
+ index.html
+ HTML=. filter="*.html" {
+  index.html
+ }
+ JS=scripts filter="*.js" {
+  float.js
+  jquery-1.2.6.min.js
+  jquery-ui-personalized-1.6rc2.packed.js
+  swatch-handler.js
+ }
+ CSS=styles filter="*.css" {
+  jquery-ui-themeroller.css
+  master.css
+ }
+}
