@@ -36,3 +36,13 @@ map <F4> :split
 " Catch common typos
 nmap :W :w
 nmap :Q :q
+
+let g:proj_flags="imstvcg"
+
+" Configurations that are system sensitive
+if has("win32")
+  map <C-T> <Esc>:tabnew<CR>
+else
+  " GUI font stuff
+  set guifont=Panic\ Sans:h14
+endif

@@ -1,9 +1,6 @@
 " Color scheme
 colorscheme rdark
 
-" GUI font stuff
-set guifont=Panic\ Sans:h14
-
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
 
