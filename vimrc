@@ -42,6 +42,7 @@ let g:proj_flags="imstvcg"
 " Configurations that are system sensitive
 if has("win32")
   map <C-T> <Esc>:tabnew<CR>
+  set guifont=Consolas:h11:cANSI
 else
   " GUI font stuff
   set guifont=Panic\ Sans:h14
