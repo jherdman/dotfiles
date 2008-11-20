@@ -17,7 +17,7 @@ augroup myfiletypes
 augroup END
 
 " Color scheme
-colorscheme wombat
+colorscheme desert
 
 " Make things pretty
 set ruler
@@ -25,9 +25,13 @@ set showcmd
 
 " Tab settings
 " I follow the Ruby paradigm: soft tabs, 2 space width
+set smarttab
+set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set backspace=start,indent
+
 set number
 
 " Mappings
@@ -39,6 +43,12 @@ nmap :Q :q
 
 let g:proj_flags="imstvcg"
 
+let mapleader=","
+
+" Use ack instead of grep
+set grepprg=ack
+set grepformat=%f:%l%m
+
 " Configurations that are system sensitive
 if has("win32")
   map <C-T> <Esc>:tabnew<CR>
@@ -46,3 +56,11 @@ else
   " GUI font stuff
   set guifont=Panic\ Sans:h14
 endif
+
+" Fuzzy Finder Settings
+let g:fuzzy_ignore="*.log"
+let g:fuzzy_matching_limit=70
+
+map <LEADER>f :FuzzyFinderTextMate<CR>
+map <LEADER>b :FuzzyFinderBuffer<CR>
+map <LEADER>d :execute 'NERDTreeToggle' . getcwd()<CR>
