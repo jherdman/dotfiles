@@ -23,13 +23,10 @@ alias finder='open -a Finder "$@"'
 alias Firefox='open -a Firefox "$@"'
 alias Camino='open -a Camino "$@"'
 alias Safari='open -a Safari "$@"'
-alias ss='ruby script/server'
-alias cons='ruby script/console'
 alias qlf='qlmanage -p "$@" >& /dev/null'
 alias qgit='open /Applications/qgit.app "$@"'
 alias ls="ls -G"
 alias gvim='mvim "$@"'
-alias clean_svn='find ./ -name ".svn" | xargs rm -Rf'
 
 # Git aliases
 
