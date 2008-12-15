@@ -53,6 +53,8 @@ if has("win32")
 else
   " GUI font stuff
   set guifont=Panic\ Sans:h14
+  set backupdir=/tmp/backup
+  set directory=/tmp/backup
 endif
 
 " Fuzzy Finder Settings
