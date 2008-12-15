@@ -34,9 +34,6 @@ set backspace=start,indent
 
 set number
 
-" Mappings
-map <F4> :split
-
 " Catch common typos
 nmap :W :w
 nmap :Q :q
@@ -64,4 +61,5 @@ let g:fuzzy_matching_limit=70
 
 map <LEADER>f :FuzzyFinderTextMate<CR>
 map <LEADER>b :FuzzyFinderBuffer<CR>
-map <LEADER>d :execute 'NERDTreeToggle' . getcwd()<CR>
+
+nmap <silent> <LEADER>d <Plug>ToggleProject
