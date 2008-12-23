@@ -146,12 +146,12 @@ call s:hibg("TabLineFill","#808080","Grey",83)
 
 hi Type gui=none
 hi Statement gui=none
-if !has("gui_mac")
-    " Mac GUI degrades italics to ugly underlining.
-    hi Comment gui=italic
-    hi railsUserClass  gui=italic
-    hi railsUserMethod gui=italic
-endif
+"if !has("gui_mac")
+"    " Mac GUI degrades italics to ugly underlining.
+"    hi Comment gui=italic
+"    hi railsUserClass  gui=italic
+"    hi railsUserMethod gui=italic
+"endif
 hi Identifier cterm=none
 " Commented numbers at the end are *old* 256 color values
 "highlight PreProc       guifg=#EDF8F9
