@@ -1,5 +1,5 @@
 " Color scheme
-colorscheme rdark
+colorscheme vividchalk
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
