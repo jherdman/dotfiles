@@ -32,8 +32,6 @@ set shiftwidth=2
 set expandtab
 set backspace=start,indent
 
-set number
-
 " Catch common typos
 nmap :W :w
 nmap :Q :q
