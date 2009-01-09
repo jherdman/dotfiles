@@ -7,7 +7,7 @@ export LSCOLORS='GxFxCxDxBxEGEDABAGACAD'
 export LC_CTYPE="en_US.UTF-8"
 export LD_LIBRARY_PATH=/usr/local/lib
 
-PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/X11R6/bin:/usr/local/scripts:/opt/local/bin:/usr/local/games:/usr/local/ruby1.9/bin:/opt/local/lib/postgresql83/bin:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/X11R6/bin:/usr/local/scripts:/opt/local/bin:/usr/local/games:/usr/local/ruby1.9/bin:/opt/local/lib/postgresql83/bin:/opt/local/libexec/git-core:$PATH"
 
 MANPATH=/usr/local/pgsql/man:$MANPATH
 export MANPATH
@@ -24,9 +24,11 @@ alias Firefox='open -a Firefox "$@"'
 alias Camino='open -a Camino "$@"'
 alias Safari='open -a Safari "$@"'
 alias qlf='qlmanage -p "$@" >& /dev/null'
-alias qgit='open /Applications/qgit.app "$@"'
 alias ls="ls -G"
 alias gvim='mvim "$@"'
+alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient "$@"'
+alias clemacs='/usr/bin/emacs "$@"'
+alias emacs='open -a Emacs "$@"'
 
 # Git aliases
 
