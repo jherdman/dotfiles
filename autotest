@@ -1,0 +1,8 @@
+require 'autotest/redgreen'
+require 'autotest/growl'
+
+Autotest.add_hook :initialize do |at|
+  %w{.svn .hg .git autotest .autotest}.each do |exception|
+    at.add_exception(exception)
+  end
+end
