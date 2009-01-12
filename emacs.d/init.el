@@ -22,3 +22,8 @@
 (color-theme-intialize)
 (load-file "~/.emacs.d/color-themes/color-theme-sunburt.el")
 (color-theme-sunburst-tm)
+
+(add-hook 'c-mode-common-hook
+  (lambda ()
+    (font-lock-add-keywords nil
+      '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
