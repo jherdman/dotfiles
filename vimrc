@@ -64,9 +64,6 @@ map <LEADER>b :FuzzyFinderBuffer<CR>
 
 nmap <silent> <LEADER>d <Plug>ToggleProject
 
-" Comments out the line a la Ruby
-map <LEADER># :s/^/#<CR>
-
 map <M-]> :tabnext<CR>
 map <M-[> :tabprevious<CR>
 map <M-t> :tabnew<CR>
