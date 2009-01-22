@@ -9,11 +9,10 @@ set background=light
 hi clear
 
 if exists("syntax_on")
-    syntax reset
+  syntax reset
 endif
 
-let colors_name="AutumnLeaf"
-
+let colors_name="AutumnLeafMine"
 
 " Colors for the User Interface.
 
@@ -52,13 +51,12 @@ hi VertSplit	guibg=#aa8866	guifg=#ffe0bb	gui=none
 " hi FoldColumn
 " hi SignColumn
 
-
 " Colors for Syntax Highlighting.
 
 hi Comment guibg=#ddeedd guifg=#002200 gui=none
 
 hi Constant	guibg=bg    guifg=#003399 gui=bold
-hi String	guibg=bg    guifg=#003399 gui=italic
+hi String	guibg=bg    guifg=#003399 gui=none
 hi Character	guibg=bg    guifg=#003399 gui=italic
 hi Number	guibg=bg    guifg=#003399 gui=bold
 hi Boolean	guibg=bg    guifg=#003399 gui=bold
@@ -99,7 +97,6 @@ hi Title    guibg=bg	guifg=fg    	gui=bold
 hi Ignore   guibg=bg	guifg=#999999	gui=none
 hi Error    guibg=red	guifg=white	gui=none
 hi Todo	    guibg=bg	guifg=#aa0000   gui=none
-
 
 
 " The same in cterm colors.

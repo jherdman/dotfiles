@@ -50,7 +50,7 @@ if has("win32")
   set guifont=Consolas:h11:cANSI
 else
   " GUI font stuff
-  set guifont=Panic\ Sans:h14
+  set guifont=DejaVu\ Sans\ Mono:h14
   set backupdir=~/.backup
   set directory=~/.backup
 endif
@@ -67,3 +67,7 @@ nmap <silent> <LEADER>d <Plug>ToggleProject
 map <M-]> :tabnext<CR>
 map <M-[> :tabprevious<CR>
 map <M-t> :tabnew<CR>
+
+" Fold Options
+au BufWinLeave * mkview " auto-save folds
+au BufWinEnter * silent loadview " automatically load folds silently
