@@ -69,5 +69,5 @@ map <M-[> :tabprevious<CR>
 map <M-t> :tabnew<CR>
 
 " Fold Options
-au BufWinLeave * mkview " auto-save folds
-au BufWinEnter * silent loadview " automatically load folds silently
+au BufWinLeave ?* mkview " auto-save folds
+au BufWinEnter ?* silent loadview " automatically load folds silently
