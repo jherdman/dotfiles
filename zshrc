@@ -1,6 +1,16 @@
-# Shell constants
-#export PROMPT="$(print '%{\e[0;33m%}$:%{\e[0;32m%}(%~)%{\e[0m%}') "
-export PROMPT="$(print '%{\e[1;34m%}%m:%{\e[1;32m%}%~%{\e[0;33m%}$%{\e[0m%}') "
+## Colours
+autoload -U colors
+colors
+
+## History
+export HISTFILE=~/.zsh_history
+export HISTSIZE=50000
+export SAVEHIST=50000
+export HISTCONTROL=ignoredups
+setopt SHARE_HISTORY
+setopt EXTENDED_GLOB
+
+## Shell constants
 export EDITOR="nano -w"
 export CLICOLOR='true'
 export LSCOLORS='GxFxCxDxBxEGEDABAGACAD'
@@ -26,9 +36,6 @@ alias Safari='open -a Safari "$@"'
 alias qlf='qlmanage -p "$@" >& /dev/null'
 alias ls="ls -G"
 alias gvim='mvim "$@"'
-alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient "$@"'
-alias clemacs='/usr/bin/emacs "$@"'
-alias emacs='open -a Emacs "$@"'
 
 # Git aliases
 
@@ -44,6 +51,12 @@ function authme {
   ssh $* 'cat >>.ssh/authorized_keys' <~/.ssh/id_dsa.pub
 }
 
-autoload colors ; colors
+## Auto-completion
 autoload -U compinit
 compinit
+
+# Custom prompt
+autoload -Uz vcs_info
+setopt prompt_subst
+
+export PROMPT="$(print '%{\e[1;34m%}%m:%{\e[1;32m%}%~%{\e[0;33m%}$%{\e[0m%}') "
