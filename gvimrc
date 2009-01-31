@@ -1,5 +1,5 @@
 " Color scheme
-colorscheme vividchalk
+colorscheme slate2
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
