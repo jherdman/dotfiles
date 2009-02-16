@@ -50,7 +50,7 @@ if has("win32")
   set guifont=Consolas:h11:cANSI
 else
   " GUI font stuff
-  set guifont=DejaVu\ Sans\ Mono:h14
+  set guifont=Inconsolata:h14
   set backupdir=~/.backup
   set directory=~/.backup
 endif
