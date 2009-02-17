@@ -14,6 +14,10 @@ augroup myfiletypes
 
   " YAML
   au BufNewFile,BufRead *.yaml, *.yml so ~/.vim/syntax/yaml.vim set ai sw=2 sts=2 et
+
+  augroup markdown
+    au! BufRead,BufNewFile *.md setfiletype mkd set ai sw=2 sts=2 et
+  augroup END
 augroup END
 
 " Color scheme
