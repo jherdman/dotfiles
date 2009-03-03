@@ -1,2 +1,7 @@
 [ui]
 username = James Herdman <james.herdman@gmail.com>
+merge    = vimdiff
+editor   = vim
+
+[diff]
+git = True
