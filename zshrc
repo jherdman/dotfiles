@@ -27,6 +27,7 @@ alias qlf='qlmanage -p "$@" >& /dev/null'
 alias qgit='open /Applications/qgit.app "$@"'
 alias ls="ls -G"
 alias gvim='mvim "$@"'
+alias sjruby='jruby -S "$@"'
 
 # Git aliases
 
