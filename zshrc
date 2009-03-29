@@ -21,10 +21,7 @@ alias finder='open -a Finder "$@"'
 alias Firefox='open -a Firefox "$@"'
 alias Camino='open -a Camino "$@"'
 alias Safari='open -a Safari "$@"'
-alias ss='ruby script/server'
-alias cons='ruby script/console'
 alias qlf='qlmanage -p "$@" >& /dev/null'
-alias qgit='open /Applications/qgit.app "$@"'
 alias ls="ls -G"
 alias gvim='mvim "$@"'
 alias sjruby='jruby -S "$@"'
@@ -33,12 +30,6 @@ alias sjruby='jruby -S "$@"'
 
 alias gst='git status "$@"'
 alias gb='git branch "$@"'
-
-# ZSH specific declarations
-
-function authme {
-  ssh $* 'cat >>.ssh/authorized_keys' <~/.ssh/id_dsa.pub
-}
 
 autoload colors ; colors
 autoload -U compinit
