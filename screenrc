@@ -1,6 +1,6 @@
 startup_message off
 
-defscrollback 1024
+defscrollback 10000
 
 vbell off
 
@@ -8,7 +8,12 @@ shell -$SHELL
 
 hardstatus alwayslastline "%{gk}[ %{G}%H %{g}] %{wk}%?%-Lw%?%{r}(%{W}%n*%f %t%?(%u)%?%{r})%{w}%?%+Lw%?%?]"
 
-screen -t work
-screen -t server
-screen -t console
-screen -t testing
+screen -t work    0
+screen -t server  1
+screen -t console 2
+screen -t testing 3
+
+select 0
+
+# Enables copying of marked buffers to the OS X clipboard
+bind b eval "writebuf" "exec sh -c 'pbcopy < /tmp/screen-exchange'"
