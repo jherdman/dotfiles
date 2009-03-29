@@ -5,3 +5,11 @@ editor   = vim
 
 [diff]
 git = True
+
+[extensions]
+color =
+
+[color]
+status.added = yellow
+status.modified = green
+status.unknown = cyan
