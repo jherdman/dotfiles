@@ -26,3 +26,5 @@
 	untracked = cyan
 [mirror]
 	summary = true
+[core]
+	autocrl = true

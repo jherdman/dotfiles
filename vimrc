@@ -51,10 +51,10 @@ set grepformat=%f:%l%m
 " Configurations that are system sensitive
 if has("win32")
   map <C-T> <Esc>:tabnew<CR>
-  set guifont=Consolas:h11:cANSI
+  set guifont=Consolas:h12:cANSI
 else
   " GUI font stuff
-  set guifont=Inconsolata:h14
+  set guifont=Consolas:h14
   set backupdir=~/.backup
   set directory=~/.backup
 endif

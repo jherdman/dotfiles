@@ -11,7 +11,7 @@ PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/X11R6/bin:/usr/lo
 MANPATH=/usr/local/pgsql/man:$MANPATH
 export MANPATH
 
-export EDITOR=vim
+export EDITOR='vim'
 export PAGER=less
 export HEWITT_PROXY='http://proxycacheF.hewitt.com:3128'
 
