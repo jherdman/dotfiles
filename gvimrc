@@ -1,5 +1,5 @@
 " Color scheme
-colorscheme slate2
+colorscheme xoria256
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
@@ -11,4 +11,4 @@ set columns=85
 " Hide the toolbar, but show tabs
 set guioptions=egmrt
 
-set transparency=10
+" set transparency=10
