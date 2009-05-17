@@ -1,6 +1,5 @@
 [ui]
 username = James Herdman <james.herdman@gmail.com>
-merge    = vimdiff
 editor   = vim
 
 [diff]
@@ -8,8 +7,13 @@ git = True
 
 [extensions]
 color =
+hgext.rebase =
 
 [color]
 status.added = yellow
 status.modified = green
 status.unknown = cyan
+
+[merge-tools]
+filemerge.executable = /usr/local/bin/opendiff-w
+filemerge.args = $local $other -ancestor $base -merge $output
