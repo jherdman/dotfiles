@@ -25,6 +25,7 @@ alias qlf='qlmanage -p "$@" >& /dev/null'
 alias ls="ls -G"
 alias gvim='mvim "$@"'
 alias sjruby='jruby -S "$@"'
+alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait "$@"'
 
 # Git aliases
 
