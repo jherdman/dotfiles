@@ -8,6 +8,7 @@ git = True
 [extensions]
 color =
 hgext.rebase =
+hgshelve = /usr/local/scripts/hgshelve/hgshelve.py
 
 [color]
 status.added = yellow
