@@ -64,7 +64,7 @@ hi VIsualNOS    ctermfg=24  guifg=#005f87 ctermbg=153 guibg=#afdfff cterm=none g
 hi WildMenu     ctermfg=0   guifg=#000000 ctermbg=184 guibg=#dfdf00 cterm=bold gui=bold
 
 "" Syntax highlighting
-hi Comment      ctermfg=244 guifg=#808080
+hi Comment      ctermfg=244 guifg=#808080 gui=italic
 hi Constant     ctermfg=229 guifg=#ffffaf
 hi Error        ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi ErrorMsg     ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
