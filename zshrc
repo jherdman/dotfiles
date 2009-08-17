@@ -6,7 +6,7 @@ export LSCOLORS='GxFxCxDxBxEGEDABAGACAD'
 export LC_CTYPE="en_US.UTF-8"
 export LD_LIBRARY_PATH=/usr/local/lib
 
-PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/X11R6/bin:/usr/local/scripts:/opt/local/bin:/usr/local/games:/usr/local/ruby1.9/bin:/opt/local/lib/postgresql83/bin:$PATH"
+PATH="/opt/local/apache2/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/X11R6/bin:/usr/local/scripts:/opt/local/bin:/usr/local/games:/usr/local/ruby1.9/bin:/opt/local/lib/postgresql83/bin:$PATH"
 
 export EDITOR='vim'
 export PAGER=less
@@ -21,6 +21,8 @@ alias ls="ls -G"
 alias gvim='mvim "$@"'
 alias sjruby='jruby -S "$@"'
 alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait "$@"'
+alias ss='ruby script/server --debug'
+alias cons='ruby script/console'
 
 # Git aliases
 
