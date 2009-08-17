@@ -199,11 +199,11 @@
 
 ;;; Code:
 
-(defconst package-archive-base "http://tromey.com/elpa/"
-  "Base URL for the package archive.
-Ordinarily you should not need to edit this.
-The default points to ELPA, the Emacs Lisp Package Archive.
-Note that some code in package.el assumes that this is an http: URL.")
+;;(defconst package-archive-base "http://tromey.com/elpa/"
+;;  "Base URL for the package archive.
+;;Ordinarily you should not need to edit this.
+;;The default points to ELPA, the Emacs Lisp Package Archive.
+;;Note that some code in package.el assumes that this is an http: URL.")
 
 (defconst package-archive-version 1
   "Version number of the package archive understood by this file.
@@ -212,7 +212,7 @@ Lower version numbers than this will probably be understood as well.")
 ;; Note that this only works if you have the password, which you
 ;; probably don't :-).  Also if you are using Emacs 21 then you will
 ;; need to hack ange-ftp-name-format to make this work.
-(defvar package-archive-upload-base "/elpa@tromey.com@tromey.com:/"
+;;(defvar package-archive-upload-base "/elpa@tromey.com@tromey.com:/"
   "Base location for uploading to package archive.")
 
 (defconst package-el-maintainer "Tom Tromey <elpa@tromey.com>"
