@@ -1,5 +1,5 @@
 [ui]
-username = James Herdman <james.herdman@gmail.com>
+username = James Herdman <james.herdman@hewitt.com>
 editor   = vim
 
 [diff]
@@ -9,6 +9,7 @@ git = True
 color =
 hgext.rebase =
 hgshelve = /usr/local/scripts/hgshelve/hgshelve.py
+hgext.graphlog=
 
 [color]
 status.added = yellow
