@@ -3,7 +3,7 @@
 	email = james.herdman@gmail.com
 [alias]
 	co = checkout
-	ci = commit
+	ci = commit -v
 [apply]
 	whitespace = nowarn
 [merge]
