@@ -66,13 +66,13 @@
 ;;    implementations-list for help.)  Leave out the semicolons at the 
 ;;    beginning of each line.
 ;; 
-;(setq viper-mode t)                ; enable Viper at load time
-;(setq viper-ex-style-editing nil)  ; can backspace past start of insert / line
-;(require 'viper)                   ; load Viper
-;(setq vimpulse-experimental nil)   ; don't load bleeding edge code (see 6. installation instruction)
-;(require 'vimpulse)                ; load Vimpulse
-;(setq woman-use-own-frame nil)     ; don't create new frame for manpages
-;(setq woman-use-topic-at-point t)  ; don't prompt upon K key (manpage display)
+(setq viper-mode t)                ; enable Viper at load time
+(setq viper-ex-style-editing nil)  ; can backspace past start of insert / line
+(require 'viper)                   ; load Viper
+(setq vimpulse-experimental nil)   ; don't load bleeding edge code (see 6. installation instruction)
+(require 'vimpulse)                ; load Vimpulse
+(setq woman-use-own-frame nil)     ; don't create new frame for manpages
+(setq woman-use-topic-at-point t)  ; don't prompt upon K key (manpage display)
 ;; 
 ;; 3. (Optional) If you will be using C-r (the redo key) and you use
 ;;    GNU Emacs, also install http://wonderworks.com/download/redo.el
