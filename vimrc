@@ -40,8 +40,6 @@ set backspace=start,indent
 nmap :W :w
 nmap :Q :q
 
-let g:proj_flags="imstvcg"
-
 let mapleader=","
 
 " Use ack instead of grep
