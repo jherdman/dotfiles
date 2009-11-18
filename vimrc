@@ -76,3 +76,6 @@ au BufWinEnter ?* silent loadview " automatically load folds silently
 
 " Always use UNIX format
 set fileformats=unix,dos
+
+" Gist plugin copy command
+let g:gist_clip_command = 'pbcopy'
