@@ -31,3 +31,9 @@ alias gb='git branch "$@"'
 autoload colors ; colors
 autoload -U compinit
 compinit
+
+# External files
+
+if [[ -f ~/.private.zsh ]]; then
+  . ~/.private.zsh
+fi
