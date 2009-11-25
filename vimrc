@@ -15,8 +15,9 @@ augroup myfiletypes
   " YAML
   au BufNewFile,BufRead *.yaml, *.yml so ~/.vim/syntax/yaml.vim set ai sw=2 sts=2 et
 
-  augroup markdown
-    au! BufRead,BufNewFile *.md setfiletype mkd set ai sw=2 sts=2 et
+  " Markdown
+  augroup mkd
+    autocmd BufRead *.mkd, *.md, *.markdown  set ai formatoptions=tcroqn2 comments=n:>
   augroup END
 augroup END
 
@@ -79,3 +80,6 @@ set fileformats=unix,dos
 
 " Gist plugin copy command
 let g:gist_clip_command = 'pbcopy'
+
+" Remove extra whitespace
+:nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
