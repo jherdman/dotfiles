@@ -22,6 +22,8 @@ alias sjruby='jruby -S "$@"'
 alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait "$@"'
 alias ss='ruby script/server --debug'
 alias cons='ruby script/console'
+alias v8='rlwrap v8'
+alias node-repl='rlwrap node-repl'
 
 # Git aliases
 
