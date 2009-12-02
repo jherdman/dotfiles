@@ -27,9 +27,6 @@ alias node-repl='rlwrap node-repl'
 
 # Git aliases
 
-alias gst='git status "$@"'
-alias gb='git branch "$@"'
-
 autoload colors ; colors
 autoload -U compinit
 autoload zmv
