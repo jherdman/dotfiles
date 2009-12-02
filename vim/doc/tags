@@ -237,8 +237,10 @@ fugitive-:Gread	fugitive.txt	/*fugitive-:Gread*
 fugitive-:Gread!	fugitive.txt	/*fugitive-:Gread!*
 fugitive-:Gremove	fugitive.txt	/*fugitive-:Gremove*
 fugitive-:Gsplit	fugitive.txt	/*fugitive-:Gsplit*
+fugitive-:Gstatus	fugitive.txt	/*fugitive-:Gstatus*
 fugitive-:Gtabedit	fugitive.txt	/*fugitive-:Gtabedit*
 fugitive-:Gvsplit	fugitive.txt	/*fugitive-:Gvsplit*
+fugitive-:Gwrite	fugitive.txt	/*fugitive-:Gwrite*
 fugitive-<CR>	fugitive.txt	/*fugitive-<CR>*
 fugitive-C	fugitive.txt	/*fugitive-C*
 fugitive-O	fugitive.txt	/*fugitive-O*
