@@ -32,6 +32,7 @@ alias gb='git branch "$@"'
 
 autoload colors ; colors
 autoload -U compinit
+autoload zmv
 compinit
 
 # External files
