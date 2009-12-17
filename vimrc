@@ -27,6 +27,8 @@ colorscheme desert
 " Make things pretty
 set ruler
 set showcmd
+set spell
+set nowrap
 
 " Tab settings
 " I follow the Ruby paradigm: soft tabs, 2 space width
