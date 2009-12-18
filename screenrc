@@ -15,8 +15,8 @@ autodetach on
 # by this command.
 bell_msg "bell     in %n (%t) [%w:%s]~"
 
-caption     always        "%{YK} %H %72=Load: %l %{wk}"
-hardstatus alwayslastline " %?%{ky}%-Lw%?%{Y}%n*%f %t%?(%u)%?%?%{ky}%+Lw%?"
+caption    always         "%{u kg}%H %=Load: %l%{kg}"
+hardstatus alwayslastline "%?%{g}%-Lw%?%{Y}%n*%f %t%?(%u)%?%?%{kg}%+Lw%?"
 
 screen -t work    0
 screen -t server  1
