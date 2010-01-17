@@ -6,21 +6,6 @@ syntax enable
 
 runtime! macros/matchit.vim
 
-augroup myfiletypes
-  autocmd!
-  
-  " Ruby-type files will use
-  autocmd FileType ruby,eruby,rake set ai sw=2 sts=2 et
-
-  " YAML
-  au BufNewFile,BufRead *.yaml, *.yml so ~/.vim/syntax/yaml.vim set ai sw=2 sts=2 et
-
-  " Markdown
-  augroup mkd
-    autocmd BufRead *.mkd, *.md, *.markdown  set ai formatoptions=tcroqn2 comments=n:>
-  augroup END
-augroup END
-
 " Color scheme
 colorscheme desert
 
@@ -42,6 +27,8 @@ set backspace=start,indent
 " Catch common typos
 nmap :W :w
 nmap :Q :q
+nmap :E :e
+nmap :Tabe :tabe
 
 let mapleader=","
 
@@ -55,7 +42,7 @@ if has("win32")
   set guifont=Consolas:h12:cANSI
 else
   " GUI font stuff
-  set guifont=Monaco:h12
+  set guifont=Inconsolata:h14
   set backupdir=~/.backup
   set directory=~/.backup
 endif
