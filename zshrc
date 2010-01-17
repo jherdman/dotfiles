@@ -10,6 +10,7 @@ PATH="/opt/local/apache2/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin
 
 export EDITOR='vim'
 export PAGER=less
+export ACK_PAGER_COLOR='less -R'
 
 # Aliases
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
