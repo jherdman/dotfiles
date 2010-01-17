@@ -1,5 +1,7 @@
 --color
---pager="less -R"
 --type-set=haml=.haml
 --type-add=ruby=.rake,.rsel
 --ignore-dir=coverage
+--ignore-dir=vendor
+--ignore-dir=log
+--ignore-dir=tmp
