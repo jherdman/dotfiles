@@ -32,7 +32,7 @@ autoload zmv
 compinit
 
 ## Private ZSH Stuff
-if [[ -f ~/.private.zsh ]]; then . ~/.private.zsh fi
+if [[ -f ~/.private.zsh ]]; then source ~/.private.zsh ; fi
 
 ## RVM
 if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/scripts/rvm ; fi
