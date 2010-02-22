@@ -31,12 +31,8 @@ autoload -U compinit
 autoload zmv
 compinit
 
-# External files
+## Private ZSH Stuff
+if [[ -f ~/.private.zsh ]]; then source ~/.private.zsh ; fi
 
-if [[ -f ~/.private.zsh ]]; then
-  source ~/.private.zsh
-fi
-
-if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then
-  source /Users/james/.rvm/scripts/rvm
-fi
+## RVM
+if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/scripts/rvm ; fi
