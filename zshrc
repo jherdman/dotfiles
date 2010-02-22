@@ -6,7 +6,7 @@ export LSCOLORS='GxFxCxDxBxEGEDABAGACAD'
 export LC_CTYPE="en_US.UTF-8"
 export LD_LIBRARY_PATH=/usr/local/lib
 
-PATH="/opt/local/apache2/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/X11R6/bin:/usr/local/scripts:/opt/local/bin:/usr/local/games:/Users/james/.gem/ruby/1.8/bin:/usr/local/rubinius/bin:$PATH"
+PATH="/opt/local/apache2/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/X11R6/bin:/usr/local/scripts:/opt/local/bin:/usr/local/games:/Users/james/.gem/ruby/1.8/bin:$PATH"
 
 export EDITOR='vim'
 export PAGER=less
