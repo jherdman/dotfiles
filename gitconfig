@@ -1,0 +1,38 @@
+# Don't forget to manually enter GIT_AUTHOR_NAME and GIT_AUTHOR_EMAIL 
+# in your .zshrc file.
+
+[alias]
+  co = checkout
+  ci = commit -v
+  rollback = reset --soft HEAD^
+  glog = log --graph
+  st = status
+  br = branch
+  df = diff
+  who = shortlog -s --
+  edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
+  sync = merge master --no-ff
+  unstage = reset HEAD
+[merge]
+	tool = opendiff
+[color]
+ 	ui = true
+[color "branch"]
+ 	current = yellow reverse
+ 	local   = yellow
+ 	remote	= green
+[color "diff"]
+ 	meta	= yellow bold
+ 	frag	= magenta bold
+ 	new	= green bold
+  old = red bold
+  whitespace = red reverse
+[color "status"]
+ 	added	= yellow
+ 	changed = green
+ 	untracked = cyan
+[mirror]
+	summary = true
+[core]
+	autocrl = true
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
