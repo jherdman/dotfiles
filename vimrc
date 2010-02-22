@@ -30,6 +30,9 @@ nmap :Q :q
 nmap :E :e
 nmap :Tabe :tabe
 
+" Disable ex mode
+map Q <Nop>
+
 let mapleader=","
 
 " Use ack instead of grep
@@ -52,7 +55,6 @@ let g:fuzzy_ignore="*.log"
 let g:fuzzy_matching_limit=70
 
 map <LEADER>f :FuzzyFinderTextMate<CR>
-map <LEADER>b :FuzzyFinderBuffer<CR>
 
 nmap <silent> <LEADER>d <Plug>ToggleProject
 
