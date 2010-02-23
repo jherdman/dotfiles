@@ -29,4 +29,4 @@ select 0
 bind b eval "writebuf" "exec sh -c 'pbcopy < /tmp/screen-exchange'"
 
 # Remap C-A to C-Z so we can have our IRB Emacs bindings
-escape ^zz
+escape ^Tt
