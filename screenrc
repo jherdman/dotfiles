@@ -1,6 +1,9 @@
 # See http://blog.deadinkvinyl.com/2009/04/10/screen-and-my-screenrcfile/
-
+crlf off # Shut up, Microsoft
 startup_message off
+
+# I like bold
+attrcolor b ".I"
 
 defscrollback 10000
 
