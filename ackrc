@@ -1,6 +1,7 @@
 --color
 --type-set=haml=.haml
 --type-add=ruby=.rake,.rsel
+--type-add=sql=.sql
 --ignore-dir=coverage
 --ignore-dir=vendor
 --ignore-dir=log
