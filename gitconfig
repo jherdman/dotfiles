@@ -11,8 +11,9 @@
   df = diff
   who = shortlog -s --
   edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
-  sync = merge master --no-ff
   unstage = reset HEAD
+  su = submodule update
+  sui = submodule update --init
 [merge]
 	tool = opendiff
 [color]
