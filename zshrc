@@ -16,13 +16,15 @@ export ZSH_THEME="james"
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
 
+# We need to know this before oh-my-zsh goes to town
+export EDITOR='vim'
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
 export LC_CTYPE="en_US.UTF-8"
 export LD_LIBRARY_PATH=/usr/local/lib
-export EDITOR='vim'
 export PAGER=less
 export ACK_PAGER_COLOR='less -R'
 export LSCOLORS='GxFxCxDxBxEGEDABAGACAD'
@@ -36,8 +38,7 @@ alias ls="ls -G"
 alias gvim='mvim "$@"'
 alias ss='ruby script/server --debug'
 alias cons='ruby script/console'
-alias v8='rlwrap v8'
-alias node-repl='rlwrap node-repl'
+alias v8-repl='rlwrap v8'
 
 ## RVM
 if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/scripts/rvm ; fi
