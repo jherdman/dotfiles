@@ -39,6 +39,7 @@ alias gvim='mvim "$@"'
 alias ss='ruby script/server --debug'
 alias cons='ruby script/console'
 alias v8-repl='rlwrap v8'
+alias nirb='rlwrap node-repl'
 
 ## RVM
 if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/scripts/rvm ; fi
