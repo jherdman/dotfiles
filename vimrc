@@ -50,14 +50,6 @@ else
   set directory=~/.backup
 endif
 
-" Fuzzy Finder Settings
-let g:fuzzy_ignore="*.log"
-let g:fuzzy_matching_limit=70
-
-map <LEADER>f :FuzzyFinderTextMate<CR>
-
-nmap <silent> <LEADER>d <Plug>ToggleProject
-
 map <M-]> :tabnext<CR>
 map <M-[> :tabprevious<CR>
 map <M-t> :tabnew<CR>
