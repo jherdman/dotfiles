@@ -4,84 +4,67 @@ SHELL = /bin/sh
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/james/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1
-hdrdir = /Users/james/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1
-arch_hdrdir = /Users/james/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/$(arch)
-VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/james/.rvm/rubies/ruby-1.9.2-head
+topdir = /Users/james/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/i686-darwin10.2.0
+hdrdir = $(topdir)
+VPATH = $(srcdir):$(topdir):$(hdrdir)
 exec_prefix = $(prefix)
-rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
-bindir = $(exec_prefix)/bin
-sbindir = $(exec_prefix)/sbin
-libexecdir = $(exec_prefix)/libexec
-datarootdir = $(prefix)/share
-datadir = $(datarootdir)
-sysconfdir = $(prefix)/etc
+prefix = $(DESTDIR)/Users/james/.rvm/rubies/ruby-1.8.7-p249
 sharedstatedir = $(prefix)/com
-localstatedir = $(prefix)/var
-includedir = $(prefix)/include
-oldincludedir = $(DESTDIR)/usr/include
-docdir = $(datarootdir)/doc/$(PACKAGE)
-infodir = $(datarootdir)/info
-htmldir = $(docdir)
-dvidir = $(docdir)
-pdfdir = $(docdir)
-psdir = $(docdir)
-libdir = $(exec_prefix)/lib
-localedir = $(datarootdir)/locale
 mandir = $(datarootdir)/man
-ridir = $(datarootdir)/$(RI_BASE_NAME)
-sitedir = $(rubylibprefix)/site_ruby
-vendordir = $(rubylibprefix)/vendor_ruby
-rubyhdrdir = $(includedir)/$(RUBY_BASE_NAME)-$(ruby_version)
-sitehdrdir = $(rubyhdrdir)/site_ruby
-vendorhdrdir = $(rubyhdrdir)/vendor_ruby
-rubylibdir = $(rubylibprefix)/$(ruby_version)
-archdir = $(rubylibdir)/$(arch)
-sitelibdir = $(sitedir)/$(ruby_version)
-sitearchdir = $(sitelibdir)/$(sitearch)
-vendorlibdir = $(vendordir)/$(ruby_version)
+psdir = $(docdir)
+oldincludedir = $(DESTDIR)/usr/include
+localedir = $(datarootdir)/locale
+bindir = $(exec_prefix)/bin
+libexecdir = $(exec_prefix)/libexec
+sitedir = $(libdir)/ruby/site_ruby
+htmldir = $(docdir)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
+includedir = $(prefix)/include
+infodir = $(datarootdir)/info
+vendorlibdir = $(vendordir)/$(ruby_version)
+sysconfdir = $(prefix)/etc
+libdir = $(exec_prefix)/lib
+sbindir = $(exec_prefix)/sbin
+rubylibdir = $(libdir)/ruby/$(ruby_version)
+docdir = $(datarootdir)/doc/$(PACKAGE)
+dvidir = $(docdir)
+vendordir = $(libdir)/ruby/vendor_ruby
+datarootdir = $(prefix)/share
+pdfdir = $(docdir)
+archdir = $(rubylibdir)/$(arch)
+sitearchdir = $(sitelibdir)/$(sitearch)
+datadir = $(datarootdir)
+localstatedir = $(prefix)/var
+sitelibdir = $(sitedir)/$(ruby_version)
 
 CC = gcc
-CXX = g++
 LIBRUBY = $(LIBRUBY_A)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
+LIBRUBYARG_SHARED = 
 LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static
-OUTFLAG = -o 
-COUTFLAG = -o 
 
 RUBY_EXTCONF_H = 
-cflags   =  $(optflags) $(debugflags) $(warnflags)
-optflags = -O3
-debugflags = -ggdb
-warnflags = -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long
-CFLAGS   = -fno-common $(cflags)  -pipe 
-INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
+CFLAGS   =  -fno-common -g -O2 -pipe -fno-common $(cflags) 
+INCFLAGS = -I. -I$(topdir) -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DHAVE_RUBY_H -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags)
-CXXFLAGS = $(CFLAGS) $(cxxflags)
-ldflags  = -L. -L/usr/local/lib
-dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -Wl,-flat_namespace
-ARCH_FLAG = 
-DLDFLAGS = $(ldflags) $(dldflags)
-LDSHARED = $(CC) -dynamic -bundle
-LDSHAREDXX = $(CXX) -dynamic -bundle
+CPPFLAGS = -DHAVE_RUBY_H  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags)
+CXXFLAGS = $(CFLAGS) 
+ldflags  = -L. 
+dldflags = 
+archflag = 
+DLDFLAGS = $(ldflags) $(dldflags) $(archflag)
+LDSHARED = cc -dynamic -bundle -undefined suppress -flat_namespace
 AR = ar
 EXEEXT = 
 
-RUBY_BASE_NAME = ruby
 RUBY_INSTALL_NAME = ruby
 RUBY_SO_NAME = ruby
-arch = x86_64-darwin10.2.0
-sitearch = $(arch)
-ruby_version = 1.9.1
-ruby = /Users/james/.rvm/rubies/ruby-1.9.2-head/bin/ruby
+arch = i686-darwin10.2.0
+sitearch = i686-darwin10.2.0
+ruby_version = 1.8
+ruby = /Users/james/.rvm/rubies/ruby-1.8.7-p249/bin/ruby
 RUBY = $(ruby)
 RM = rm -f
-RM_RF = $(RUBY) -run -e rm -- -rf
-RMDIRS = $(RUBY) -run -e rmdir -- -p
 MAKEDIRS = mkdir -p
 INSTALL = /usr/bin/install -c
 INSTALL_PROG = $(INSTALL) -m 0755
@@ -98,13 +81,12 @@ DEFFILE =
 
 CLEANFILES = mkmf.log
 DISTCLEANFILES = 
-DISTCLEANDIRS = 
 
 extout = 
 extout_prefix = 
 target_prefix = 
 LOCAL_LIBS = 
-LIBS =   -lpthread -ldl -lobjc 
+LIBS =   -ldl -lobjc  
 SRCS = ext.c match.c matcher.c
 OBJS = ext.o match.o matcher.o
 TARGET = ext
@@ -116,40 +98,28 @@ BINDIR        = $(bindir)
 RUBYCOMMONDIR = $(sitedir)$(target_prefix)
 RUBYLIBDIR    = $(sitelibdir)$(target_prefix)
 RUBYARCHDIR   = $(sitearchdir)$(target_prefix)
-HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
-ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 
 TARGET_SO     = $(DLLIB)
-CLEANLIBS     = $(TARGET).bundle 
-CLEANOBJS     = *.o  *.bak
+CLEANLIBS     = $(TARGET).bundle $(TARGET).il? $(TARGET).tds $(TARGET).map
+CLEANOBJS     = *.o *.a *.s[ol] *.pdb *.exp *.bak
 
-all:    $(DLLIB)
-static: $(STATIC_LIB)
-.PHONY: all install static install-so install-rb
-.PHONY: clean clean-so clean-rb
+all:		$(DLLIB)
+static:		$(STATIC_LIB)
 
-clean-rb-default::
-clean-rb::
-clean-so::
-clean: clean-so clean-rb-default clean-rb
+clean:
 		@-$(RM) $(CLEANLIBS) $(CLEANOBJS) $(CLEANFILES)
 
-distclean-rb-default::
-distclean-rb::
-distclean-so::
-distclean: clean distclean-so distclean-rb-default distclean-rb
+distclean:	clean
 		@-$(RM) Makefile $(RUBY_EXTCONF_H) conftest.* mkmf.log
 		@-$(RM) core ruby$(EXEEXT) *~ $(DISTCLEANFILES)
-		@-$(RMDIRS) $(DISTCLEANDIRS)
 
-realclean: distclean
+realclean:	distclean
 install: install-so install-rb
 
 install-so: $(RUBYARCHDIR)
 install-so: $(RUBYARCHDIR)/$(DLLIB)
 $(RUBYARCHDIR)/$(DLLIB): $(DLLIB)
-	@-$(MAKEDIRS) $(@D)
-	$(INSTALL_PROG) $(DLLIB) $(@D)
+	$(INSTALL_PROG) $(DLLIB) $(RUBYARCHDIR)
 install-rb: pre-install-rb install-rb-default
 install-rb-default: pre-install-rb-default
 pre-install-rb: Makefile
@@ -164,22 +134,22 @@ site-install-rb: install-rb
 .SUFFIXES: .c .m .cc .cxx .cpp .C .o
 
 .cc.o:
-	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) -c $<
 
 .cxx.o:
-	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) -c $<
 
 .cpp.o:
-	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) -c $<
 
 .C.o:
-	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) -c $<
 
 .c.o:
-	$(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $<
+	$(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) -c $<
 
 $(DLLIB): $(OBJS) Makefile
-	@-$(RM) $(@)
+	@-$(RM) $@
 	$(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
 
 

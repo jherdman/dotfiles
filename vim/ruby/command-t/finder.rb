@@ -21,55 +21,31 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+require 'command-t/ext' # CommandT::Matcher
+require 'command-t/scanner'
+
 module CommandT
-  # Convenience class for saving and restoring global settings.
-  class Settings
-    def initialize
-      save
+  # Encapsulates a Scanner instance (which builds up a list of available files
+  # in a directory) and a Matcher instance (which selects from that list based
+  # on a search string).
+  class Finder
+    def initialize path = Dir.pwd, options = {}
+      @scanner = Scanner.new path, options
+      @matcher = Matcher.new @scanner, options
     end
 
-    def save
-      @timeoutlen     = get_number 'timeoutlen'
-      @report         = get_number 'report'
-      @sidescroll     = get_number 'sidescroll'
-      @sidescrolloff  = get_number 'sidescrolloff'
-      @equalalways    = get_bool 'equalalways'
-      @hlsearch       = get_bool 'hlsearch'
-      @insertmode     = get_bool 'insertmode'
-      @showcmd        = get_bool 'showcmd'
+    # Options:
+    #   :limit (integer): limit the number of returned matches
+    def sorted_matches_for str, options = {}
+      @matcher.sorted_matches_for str, options
     end
 
-    def restore
-      set_number 'timeoutlen', @timeoutlen
-      set_number 'report', @report
-      set_number 'sidescroll', @sidescroll
-      set_number 'sidescrolloff', @sidescrolloff
-      set_bool 'equalalways', @equalalways
-      set_bool 'hlsearch', @hlsearch
-      set_bool 'insertmode', @insertmode
-      set_bool 'showcmd', @showcmd
+    def flush
+      @scanner.flush
     end
 
-  private
-
-    def get_number setting
-      VIM::evaluate("&#{setting}").to_i
+    def path= path
+      @scanner.path = path
     end
-
-    def get_bool setting
-      VIM::evaluate("&#{setting}").to_i == 1
-    end
-
-    def set_number setting, value
-      VIM::set_option "#{setting}=#{value}"
-    end
-
-    def set_bool setting, value
-      if value
-        VIM::set_option setting
-      else
-        VIM::set_option "no#{setting}"
-      end
-    end
-  end # class Settings
-end # module CommandT
+  end # class Finder
+end # CommandT
