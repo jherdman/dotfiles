@@ -231,6 +231,7 @@ command-t-license	command-t.txt	/*command-t-license*
 command-t-mappings	command-t.txt	/*command-t-mappings*
 command-t-options	command-t.txt	/*command-t-options*
 command-t-requirements	command-t.txt	/*command-t-requirements*
+command-t-trouble-shooting	command-t.txt	/*command-t-trouble-shooting*
 command-t-usage	command-t.txt	/*command-t-usage*
 command-t-website	command-t.txt	/*command-t-website*
 command-t-wildignore	command-t.txt	/*command-t-wildignore*
