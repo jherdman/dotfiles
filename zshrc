@@ -41,6 +41,7 @@ alias cons='ruby script/console'
 alias v8-repl='rlwrap v8'
 alias nirb='rlwrap node-repl'
 alias cuke=cucumber
+alias src=screen
 
 ## RVM
 if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/scripts/rvm ; fi
