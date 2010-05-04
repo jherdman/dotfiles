@@ -37,3 +37,4 @@
 [core]
 	autocrl = true
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = /Users/james/.gitignore
