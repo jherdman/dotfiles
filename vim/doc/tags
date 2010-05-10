@@ -40,6 +40,7 @@
 :NERDTreeFromBookmark	NERD_tree.txt	/*:NERDTreeFromBookmark*
 :NERDTreeMirror	NERD_tree.txt	/*:NERDTreeMirror*
 :NERDTreeToggle	NERD_tree.txt	/*:NERDTreeToggle*
+:UB	histwin.txt	/*:UB*
 Align-copyright	Align.txt	/*Align-copyright*
 NERDComAbout	NERD_commenter.txt	/*NERDComAbout*
 NERDComAlignedComment	NERD_commenter.txt	/*NERDComAlignedComment*
@@ -322,6 +323,17 @@ g:rails_statusline	rails.txt	/*g:rails_statusline*
 g:rails_syntax	rails.txt	/*g:rails_syntax*
 g:rails_tabstop	rails.txt	/*g:rails_tabstop*
 g:rails_url	rails.txt	/*g:rails_url*
+histwin-browse	histwin.txt	/*histwin-browse*
+histwin-color	histwin.txt	/*histwin-color*
+histwin-config	histwin.txt	/*histwin-config*
+histwin-contents	histwin.txt	/*histwin-contents*
+histwin-copyright	histwin.txt	/*histwin-copyright*
+histwin-feedback	histwin.txt	/*histwin-feedback*
+histwin-history	histwin.txt	/*histwin-history*
+histwin-keys	histwin.txt	/*histwin-keys*
+histwin-plugin	histwin.txt	/*histwin-plugin*
+histwin-var	histwin.txt	/*histwin-var*
+histwin.txt	histwin.txt	/*histwin.txt*
 i_CTRL-G_S	surround.txt	/*i_CTRL-G_S*
 i_CTRL-G_s	surround.txt	/*i_CTRL-G_s*
 macros/rails.vim	rails.txt	/*macros\/rails.vim*
