@@ -36,12 +36,15 @@ alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
 alias finder='open -a Finder "$@"'
 alias ls="ls -G"
 alias gvim='mvim "$@"'
-alias ss='ruby script/server --debug'
-alias cons='ruby script/console'
 alias v8-repl='rlwrap v8'
 alias nirb='rlwrap node-repl'
 alias cuke=cucumber
 alias src=screen
+
+## Rails Aliases
+alias ss='ruby script/server --debug'
+alias cons='ruby script/console'
+alias sg='ruby script/generate'
 
 ## RVM
 if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/scripts/rvm ; fi
