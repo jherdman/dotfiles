@@ -1,8 +1,20 @@
 set nocompatible " We don't want vi compatibility
-syntax on
-filetype plugin indent on " Automatically detect file types
 
-syntax enable
+"" see http://vimcasts.org/episodes/running-vim-within-irb
+if has('autocmd')
+  " Automatically detect file types
+  filetype plugin indent on
+
+  autocmd BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g `\"" |
+        \ endif
+endif
+
+if &t_Co > 2 || has("gui_running")
+  " Enable syntax highlighting
+  syntax on
+endif
 
 runtime! macros/matchit.vim
 
@@ -89,6 +101,9 @@ command! -nargs=* Wrap set wrap linebreak nolist
 
 set showbreak=…
 
+" Don't use Ex mode, use Q for formatting
+map Q gq
+
 " Softwrap mappings with command key
 vmap <D-j> gj
 vmap <D-k> gk
@@ -100,3 +115,16 @@ nmap <D-k> gk
 nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
+
+" Splits
+"" Window
+nmap <leader>sw<left>  :topleft  vnew<CR>
+nmap <leader>sw<right> :botright vnew<CR>
+nmap <leader>sw<up>    :topleft  new<CR>
+nmap <leader>sw<down>  :botright new<CR>
+
+"" Buffer
+nmap <leader>s<left>  :leftabove  vnew<CR>
+nmap <leader>s<right> :rightbelow vnew<CR>
+nmap <leader>s<up>    :leftabove  new<CR>
+nmap <leader>s<down>  :rightbelow new<CR>
