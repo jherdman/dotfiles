@@ -3,6 +3,7 @@
 
 [alias]
   co = checkout
+  pr = pull --rebase
   ci = commit -v
   rollback = reset --soft HEAD^
   glog = log --graph
