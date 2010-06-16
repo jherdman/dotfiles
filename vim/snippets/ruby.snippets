@@ -422,11 +422,9 @@ snippet tas
 	task :${2:task_name => [:dependent, :tasks]} do
 		${3}
 	end
-
 snippet desc
 	describe ${1:Class} do
 		${2}
 	end
-
 snippet it
-	it '${1:does stuff\}'
+	it '${1:does stuff}'${2}
