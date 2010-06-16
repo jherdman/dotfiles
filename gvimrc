@@ -1,5 +1,5 @@
 " Color scheme
-colorscheme ego
+colorscheme xoria256
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
