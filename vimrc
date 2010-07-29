@@ -128,3 +128,7 @@ nmap <leader>s<left>  :leftabove  vnew<CR>
 nmap <leader>s<right> :rightbelow vnew<CR>
 nmap <leader>s<up>    :leftabove  new<CR>
 nmap <leader>s<down>  :rightbelow new<CR>
+
+" Markdown preview
+imap <leader>p <ESC>:w!<CR>:!markdown % > %.mkd.html && open %.mkd.html<CR><CR>a
+map  <leader>p <ESC>:w!<CR>:!markdown % > %.mkd.html && open %.mkd.html<CR><CR>a
