@@ -15,8 +15,9 @@
   unstage = reset HEAD
   su = submodule update
   sui = submodule update --init
-  pom = push origin master
-	datetag = !git tag `date \"+%Y%m%d%H%M\"`
+  lod = log --online -decorate
+  dfw = diff --word-diff
+  datetag = !git tag `date \"+%Y%m%d%H%M\"`
 [merge]
 	tool = opendiff
 [color]
@@ -47,5 +48,7 @@
 	prompt = false
 [diff]
 	tool = Kaleidoscope
+[push]
+	default = tracking
 [user]
-	email = james.herdman@me.com
+  email = james.herdman@me.com
