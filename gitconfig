@@ -15,7 +15,7 @@
   unstage = reset HEAD
   su = submodule update
   sui = submodule update --init
-  lod = log --oneline -decorate
+  lod = log --oneline --decorate
   dfw = diff --word-diff
   datetag = !git tag `date \"+%Y%m%d%H%M\"`
 [merge]
