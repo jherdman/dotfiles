@@ -50,3 +50,5 @@
 	tool = Kaleidoscope
 [push]
 	default = tracking
+[status]
+	submodulesummary = true
