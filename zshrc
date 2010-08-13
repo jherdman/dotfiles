@@ -29,7 +29,7 @@ export PAGER=less
 export ACK_PAGER_COLOR='less -R'
 export LSCOLORS='GxFxCxDxBxEGEDABAGACAD'
 
-PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/scripts:/Users/james/.gem/ruby/1.8/bin:$PATH"
+PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/scripts:/Users/james/.gem/ruby/1.8/bin:/Users/james/.dotfiles/bin:$PATH"
 
 ## Aliases
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
