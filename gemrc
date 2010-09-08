@@ -1,5 +1,4 @@
 --- 
-gem: --no-rdoc
 :benchmark: false
 install: --env-shebang
 :backtrace: false
