@@ -1,5 +1,5 @@
 " Color scheme
-colorscheme xoria256
+colorscheme mustang
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
