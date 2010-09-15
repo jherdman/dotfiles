@@ -1,5 +1,38 @@
 set nocompatible " We don't want vi compatibility
 
+" Use pathogen to easily modify the runtime path to include all plugins
+" under the ~/.vim/bundle directory.
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
+" Remap <leader> to ,
+let mapleader=","
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Other basic settings
+
+set ruler
+set showcmd
+set spell
+set nowrap
+set smarttab
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set backspace=eol,start,indent " backspacing over everything in insert mode"
+set hlsearch                   " highlight search terms"
+set incsearch                  " show search mates as you type"
+set ignorecase                 " ignore case when searching, but...
+set smartcase                  " only when I'm using all lowercase search terms"
+set nobackup                   " bleh"
+
+" Now you can do ";w" instead of ":w"
+nnoremap ; :
+
 "" see http://vimcasts.org/episodes/running-vim-within-irb
 if has('autocmd')
   " Automatically detect file types
@@ -21,21 +54,6 @@ runtime! macros/matchit.vim
 " Color scheme
 colorscheme desert
 
-" Make things pretty
-set ruler
-set showcmd
-set spell
-set nowrap
-
-" Tab settings
-" I follow the Ruby paradigm: soft tabs, 2 space width
-set smarttab
-set autoindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set backspace=start,indent
-
 " Catch common typos
 nmap :W :w
 nmap :Q :q
@@ -45,7 +63,6 @@ nmap :Tabe :tabe
 " Disable ex mode
 map Q <Nop>
 
-let mapleader=","
 
 " Use ack instead of grep
 set grepprg=ack
@@ -132,3 +149,6 @@ nmap <leader>s<down>  :rightbelow new<CR>
 " Markdown preview
 imap <leader>p <ESC>:w!<CR>:!markdown % > %.mkd.html && open %.mkd.html<CR><CR>a
 map  <leader>p <ESC>:w!<CR>:!markdown % > %.mkd.html && open %.mkd.html<CR><CR>a
+
+" Clear search buffer
+nmap <silent> <leader>/ :let @/=""<CR>
