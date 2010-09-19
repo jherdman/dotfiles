@@ -106,7 +106,7 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
-nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+nnoremap <silent> <F6> :call <SID>StripTrailingWhitespaces()<CR>
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
