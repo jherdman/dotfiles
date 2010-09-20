@@ -52,7 +52,17 @@ endif
 runtime! macros/matchit.vim
 
 " Color scheme
-colorscheme desert
+if has("gui_running")
+  colorscheme mustang
+
+  set lines=48
+  set columns=85
+
+  " Hide the toolbar, but show tabs
+  set guioptions=egmrt
+else
+  colorscheme desert
+endif
 
 " Catch common typos
 nmap :W :w
