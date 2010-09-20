@@ -53,7 +53,7 @@ runtime! macros/matchit.vim
 
 " Color scheme
 if has("gui_running")
-  colorscheme mustang
+  colorscheme xoria256
 
   set lines=48
   set columns=85
