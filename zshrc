@@ -38,3 +38,6 @@ alias sg='ruby script/generate'
 
 ## RVM
 if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/scripts/rvm ; fi
+
+## Opts
+unsetopt extended_glob
