@@ -1,4 +1,4 @@
-bindkey -v
+#bindkey -v
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
@@ -8,7 +8,9 @@ export ZSH=$HOME/.dotfiles/oh-my-zsh
 export ZSH_THEME="james"
 
 # We need to know this before oh-my-zsh goes to town
-export EDITOR='vim'
+#export EDITOR='vim'
+
+plugins=(vi-mode brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -26,10 +28,7 @@ alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
 alias finder='open -a Finder "$@"'
 alias ls="ls -G"
 alias gvim='mvim "$@"'
-alias v8-repl='rlwrap v8'
-alias nirb='rlwrap node-repl'
 alias cuke=cucumber
-alias src=screen
 
 ## Rails Aliases
 alias ss='ruby script/server --debug'
