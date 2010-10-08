@@ -53,7 +53,7 @@ runtime! macros/matchit.vim
 
 " Color scheme
 if has("gui_running")
-  colorscheme xoria256
+  colorscheme sonofobsidian
 
   set lines=48
   set columns=85
