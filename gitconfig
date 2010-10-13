@@ -18,7 +18,6 @@
   lod = log --oneline --decorate
   dfw = diff --word-diff
   datetag = !git tag `date \"+%Y%m%d%H%M\"`
-  poo = "!git checkout master && git pull --rebase"
 [merge]
 	tool = opendiff
 [color]
