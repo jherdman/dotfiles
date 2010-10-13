@@ -160,3 +160,7 @@ map  <leader>p <ESC>:w!<CR>:!markdown % > %.mkd.html && open %.mkd.html<CR><CR>a
 
 " Clear search buffer
 nmap <silent> <leader>/ :let @/=""<CR>
+
+" Find and replace text under cursor
+" http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
