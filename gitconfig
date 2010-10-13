@@ -7,7 +7,7 @@
   ci = commit -v
   rollback = reset --soft HEAD^
   glog = log --graph
-  st = status
+  st = status -s
   br = branch
   df = diff
   who = shortlog -s --
