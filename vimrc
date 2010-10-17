@@ -159,6 +159,9 @@ nmap <leader>s<down>  :rightbelow new<CR>
 imap <leader>p <ESC>:w!<CR>:!markdown % > %.mkd.html && open %.mkd.html<CR><CR>a
 map  <leader>p <ESC>:w!<CR>:!markdown % > %.mkd.html && open %.mkd.html<CR><CR>a
 
+" Open a method def via Ctags in a vertical split
+map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
 " Clear search buffer
 nmap <silent> <leader>/ :let @/=""<CR>
 
