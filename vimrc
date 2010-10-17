@@ -162,6 +162,9 @@ map  <leader>p <ESC>:w!<CR>:!markdown % > %.mkd.html && open %.mkd.html<CR><CR>a
 " Open a method def via Ctags in a vertical split
 map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
+" Toggle TagList
+nnoremap <silent> <F8> :TlistToggle<CR>
+
 " Clear search buffer
 nmap <silent> <leader>/ :let @/=""<CR>
 
