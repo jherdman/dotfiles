@@ -27,6 +27,7 @@ set incsearch                  " show search mates as you type"
 set ignorecase                 " ignore case when searching, but...
 set smartcase                  " only when I'm using all lowercase search terms"
 set nobackup                   " backups... who needs em?
+set tags=tags;./tmp/tags       " look in root of project, and work your way up
 
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
