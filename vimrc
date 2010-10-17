@@ -26,7 +26,7 @@ set hlsearch                   " highlight search terms"
 set incsearch                  " show search mates as you type"
 set ignorecase                 " ignore case when searching, but...
 set smartcase                  " only when I'm using all lowercase search terms"
-set nobackup                   " bleh"
+set nobackup                   " backups... who needs em?
 
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
