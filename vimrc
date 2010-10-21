@@ -52,7 +52,7 @@ runtime! macros/matchit.vim
 
 " Color scheme
 if has("gui_running")
-  colorscheme sonofobsidian
+  colorscheme slate2
 
   set lines=48
   set columns=85
