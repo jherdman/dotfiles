@@ -21,7 +21,8 @@ export LD_LIBRARY_PATH=/usr/local/lib
 export PAGER=less
 export ACK_PAGER_COLOR='less -R'
 
-PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/scripts:/Users/james/.gem/ruby/1.8/bin:/Users/james/.dotfiles/bin:$PATH"
+PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/scripts:/Users/james/.gem/ruby/1.8/bin:/Users/james/.dotfiles/bin:/usr/local/share/npm/bin:$PATH"
+NODE_PATH="/usr/local/lib/node"
 
 ## Aliases
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
