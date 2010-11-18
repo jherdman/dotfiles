@@ -37,6 +37,7 @@ alias cons='ruby script/console'
 alias sg='ruby script/generate'
 
 ## RVM
+unsetopt auto_name_dirs
 if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/scripts/rvm ; fi
 
 ## Opts
