@@ -8,3 +8,6 @@ augroup END
 
 " Objective J
 au BufNewFile,BufRead *.j setfiletype objj
+
+" JSON
+au! BufRead,BufNewFile *.json setfiletype json 
