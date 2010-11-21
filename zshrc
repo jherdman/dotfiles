@@ -29,7 +29,8 @@ export MANPATH="/usr/local/Cellar/node/0.2.4/share/man:$MANPATH"
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
 alias finder='open -a Finder "$@"'
 alias ls="ls -G"
-alias gvim='mvim "$@"'
+alias gvim='mvim -p "$@"'
+alias vim='vim -p'
 alias cuke=cucumber
 
 ## Rails Aliases
