@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'interactive_editor'
 
 IRB.conf[:AUTO_INDENT]   = true
 IRB.conf[:USE_READLINE]  = true
