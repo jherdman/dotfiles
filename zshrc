@@ -21,7 +21,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 export PAGER=less
 export ACK_PAGER_COLOR='less -R'
 
-export PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/scripts:/Users/james/.gem/ruby/1.8/bin:/Users/james/.dotfiles/bin:/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/scripts:/Users/james/.gem/ruby/1.8/bin:/Users/james/.dotfiles/bin:/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node"
 export MANPATH="/usr/local/Cellar/node/0.2.4/share/man:$MANPATH"
 
