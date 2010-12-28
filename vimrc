@@ -1,7 +1,8 @@
 " Use pathogen to easily modify the runtime path to include all plugins
 " under the ~/.vim/bundle directory.
 runtime! autoload/pathogen.vim
-silent!  call pathogen#runtime_append_all_bundles()
+silent! call pathogen#runtime_append_all_bundles()
+silent! call pathogen#helptags()
 
 let mapleader=","
 
