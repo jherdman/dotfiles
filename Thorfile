@@ -7,4 +7,14 @@ class Sys < Thor
     run "git submodule add #{git_url} vim/bundle/#{md[1]}"
     run "git submodule update --init"
   end
+
+  desc "git_config", "Installs config options for Git"
+  def git_config
+    append_to_file ".git/config" do
+      <<-GIT_CONFIG
+      [status]
+         showUntrackedFiles = no
+      GIT_CONFIG
+    end
+  end
 end
