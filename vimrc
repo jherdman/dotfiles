@@ -175,3 +175,6 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " Close Vim when TagList is only open window
 let Tlist_Exit_OnlyWindow = 1
+
+" Toggle comments
+map <leader>/ <plug>NERDCommenterToggle
