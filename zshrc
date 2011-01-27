@@ -32,6 +32,7 @@ alias ls="ls -G"
 alias gvim='mvim -p "$@"'
 alias vim='vim -p'
 alias cuke=cucumber
+alias be='bundle exec "$@"'
 
 ## Rails Aliases
 alias ss='ruby script/server --debug'
