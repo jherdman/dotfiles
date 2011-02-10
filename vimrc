@@ -178,3 +178,6 @@ let Tlist_Exit_OnlyWindow = 1
 
 " Toggle comments
 map <D-/> <plug>NERDCommenterToggle
+
+" Use fast sender for Ruby debugger
+let g:ruby_debugger_fast_sender = 1
