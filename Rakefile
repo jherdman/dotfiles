@@ -4,7 +4,7 @@ task :install do
     next if entry == "Rakefile"
 
     begin
-      FileUtils.ln_s(entry, File.join(ENV["HOME"], ".#{entry}"), :verbose => true)
+      FileUtils.ln_sf(File.join(File.dirname(File.expand_path(__FILE__)), entry), File.join(ENV["HOME"], ".#{entry}"), :verbose => true)
     rescue Errno::EEXIST => e
       puts e.message
     end
