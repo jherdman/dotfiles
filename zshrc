@@ -8,9 +8,9 @@ export ZSH=$HOME/.dotfiles/oh-my-zsh
 export ZSH_THEME="james"
 
 # We need to know this before oh-my-zsh goes to town
-#export EDITOR='vim'
 
 plugins=(vi-mode brew)
+fpath=(~/.zsh/Completion $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
