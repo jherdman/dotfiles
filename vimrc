@@ -203,3 +203,8 @@ if exists(":Tabularize")
     endif
   endfunction
 endif
+
+if has('statusline')
+  set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+  set laststatus=2
+end
