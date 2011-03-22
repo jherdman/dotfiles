@@ -1,5 +1,3 @@
-#bindkey -v
-
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 
@@ -21,9 +19,8 @@ export LD_LIBRARY_PATH=/usr/local/lib
 export PAGER=less
 export ACK_PAGER_COLOR='less -R'
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/scripts:/Users/james/.gem/ruby/1.8/bin:/Users/james/.dotfiles/bin:/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/Users/james/.gem/ruby/1.8/bin:/Users/james/.dotfiles/bin:/usr/local/share/npm/bin:/Users/james/.lein/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node"
-export MANPATH="/usr/local/Cellar/node/0.2.4/share/man:$MANPATH"
 
 ## Aliases
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
@@ -33,11 +30,6 @@ alias gvim='mvim -p "$@"'
 alias vim='vim -p'
 alias cuke=cucumber
 alias be='bundle exec "$@"'
-
-## Rails Aliases
-alias ss='ruby script/server --debug'
-alias cons='ruby script/console'
-alias sg='ruby script/generate'
 
 ## RVM
 unsetopt auto_name_dirs
