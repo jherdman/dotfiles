@@ -206,3 +206,6 @@ if has('statusline')
   set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
   set laststatus=2
 end
+
+" Treat Thor files like Ruby
+au BufRead,BufNewFile *.thor set filetype=ruby
