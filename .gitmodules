@@ -79,3 +79,6 @@
 [submodule "vim/bundle/vim-ruby-block-conv"]
 	path = vim/bundle/vim-ruby-block-conv
 	url = https://github.com/bronson/vim-ruby-block-conv.git
+[submodule "vim/bundle/textile.vim"]
+	path = vim/bundle/textile.vim
+	url = https://github.com/timcharper/textile.vim.git
