@@ -53,7 +53,7 @@ runtime! macros/matchit.vim
 
 " Color scheme
 if has("gui_running")
-  colorscheme slate2
+  colorscheme github
 
   set lines=48
   set columns=85
@@ -61,7 +61,7 @@ if has("gui_running")
   " Hide the toolbar, but show tabs
   set guioptions=egmrt
 else
-  colorscheme desert
+  colorscheme github
 endif
 
 " Catch common typos
