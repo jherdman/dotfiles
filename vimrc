@@ -53,7 +53,7 @@ runtime! macros/matchit.vim
 
 " Color scheme
 if has("gui_running")
-  colorscheme github
+  colorscheme devbox-dark-256
 
   set lines=48
   set columns=85
@@ -61,7 +61,7 @@ if has("gui_running")
   " Hide the toolbar, but show tabs
   set guioptions=egmrt
 else
-  colorscheme github
+  colorscheme devbox-dark-256
 endif
 
 " Catch common typos
