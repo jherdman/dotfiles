@@ -30,6 +30,8 @@ set smartcase                  " only when I'm using all lowercase search terms"
 set nobackup                   " backups... who needs em?
 set tags=tags;./tmp/tags       " look in root of project, and work your way up
 
+set background=dark " I has dark background
+
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
 
@@ -53,7 +55,7 @@ runtime! macros/matchit.vim
 
 " Color scheme
 if has("gui_running")
-  colorscheme devbox-dark-256
+  colorscheme solarized
 
   set lines=48
   set columns=85
@@ -61,7 +63,7 @@ if has("gui_running")
   " Hide the toolbar, but show tabs
   set guioptions=egmrt
 else
-  colorscheme devbox-dark-256
+  colorscheme solarized
 endif
 
 " Catch common typos
