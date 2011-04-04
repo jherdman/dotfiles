@@ -63,7 +63,7 @@ if has("gui_running")
   " Hide the toolbar, but show tabs
   set guioptions=egmrt
 else
-  colorscheme solarized
+  colorscheme devbox-dark-256
 endif
 
 " Catch common typos
