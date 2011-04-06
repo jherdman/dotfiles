@@ -51,8 +51,6 @@ if &t_Co > 2 || has("gui_running")
   syntax on
 endif
 
-runtime! macros/matchit.vim
-
 " Color scheme
 if has("gui_running")
   colorscheme solarized
