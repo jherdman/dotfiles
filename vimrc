@@ -85,8 +85,6 @@ if has("win32")
 else
   " GUI font stuff
   set guifont=Menlo:h12
-  set backupdir=~/.backup
-  set directory=~/.backup
 endif
 
 map <M-]> :tabnext<CR>
