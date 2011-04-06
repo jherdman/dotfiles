@@ -29,6 +29,7 @@ set ignorecase                 " ignore case when searching, but...
 set smartcase                  " only when I'm using all lowercase search terms"
 set nobackup                   " backups... who needs em?
 set nowritebackup              " Vim FAQ 5.2 says this is required for no backups too
+set noswapfile                 " no swap files
 set tags=tags;./tmp/tags       " look in root of project, and work your way up
 
 set background=dark " I has dark background
