@@ -48,7 +48,6 @@ if has('autocmd')
 endif
 
 if &t_Co > 2 || has("gui_running")
-  " Enable syntax highlighting
   syntax on
 endif
 
