@@ -83,8 +83,7 @@ if has("win32")
   map <C-T> <Esc>:tabnew<CR>
   set guifont=Consolas:h12:cANSI
 else
-  " GUI font stuff
-  set guifont=Menlo:h12
+  set guifont=Menlo:h16
 endif
 
 map <M-]> :tabnext<CR>
