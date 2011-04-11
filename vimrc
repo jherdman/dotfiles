@@ -186,6 +186,9 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
+" NERDTree convenience
+map <F2> :NERDTreeToggle<CR>
+
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
   if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
