@@ -6,7 +6,6 @@ class Sys < Thor
   desc "install", "Installs dotfiles on your system"
   def install
     setup_symlinks
-    setup_constants
   end
 
   desc "setup_symlinks", "Sets up required symlinks on your system"
