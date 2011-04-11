@@ -30,8 +30,6 @@ set smartcase                  " only when I'm using all lowercase search terms"
 set tags=tags;./tmp/tags       " look in root of project, and work your way up
 set backupdir=~/.tmp
 
-set background=dark " I has dark background
-
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
 
@@ -52,6 +50,7 @@ endif
 
 " Color scheme
 if has("gui_running")
+  set background=light
   colorscheme solarized
 
   set lines=48
