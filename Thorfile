@@ -6,6 +6,7 @@ class Sys < Thor
   desc "install", "Installs dotfiles on your system"
   def install
     setup_symlinks
+    setup_directories
   end
 
   desc "setup_symlinks", "Sets up required symlinks on your system"
@@ -33,5 +34,11 @@ class Sys < Thor
          showUntrackedFiles = no
       GIT_CONFIG
     end
+  end
+
+  desc "setup_directories", "Makes any directories required"
+  def setup_directories
+    self.destination_root = ENV["HOME"]
+    empty_directory ".tmp"
   end
 end
