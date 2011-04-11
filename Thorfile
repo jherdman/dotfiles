@@ -7,6 +7,7 @@ class Sys < Thor
   def install
     setup_symlinks
     setup_directories
+    setup_git
   end
 
   desc "setup_symlinks", "Sets up required symlinks on your system"
@@ -40,5 +41,11 @@ class Sys < Thor
   def setup_directories
     self.destination_root = ENV["HOME"]
     empty_directory ".tmp"
+  end
+
+  desc "setup_git", "Runs Git configs"
+  def setup_git
+    `git config --global user.name`
+    `git config --global user.email`
   end
 end
