@@ -30,8 +30,6 @@ set smartcase                  " only when I'm using all lowercase search terms"
 set tags=tags;./tmp/tags       " look in root of project, and work your way up
 set backupdir=~/.tmp
 
-set background=dark " I has dark background
-
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
 
@@ -52,6 +50,7 @@ endif
 
 " Color scheme
 if has("gui_running")
+  set background=light
   colorscheme solarized
 
   set lines=48
@@ -187,6 +186,9 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
+" NERDTree convenience
+map <F2> :NERDTreeToggle<CR>
+
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
   if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
@@ -205,3 +207,6 @@ end
 
 " Treat Thor files like Ruby
 au BufRead,BufNewFile *.thor set filetype=ruby
+
+" Ignore generated documentation in things like Rails
+set wildignore+=doc
