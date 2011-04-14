@@ -9,4 +9,5 @@
 --ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
+--ignore-dir=doc
 --follow
