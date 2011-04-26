@@ -50,7 +50,7 @@ endif
 
 " Color scheme
 if has("gui_running")
-  set background=light
+  set background=dark
   colorscheme solarized
 
   set lines=48
