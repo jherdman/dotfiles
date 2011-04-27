@@ -1,8 +1,27 @@
-" Use pathogen to easily modify the runtime path to include all plugins
-" under the ~/.vim/bundle directory.
-runtime! autoload/pathogen.vim
-silent! call pathogen#runtime_append_all_bundles()
-silent! call pathogen#helptags()
+set rtp+=~/.vim/vundle.git
+call vundle#rc()
+
+Bundle 'wincent/Command-T'
+Bundle 'mileszs/ack.vim'
+Bundle 'markabe/bufexplorer'
+Bundle 'Raimondi/delimitMate'
+Bundle 'sjl/gundo.vim'
+Bundle 'hallettj/jslint.vim'
+Bundle 'edsono/vim-matchit'
+Bundle 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
+Bundle 'godlygeek/tabular'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'skammer/vim-css-color'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'pangloss/vim-javascript'
+Bundle 'hallison/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'VimClojure'
 
 let mapleader=","
 
