@@ -228,6 +228,3 @@ end
 
 " Treat Thor files like Ruby
 au BufRead,BufNewFile *.thor set filetype=ruby
-
-" Ignore generated documentation in things like Rails
-set wildignore+=doc
