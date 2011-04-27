@@ -1,12 +1,11 @@
 set rtp+=~/.vim/vundle.git
+
 call vundle#rc()
 
 Bundle 'wincent/Command-T'
-Bundle 'mileszs/ack.vim'
 Bundle 'markabe/bufexplorer'
 Bundle 'Raimondi/delimitMate'
 Bundle 'sjl/gundo.vim'
-Bundle 'hallettj/jslint.vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
@@ -22,6 +21,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'VimClojure'
+Bundle 'hallettj/jslint.vim'
+Bundle 'scrooloose/nerdcommenter'
 
 let mapleader=","
 
