@@ -23,6 +23,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'VimClojure'
 Bundle 'hallettj/jslint.vim'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'jherdman/snipmate.vim'
 
 let mapleader=","
 
