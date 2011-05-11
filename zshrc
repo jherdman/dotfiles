@@ -24,7 +24,6 @@ export NODE_PATH="/usr/local/lib/node"
 
 ## Aliases
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
-alias finder='open -a Finder "$@"'
 alias ls="ls -G"
 alias gvim='mvim -p "$@"'
 alias vim='vim -p'
