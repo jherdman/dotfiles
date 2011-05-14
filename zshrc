@@ -7,7 +7,7 @@ export ZSH_THEME="james"
 
 # We need to know this before oh-my-zsh goes to town
 
-plugins=(vi-mode brew)
+plugins=(vi-mode brew git-flow)
 
 source $ZSH/oh-my-zsh.sh
 
