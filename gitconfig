@@ -6,7 +6,7 @@
   pr = pull --rebase
   ci = commit -v
   rollback = reset --soft HEAD^
-  glog = log --graph
+  glog = log --graph --oneline --all
   st = status -s
   br = branch
   df = diff
