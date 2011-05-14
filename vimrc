@@ -4,7 +4,6 @@ call vundle#rc()
 
 Bundle 'wincent/Command-T'
 Bundle 'markabe/bufexplorer'
-Bundle 'Raimondi/delimitMate'
 Bundle 'sjl/gundo.vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdtree'
