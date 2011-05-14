@@ -35,11 +35,3 @@ if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/script
 
 ## Opts
 unsetopt extended_glob
-
-## Hitch shit
-
-hitch() {
-  command hitch "$@"
-  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
-}
-alias unhitch='hitch -u'
