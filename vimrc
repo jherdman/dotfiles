@@ -65,8 +65,7 @@ if has('autocmd')
 
   autocmd BufReadPost *
         \ if line("'\"") > 1 && line("'\"") <= line("$") |
-        \   exe "normal! g `\"" |
-        \ endif
+        \   exe "normal! g `\"" | \ endif
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -119,9 +118,6 @@ au BufWinEnter ?* silent loadview " automatically load folds silently
 
 " Always use UNIX format
 set fileformats=unix,dos
-
-" Gist plugin copy command
-let g:gist_clip_command = 'pbcopy'
 
 " Remove extra whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -179,9 +175,6 @@ nmap <leader>s<down>  :rightbelow new<CR>
 " Open a method def via Ctags in a vertical split
 map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
-" Toggle TagList
-nnoremap <silent> <F8> :TlistToggle<CR>
-
 " Clear search buffer
 nmap <silent> <leader>/ :let @/=""<CR>
 
@@ -192,17 +185,12 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 " Toggle comments
 map <D-/> <plug>NERDCommenterToggle
 
-" Use fast sender for Ruby debugger
-let g:ruby_debugger_fast_sender = 1
-
 " Tabularize settings
 
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
-
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 " NERDTree convenience
 map <F2> :NERDTreeToggle<CR>
