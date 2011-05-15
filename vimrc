@@ -5,6 +5,7 @@ set rtp+=~/.vim/vundle.git
 
 call vundle#rc()
 
+Bundle 'devbox-dark-256'
 Bundle 'wincent/Command-T'
 Bundle 'markabe/bufexplorer'
 Bundle 'sjl/gundo.vim'
