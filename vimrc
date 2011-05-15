@@ -1,3 +1,6 @@
+set nocompatible
+filetype off
+
 set rtp+=~/.vim/vundle.git
 
 call vundle#rc()
