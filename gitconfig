@@ -54,3 +54,6 @@
 	default = tracking
 [status]
 	submodulesummary = true
+[user]
+	name = James Herdman
+	email = james.herdman@me.com
