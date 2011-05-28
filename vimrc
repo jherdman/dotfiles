@@ -27,6 +27,7 @@ Bundle 'VimClojure'
 Bundle 'hallettj/jslint.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jherdman/snipmate.vim'
+Bundle 'kchmck / vim-coffee-script'
 
 let mapleader=","
 
