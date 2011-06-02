@@ -28,6 +28,7 @@ alias gvim='mvim -p "$@"'
 alias vim='vim -p'
 alias cuke=cucumber
 alias tmux="TERM=xterm-256color tmux"
+alias be='bundle exec "$@"'
 
 ## RVM
 unsetopt auto_name_dirs
