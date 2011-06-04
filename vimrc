@@ -27,7 +27,7 @@ Bundle 'VimClojure'
 Bundle 'hallettj/jslint.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jherdman/snipmate.vim'
-Bundle 'kchmck / vim-coffee-script'
+Bundle 'kchmck/vim-coffee-script'
 
 let mapleader=","
 
@@ -214,3 +214,7 @@ end
 
 " Treat Thor files like Ruby
 au BufRead,BufNewFile *.thor set filetype=ruby
+
+" CoffeeScript bundle customizations
+let coffee_folding = 1
+autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
