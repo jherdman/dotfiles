@@ -1,6 +1,5 @@
 --color
 --type-set=haml=.haml
---type-set=objj=.j
 --type-set=sass=.sass,.scss
 --type-set=cucumber=.feature
 --type-add=ruby=.rake,.rsel
