@@ -2,6 +2,7 @@
 --type-set=haml=.haml
 --type-set=sass=.sass,.scss
 --type-set=cucumber=.feature
+--type-set=rabl=.rabl
 --type-add=ruby=.rake,.rsel
 --type-add=sql=.sql
 --ignore-dir=coverage
