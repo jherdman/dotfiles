@@ -28,7 +28,7 @@ Bundle 'hallettj/jslint.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jherdman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'haskell.vim'
+Bundle 'lukerandall/haskellmode-vim'
 
 let mapleader=","
 
@@ -219,3 +219,8 @@ au BufRead,BufNewFile *.thor set filetype=ruby
 " CoffeeScript bundle customizations
 let coffee_folding = 1
 autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
+
+" Haskell stuff
+let g:haddock_browser = "open -a 'Google Chrome'"
+let g:ghc = "/usr/bin/ghci"
+let g:haddock_docdir = "/usr/share/doc/ghc/html"
