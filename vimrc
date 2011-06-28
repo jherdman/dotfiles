@@ -211,6 +211,7 @@ end
 
 " Treat Thor files like Ruby
 au BufRead,BufNewFile *.thor set filetype=ruby
+au BufRead,BufNewFile *.rabl set filetype=ruby
 
 " CoffeeScript bundle customizations
 let coffee_folding = 1
