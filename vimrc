@@ -114,10 +114,6 @@ map <M-]> :tabnext<CR>
 map <M-[> :tabprevious<CR>
 map <M-t> :tabnew<CR>
 
-" Fold Options
-au BufWinLeave ?* mkview " auto-save folds
-au BufWinEnter ?* silent loadview " automatically load folds silently
-
 " Always use UNIX format
 set fileformats=unix,dos
 
