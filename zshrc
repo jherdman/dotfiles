@@ -24,11 +24,11 @@ export NODE_PATH="/usr/local/lib/node"
 ## Aliases
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
 alias ls="ls -G"
-alias gvim='mvim -p "$@"'
+alias gvim='mvim -p'
 alias vim='vim -p'
 alias cuke=cucumber
 alias tmux="TERM=xterm-256color tmux"
-alias be='bundle exec "$@"'
+alias be='bundle exec'
 
 ## RVM
 unsetopt auto_name_dirs
