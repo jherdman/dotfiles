@@ -210,8 +210,7 @@ if has('statusline')
 end
 
 " Treat Thor files like Ruby
-au BufRead,BufNewFile *.thor set filetype=ruby
-au BufRead,BufNewFile *.rabl set filetype=ruby
+au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor} set ft=ruby
 
 " CoffeeScript bundle customizations
 let coffee_folding = 1
