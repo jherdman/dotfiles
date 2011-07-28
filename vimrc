@@ -27,6 +27,7 @@ Bundle 'hallettj/jslint.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jherdman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'majutsushi/tagbar'
 
 let mapleader=","
 
@@ -208,7 +209,7 @@ if has('statusline')
 end
 
 " Treat Thor files like Ruby
-au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor} set ft=ruby
+au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl} set ft=ruby
 
 " CoffeeScript bundle customizations
 let coffee_folding = 1
