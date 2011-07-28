@@ -23,12 +23,10 @@ Bundle 'hallison/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'VimClojure'
 Bundle 'hallettj/jslint.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jherdman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'lukerandall/haskellmode-vim'
 
 let mapleader=","
 
