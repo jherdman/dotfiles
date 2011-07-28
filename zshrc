@@ -29,6 +29,7 @@ alias vim='vim -p'
 alias cuke=cucumber
 alias tmux="TERM=xterm-256color tmux"
 alias be='bundle exec'
+alias ctags="`brew --prefix`/bin/ctags"
 
 ## RVM
 unsetopt auto_name_dirs
