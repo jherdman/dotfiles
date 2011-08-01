@@ -28,7 +28,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'jherdman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'majutsushi/tagbar'
-Bundle 'tpope/fugitive'
+Bundle 'tpope/vim-fugitive'
 
 let mapleader=","
 
