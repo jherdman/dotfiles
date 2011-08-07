@@ -220,3 +220,6 @@ autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
 let g:haddock_browser = "open -a 'Google Chrome'"
 let g:ghc = "/usr/bin/ghci"
 let g:haddock_docdir = "/usr/share/doc/ghc/html"
+
+" Tagbar
+let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
