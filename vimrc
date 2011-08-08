@@ -223,3 +223,4 @@ let g:haddock_docdir = "/usr/share/doc/ghc/html"
 
 " Tagbar
 let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
+map <F3> :TagbarToggle<CR>
