@@ -18,7 +18,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 export PAGER=less
 export ACK_PAGER_COLOR='less -R'
 
-export PATH="/Users/james/.dotfiles/bin:/usr/local/share/npm/bin:/Users/james/.lein/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/share/npm/bin:/Users/james/.lein/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node"
 
 ## Aliases
