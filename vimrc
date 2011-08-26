@@ -1,10 +1,10 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/vundle.git
-
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
 Bundle 'devbox-dark-256'
 Bundle 'haskell.vim'
 Bundle 'wincent/Command-T'
@@ -30,6 +30,9 @@ Bundle 'jherdman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
+
+" Required for Vundle
+filetype plugin indent on
 
 let mapleader=","
 
@@ -64,8 +67,6 @@ nnoremap ; :
 "" see http://vimcasts.org/episodes/running-vim-within-irb
 if has('autocmd')
   " Automatically detect file types
-  filetype plugin indent on
-
   autocmd BufReadPost *
         \ if line("'\"") > 1 && line("'\"") <= line("$") |
         \   exe "normal! g `\"" | \ endif
