@@ -9,15 +9,11 @@
   glog = log --graph --oneline --all
   st = status -s
   br = branch
-  df = diff
   who = shortlog -s --
   edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
   unstage = reset HEAD
   su = submodule update
   sui = submodule update --init
-  lod = log --oneline --decorate
-  dfw = diff --word-diff
-  datetag = !git tag `date \"+%Y%m%d%H%M\"`
   sp = format-patch -1
 [merge]
 	tool = opendiff
