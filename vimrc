@@ -29,7 +29,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'jherdman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-fugitive'
 
 " Required for Vundle
 filetype plugin indent on
