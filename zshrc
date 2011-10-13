@@ -32,6 +32,7 @@ alias tmux="TERM=xterm-256color tmux"
 alias be='bundle exec'
 alias ctags="`brew --prefix`/bin/ctags"
 alias rtags='ctags -R --exclude=.git --exclude=log *'
+alias curl='noglob curl'
 
 ## RVM
 unsetopt auto_name_dirs
