@@ -5,20 +5,13 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'devbox-dark-256'
-Bundle 'haskell.vim'
 Bundle 'wincent/Command-T'
 Bundle 'markabe/bufexplorer'
-Bundle 'sjl/gundo.vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'skammer/vim-css-color'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
 Bundle 'pangloss/vim-javascript'
 Bundle 'hallison/vim-markdown'
 Bundle 'tpope/vim-rails'
@@ -26,8 +19,8 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jherdman/snipmate.vim'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'majutsushi/tagbar'
+Bundle 'devbox-dark-256'
 
 " Required for Vundle
 filetype plugin indent on
@@ -204,22 +197,8 @@ function! s:align()
   endif
 endfunction
 
-if has('statusline')
-  set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-  set laststatus=2
-end
-
 " Treat Thor files like Ruby
 au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl} set ft=ruby
-
-" CoffeeScript bundle customizations
-let coffee_folding = 1
-autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
-
-" Haskell stuff
-let g:haddock_browser = "open -a 'Google Chrome'"
-let g:ghc = "/usr/bin/ghci"
-let g:haddock_docdir = "/usr/share/doc/ghc/html"
 
 " Tagbar
 let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
