@@ -49,20 +49,12 @@ set hlsearch                   " highlight search terms"
 set incsearch                  " show search mates as you type"
 set ignorecase                 " ignore case when searching, but...
 set smartcase                  " only when I'm using all lowercase search terms"
-set tags=tags;./tmp/tags       " look in root of project, and work your way up
+set tags=tags                  " look in root of project, and work your way up
 set backupdir=~/.tmp
 set number
 
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
-
-"" see http://vimcasts.org/episodes/running-vim-within-irb
-if has('autocmd')
-  " Automatically detect file types
-  autocmd BufReadPost *
-        \ if line("'\"") > 1 && line("'\"") <= line("$") |
-        \   exe "normal! g `\"" | \ endif
-endif
 
 if &t_Co > 2 || has("gui_running")
   syntax on
@@ -82,19 +74,8 @@ else
   colorscheme devbox-dark-256
 endif
 
-" Catch common typos
-nmap :W :w
-nmap :Q :q
-nmap :E :e
-nmap :Tabe :tabe
-
 " Disable ex mode
 map Q <Nop>
-
-
-" Use ack instead of grep
-set grepprg=ack
-set grepformat=%f:%l%m
 
 " Configurations that are system sensitive
 if has("win32")
@@ -103,10 +84,6 @@ if has("win32")
 else
   set guifont=Menlo:h16
 endif
-
-map <M-]> :tabnext<CR>
-map <M-[> :tabprevious<CR>
-map <M-t> :tabnew<CR>
 
 " Always use UNIX format
 set fileformats=unix,dos
@@ -125,9 +102,6 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 
 nnoremap <silent> <F6> :call <SID>StripTrailingWhitespaces()<CR>
-
-" Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
