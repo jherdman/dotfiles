@@ -22,6 +22,7 @@ Bundle 'jherdman/snipmate.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'devbox-dark-256'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'vim-scripts/VimClojure'
 
 " Required for Vundle
 filetype plugin indent on
