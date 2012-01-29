@@ -34,6 +34,8 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias rtags='ctags -R --exclude=.git --exclude=log --exclude=coverage --exclude=tmp --exclude=vendor --exclude=doc --exclude=db --exclude=config --exclude=bin *'
 alias curl='noglob curl'
 alias rake='noglob rake'
+alias tn='tmux new -s'
+alias ta='tmux attach -t'
 
 ## RVM
 unsetopt auto_name_dirs
