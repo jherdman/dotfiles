@@ -31,7 +31,7 @@ alias cuke=cucumber
 alias tmux="TERM=xterm-256color tmux"
 alias be='bundle exec'
 alias ctags="`brew --prefix`/bin/ctags"
-alias rtags='ctags -R --exclude=.git --exclude=log --exclude=coverage --exclude=tmp --exclude=vendor --exclude=doc --exclude=db --exclude=config --exclude=bin *'
+alias mtags='ctags -R --exclude=.git --exclude=log --exclude=coverage --exclude=tmp --exclude=vendor --exclude=doc --exclude=db --exclude=config --exclude=bin --exclude=node_modules *'
 alias curl='noglob curl'
 alias rake='noglob rake'
 alias tn='tmux new -s'
