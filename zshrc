@@ -36,6 +36,7 @@ alias curl='noglob curl'
 alias rake='noglob rake'
 alias tn='tmux new -s'
 alias ta='tmux attach -t'
+alias tl='tmux ls'
 
 ## RVM
 unsetopt auto_name_dirs
