@@ -44,3 +44,5 @@ if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/script
 
 ## Opts
 unsetopt extended_glob
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
