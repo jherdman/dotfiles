@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="james"
+export ZSH_THEME="mine"
 
 # We need to know this before oh-my-zsh goes to town
 

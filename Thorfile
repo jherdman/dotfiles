@@ -15,8 +15,12 @@ class Sys < Thor
     self.destination_root = ENV["HOME"]
 
     Dir['*'].each do |entry|
-      next if entry == File.basename(__FILE__)
-      create_link ".#{entry}", File.join(File.expand_path(File.dirname(__FILE__)), entry)
+      next if entry == File.basename(__FILE__) || entry == 'zsh-custom'
+      create_link ".#{entry}", entry
+    end
+
+    Dir['zsh-custom/*'].each do |entry|
+      create_link ".oh-my-zsh/custom/#{File.basename(entry)}", entry
     end
   end
 
