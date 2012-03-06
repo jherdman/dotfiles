@@ -5,9 +5,15 @@ class Sys < Thor
 
   desc "install", "Installs dotfiles on your system"
   def install
+    setup_zsh
     setup_symlinks
     setup_directories
     setup_git
+  end
+
+  desc "setup_zsh", "Clone ZSH"
+  def setup_zsh
+    `curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh`
   end
 
   desc "setup_symlinks", "Sets up required symlinks on your system"
