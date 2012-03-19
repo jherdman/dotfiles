@@ -42,8 +42,6 @@
 	editor = /usr/bin/vim
 [difftool]
 	prompt = false
-[diff]
-	tool = Kaleidoscope
 [push]
 	default = tracking
 [status]
