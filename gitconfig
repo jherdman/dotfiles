@@ -43,7 +43,7 @@
 [difftool]
 	prompt = false
 [push]
-	default = tracking
+	default = upstream
 [status]
 	submodulesummary = true
 [user]
