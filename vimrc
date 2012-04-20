@@ -22,6 +22,7 @@ Bundle 'jherdman/snipmate.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'devbox-dark-256'
 Bundle 'tpope/vim-cucumber'
+Bundle 'nono/vim-handlebars'
 
 " Required for Vundle
 filetype plugin indent on
