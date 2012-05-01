@@ -1,5 +1,6 @@
 .DS_Store
 *.swp
+*.swo
 tags
 .sublime-project
 .sublime-workspace
