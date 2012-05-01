@@ -23,6 +23,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'devbox-dark-256'
 Bundle 'tpope/vim-cucumber'
 Bundle 'nono/vim-handlebars'
+Bundle 'tpope/vim-fugitive'
 
 " Required for Vundle
 filetype plugin indent on
