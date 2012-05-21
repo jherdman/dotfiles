@@ -54,6 +54,7 @@ set smartcase                  " only when I'm using all lowercase search terms"
 set tags=tags                  " look in root of project, and work your way up
 set backupdir=~/.tmp
 set number
+set cursorline
 
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
