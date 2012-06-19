@@ -6,15 +6,11 @@
   pr = pull --rebase
   ci = commit -v
   rollback = reset --soft HEAD^
-  glog = log --graph --oneline --all
   st = status -s
   br = branch
-  who = shortlog -s --
-  edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
   unstage = reset HEAD
   su = submodule update
   sui = submodule update --init
-  sp = format-patch -1
 [merge]
 	tool = opendiff
 [color]
