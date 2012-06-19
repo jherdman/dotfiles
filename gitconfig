@@ -6,7 +6,7 @@
   pr = pull --rebase
   ci = commit -v
   rollback = reset --soft HEAD^
-  st = status -s
+  st = status -sb
   br = branch
   unstage = reset HEAD
   su = submodule update
