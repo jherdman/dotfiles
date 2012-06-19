@@ -11,6 +11,8 @@
   unstage = reset HEAD
   su = submodule update
   sui = submodule update --init
+  lol = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
 [merge]
 	tool = opendiff
 [color]
