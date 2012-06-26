@@ -33,3 +33,5 @@
 [user]
 	name = James Herdman
 	email = james.herdman@me.com
+[credential]
+	helper = osxkeychain
