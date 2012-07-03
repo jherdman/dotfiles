@@ -14,24 +14,24 @@
   lol = log --graph --decorate --oneline
   lola = log --graph --decorate --oneline --all
 [merge]
-	tool = opendiff
+  tool = opendiff
 [color]
-	ui = auto
+  ui = auto
 [mirror]
-	summary = true
+  summary = true
 [core]
-	autocrl = true
+  autocrl = true
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/james/.gitignore
-	editor = /usr/bin/vim
+  excludesfile = /Users/james/.gitignore
+  editor = /usr/bin/vim
 [difftool]
-	prompt = false
+  prompt = false
 [push]
-	default = upstream
+  default = upstream
 [status]
-	submodulesummary = true
+  submodulesummary = true
 [user]
-	name = James Herdman
-	email = james.herdman@me.com
+  name = James Herdman
+  email = james.herdman@me.com
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
