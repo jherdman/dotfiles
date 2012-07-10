@@ -59,23 +59,9 @@ set cursorline
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
 
-if &t_Co > 2 || has("gui_running")
-  syntax on
-endif
-
-" Color scheme
-if has("gui_running")
-  set background=dark
-  colorscheme solarized
-
-  set lines=48
-  set columns=85
-
-  " Hide the toolbar, but show tabs
-  set guioptions=egmrt
-else
-  colorscheme devbox-dark-256
-endif
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Disable ex mode
 map Q <Nop>
@@ -115,18 +101,6 @@ set showbreak=…
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
-
-" Softwrap mappings with command key
-vmap <D-j> gj
-vmap <D-k> gk
-vmap <D-4> g$
-vmap <D-6> g^
-vmap <D-0> g^
-nmap <D-j> gj
-nmap <D-k> gk
-nmap <D-4> g$
-nmap <D-6> g^
-nmap <D-0> g^
 
 " Splits
 "" Window
