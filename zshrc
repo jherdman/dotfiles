@@ -7,7 +7,7 @@ export ZSH_THEME="mine"
 
 # We need to know this before oh-my-zsh goes to town
 
-plugins=(vi-mode brew git-flow)
+plugins=(vi-mode brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -31,7 +31,6 @@ alias cuke=cucumber
 alias tmux='TERM=screen-256color-bce tmux'
 alias be='bundle exec'
 alias ctags="`brew --prefix`/bin/ctags"
-alias mtags='ctags -R --exclude=.git --exclude=log --exclude=coverage --exclude=tmp --exclude=vendor --exclude=doc --exclude=db --exclude=config --exclude=bin --exclude=node_modules *'
 alias curl='noglob curl'
 alias rake='noglob rake'
 alias tn='tmux new -s'
