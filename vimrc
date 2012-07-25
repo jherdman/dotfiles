@@ -24,6 +24,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-fugitive'
 Bundle 'sjl/badwolf'
+Bundle 'Gundo'
 
 " Required for Vundle
 filetype plugin indent on
