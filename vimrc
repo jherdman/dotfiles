@@ -11,7 +11,6 @@ Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'pangloss/vim-javascript'
 Bundle 'hallison/vim-markdown'
 Bundle 'tpope/vim-rails'
@@ -24,6 +23,7 @@ Bundle 'devbox-dark-256'
 Bundle 'tpope/vim-cucumber'
 Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-fugitive'
+Bundle 'sjl/badwolf'
 
 " Required for Vundle
 filetype plugin indent on
@@ -60,8 +60,9 @@ set cursorline
 nnoremap ; :
 
 syntax enable
+set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme badwolf
 
 " Disable ex mode
 map Q <Nop>
