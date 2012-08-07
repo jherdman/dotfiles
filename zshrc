@@ -14,7 +14,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 export LC_CTYPE="en_US.UTF-8"
-export LD_LIBRARY_PATH=/usr/local/lib
 export PAGER=less
 export ACK_PAGER_COLOR='less -R'
 export EDITOR=vim
@@ -43,5 +42,8 @@ if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/script
 
 ## Opts
 unsetopt extended_glob
+
+## zmv util
+autoload -U zmv
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
