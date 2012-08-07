@@ -19,12 +19,12 @@ Bundle 'kana/vim-smartinput'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jherdman/snipmate.vim'
 Bundle 'majutsushi/tagbar'
-Bundle 'devbox-dark-256'
 Bundle 'tpope/vim-cucumber'
 Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-fugitive'
 Bundle 'sjl/badwolf'
 Bundle 'Gundo'
+Bundle 'groenewege/vim-less'
 
 " Required for Vundle
 filetype plugin indent on
@@ -127,9 +127,6 @@ nmap <silent> <leader>/ :let @/=""<CR>
 " http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-" Toggle comments
-map <D-/> <plug>NERDCommenterToggle
-
 " Tabularize settings
 
 nmap <Leader>a= :Tabularize /=<CR>
@@ -152,7 +149,7 @@ function! s:align()
 endfunction
 
 " Treat Thor files like Ruby
-au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl} set ft=ruby
+au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=ruby
 
 " Tagbar
 let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
