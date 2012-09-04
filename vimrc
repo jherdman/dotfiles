@@ -24,7 +24,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-liquid'
 Bundle 'sjl/badwolf'
 Bundle 'Gundo'
-Bundle 'groenewege/vim-less'
+Bundle 'vim-less'
 
 " Required for Vundle
 filetype plugin indent on
