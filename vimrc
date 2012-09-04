@@ -101,38 +101,12 @@ command! -nargs=* Wrap set wrap linebreak nolist
 
 set showbreak=…
 
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
-" Splits
-"" Window
-nmap <leader>sw<left>  :topleft  vnew<CR>
-nmap <leader>sw<right> :botright vnew<CR>
-nmap <leader>sw<up>    :topleft  new<CR>
-nmap <leader>sw<down>  :botright new<CR>
-
-"" Buffer
-nmap <leader>s<left>  :leftabove  vnew<CR>
-nmap <leader>s<right> :rightbelow vnew<CR>
-nmap <leader>s<up>    :leftabove  new<CR>
-nmap <leader>s<down>  :rightbelow new<CR>
-
-" Open a method def via Ctags in a vertical split
-map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
 " Clear search buffer
 nmap <silent> <leader>/ :let @/=""<CR>
 
 " Find and replace text under cursor
 " http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-
-" Tabularize settings
-
-nmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:\zs<CR>
-vmap <Leader>a: :Tabularize /:\zs<CR>
 
 " NERDTree convenience
 map <F2> :NERDTreeToggle<CR>
