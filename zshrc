@@ -18,7 +18,7 @@ export PAGER=less
 export ACK_PAGER_COLOR='less -R'
 export EDITOR=vim
 
-export PATH="/usr/local/bin:/usr/local/share/npm/bin:/Users/james/.lein/bin:/Users/james/Library/Haskell/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/share/npm/bin:/Users/james/.lein/bin:/usr/local/sbin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 ## Aliases
