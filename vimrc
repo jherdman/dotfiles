@@ -19,9 +19,9 @@ Bundle 'majutsushi/tagbar'
 Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-liquid'
-Bundle 'sjl/badwolf'
 Bundle 'Gundo'
 Bundle 'vim-less'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " Required for Vundle
 filetype plugin indent on
@@ -60,7 +60,7 @@ nnoremap ; :
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme badwolf
+colorscheme Tomorrow-Night-Bright
 
 " Disable ex mode
 map Q <Nop>
