@@ -35,3 +35,5 @@
   email = james.herdman@me.com
 [credential]
   helper = osxkeychain
+[grep]
+	lineNumber = true
