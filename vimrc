@@ -125,3 +125,10 @@ au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=rub
 " Tagbar
 let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
 map <F3> :TagbarToggle<CR>
+
+" Relative line numbers
+set rnu
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+au FocusLost * :set nu
+au FocusGained * :set rnu
