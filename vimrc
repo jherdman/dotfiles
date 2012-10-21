@@ -128,6 +128,10 @@ map <F3> :TagbarToggle<CR>
 
 " Relative line numbers
 set rnu
+au BufEnter * :set rnu
+au BufLeave * :set nu
+au WinEnter * :set rnu
+au WinLeave * :set nu
 au InsertEnter * :set nu
 au InsertLeave * :set rnu
 au FocusLost * :set nu
