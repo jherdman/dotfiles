@@ -24,7 +24,6 @@ export NODE_PATH="/usr/local/lib/node_modules"
 ## Aliases
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
 alias ls="ls -G"
-alias vim='vim -p'
 alias cuke=cucumber
 alias tmux='TERM=screen-256color-bce tmux'
 alias be='bundle exec'
