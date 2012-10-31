@@ -71,14 +71,6 @@ colorscheme Tomorrow-Night-Bright
 " Disable ex mode
 map Q <Nop>
 
-" Configurations that are system sensitive
-if has("win32")
-  map <C-T> <Esc>:tabnew<CR>
-  set guifont=Consolas:h12:cANSI
-else
-  set guifont=Menlo:h16
-endif
-
 " Always use UNIX format
 set fileformats=unix,dos
 
