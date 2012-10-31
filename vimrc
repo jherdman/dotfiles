@@ -34,9 +34,9 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Other basic settings
 
-set nocompatible
-set ruler
-set showcmd
+set nocompatible               " Use Vim settings, not Vi
+set ruler                      " show cursor position all of the time
+set showcmd                    " display incomplete commands
 set spell
 set nowrap
 set smarttab
@@ -44,11 +44,11 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set backspace=eol,start,indent " backspacing over everything in insert mode"
-set hlsearch                   " highlight search terms"
-set incsearch                  " show search mates as you type"
+set backspace=eol,start,indent " backspacing over everything in insert mode
+set hlsearch                   " highlight search terms
+set incsearch                  " show search mates as you type
 set ignorecase                 " ignore case when searching, but...
-set smartcase                  " only when I'm using all lowercase search terms"
+set smartcase                  " only when I'm using all lowercase search terms
 set tags=tags                  " look in root of project, and work your way up
 set backupdir=~/.tmp
 set number
