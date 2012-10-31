@@ -50,9 +50,10 @@ set incsearch                  " show search mates as you type
 set ignorecase                 " ignore case when searching, but...
 set smartcase                  " only when I'm using all lowercase search terms
 set tags=tags                  " look in root of project, and work your way up
-set backupdir=~/.tmp
 set number
 set cursorline
+set nobackup
+set noswapfile
 
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
