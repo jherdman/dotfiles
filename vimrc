@@ -58,7 +58,12 @@ set noswapfile
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
 
-syntax enable
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+endif
+
 set t_Co=256
 set background=dark
 colorscheme Tomorrow-Night-Bright
