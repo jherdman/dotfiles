@@ -9,7 +9,6 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle 'markabe/bufexplorer'
 Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-rails'
@@ -108,6 +107,17 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " NERDTree convenience
 map <F2> :NERDTreeToggle<CR>
+
+" Tab completion
+set wildmode=list:longest,list:full
+set complete=.,w,t
+imap <Tab> <C-P>
+
+" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
+let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+
+" Index ctags from any project, including those outside Rails
+map <Leader>ct :!ctags -R .<CR>
 
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
