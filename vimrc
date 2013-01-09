@@ -54,6 +54,7 @@ set number
 set cursorline
 set nobackup
 set noswapfile
+set clipboard=unnamed          " Vim behaves with clipboard now
 
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
