@@ -22,6 +22,7 @@ Bundle 'Gundo'
 Bundle 'vim-less'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-unimpaired'
 
 " Required for Vundle
 filetype plugin indent on
