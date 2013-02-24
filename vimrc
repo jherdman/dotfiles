@@ -14,7 +14,6 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-markdown'
 Bundle 'kana/vim-smartinput'
-Bundle 'majutsushi/tagbar'
 Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-liquid'
@@ -133,9 +132,6 @@ endfunction
 " Treat Thor files like Ruby
 au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=ruby
 
-" Tagbar
-let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
-map <F3> :TagbarToggle<CR>
 
 " Relative line numbers
 set rnu
