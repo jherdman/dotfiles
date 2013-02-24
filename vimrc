@@ -20,6 +20,7 @@ Bundle 'tpope/vim-liquid'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'Lokaltog/vim-powerline'
 
 " Required for Vundle
 filetype plugin indent on
@@ -53,6 +54,7 @@ set cursorline
 set nobackup
 set noswapfile
 set clipboard=unnamed          " Vim behaves with clipboard now
+set laststatus=2               " For Powerline
 
 " Now you can do ";w" instead of ":w"
 nnoremap ; :
@@ -132,6 +134,8 @@ au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=rub
 
 " CTRL-P settings
 let g:ctrlp_extensions = ['tag']
+
+let g:Powerline_symbols = 'fancy'
 
 " Relative line numbers
 set rnu
