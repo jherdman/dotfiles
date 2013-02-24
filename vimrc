@@ -130,6 +130,8 @@ endfunction
 " Treat Thor files like Ruby
 au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=ruby
 
+" CTRL-P settings
+let g:ctrlp_extensions = ['tag']
 
 " Relative line numbers
 set rnu
