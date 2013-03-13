@@ -35,6 +35,7 @@ alias ta='tmux attach -t'
 alias tl='tmux ls'
 alias v='vagrant'
 alias rspec='nocorrect rspec'
+alias selenium='java -jar /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.30.0.jar -p 4444'
 
 ## RVM
 unsetopt auto_name_dirs
