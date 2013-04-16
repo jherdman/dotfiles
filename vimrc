@@ -13,7 +13,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-markdown'
-Bundle 'kana/vim-smartinput'
 Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-liquid'
@@ -21,6 +20,9 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-surround'
+Bundle 'groenewege/vim-less'
 
 " Required for Vundle
 filetype plugin indent on
