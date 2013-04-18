@@ -7,7 +7,7 @@ export ZSH_THEME="mine"
 
 # We need to know this before oh-my-zsh goes to town
 
-plugins=(vi-mode brew)
+plugins=(vi-mode brew safe-paste)
 
 source $ZSH/oh-my-zsh.sh
 
