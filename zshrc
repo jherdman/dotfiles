@@ -25,7 +25,6 @@ export NODE_PATH="/usr/local/lib/node_modules"
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
 alias ls="ls -G"
 alias cuke=cucumber
-alias tmux='TERM=screen-256color-bce tmux'
 alias be='bundle exec'
 alias ctags="`brew --prefix`/bin/ctags"
 alias curl='noglob curl'
