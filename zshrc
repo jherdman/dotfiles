@@ -26,7 +26,6 @@ alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
 alias ls="ls -G"
 alias cuke=cucumber
 alias be='bundle exec'
-alias ctags="`brew --prefix`/bin/ctags"
 alias curl='noglob curl'
 alias rake='noglob rake'
 alias tn='tmux new -s'
