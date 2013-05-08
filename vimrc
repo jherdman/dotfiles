@@ -23,6 +23,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'groenewege/vim-less'
+Bundle 'noprompt/vim-yardoc'
 
 " Required for Vundle
 filetype plugin indent on
