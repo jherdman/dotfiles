@@ -24,6 +24,8 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'groenewege/vim-less'
 Bundle 'noprompt/vim-yardoc'
+Bundle 'rson/vim-conque'
+Bundle 'skwp/vim-ruby-conque'
 
 " Required for Vundle
 filetype plugin indent on
@@ -146,3 +148,15 @@ au InsertEnter * :set nu
 au InsertLeave * :set rnu
 au FocusLost * :set nu
 au FocusGained * :set rnu
+
+" Conque shit
+nmap <silent> <Leader>rcrr :call RunRubyCurrentFileConque()<CR>
+nmap <silent> <Leader>rcss :call RunRspecCurrentFileConque()<CR>
+nmap <silent> <Leader>rcll :call RunRspecCurrentLineConque()<CR>
+nmap <silent> <Leader>rccc :call RunCucumberCurrentFileConque()<CR>
+nmap <silent> <Leader>rccl :call RunCucumberCurrentLineConque()<CR>
+nmap <silent> <Leader>rcRR :call RunRakeConque()<CR>
+nmap <silent> <Leader>rcrl :call RunLastConqueCommand()<CR>
+
+nnoremap <silent> <C-s> :call RelatedSpecVOpen()<CR>
+nnoremap <silent> ,<C-s> :call RelatedSpecOpen()<CR>

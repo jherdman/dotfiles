@@ -23,7 +23,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 ## Aliases
 alias ri='RI="${RI} -f ansi" LESS="${LESS} -f -R" ri'
 alias ls="ls -G"
-alias cuke=cucumber
+alias cuke='cucumber'
 alias be='bundle exec'
 alias curl='noglob curl'
 alias rake='noglob rake'
