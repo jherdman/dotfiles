@@ -15,7 +15,6 @@ source $ZSH/oh-my-zsh.sh
 
 export LC_CTYPE="en_US.UTF-8"
 export PAGER=less
-export ACK_PAGER_COLOR='less -R'
 export EDITOR=vim
 
 export PATH="/usr/local/bin:/usr/local/share/npm/bin:/Users/james/.lein/bin:/usr/local/sbin:$PATH"
