@@ -24,6 +24,8 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'groenewege/vim-less'
 Bundle 'noprompt/vim-yardoc'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
 Bundle 'slim-template/vim-slim'
 
 " Required for Vundle
@@ -151,3 +153,5 @@ au InsertLeave * :set rnu
 au FocusLost * :set nu
 au FocusGained * :set rnu
 
+" Search up in Dash
+nmap <silent> <leader>d <Plug>DashSearch
