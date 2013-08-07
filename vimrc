@@ -24,6 +24,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'groenewege/vim-less'
 Bundle 'noprompt/vim-yardoc'
+Bundle 'slim-template/vim-slim'
 
 " Required for Vundle
 filetype plugin indent on
@@ -130,6 +131,9 @@ endfunction
 
 " Treat Thor files like Ruby
 au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=ruby
+
+" Emblem, it's like Slim but for Ember
+autocmd BufNewFile,BufRead *.emblem set syntax=slim
 
 " CTRL-P settings
 let g:ctrlp_extensions = ['tag']
