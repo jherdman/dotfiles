@@ -107,8 +107,9 @@ nmap <silent> <leader>/ :let @/=""<CR>
 " http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-" NERDTree convenience
+" NERDTree conveniences
 map <F2> :NERDTreeToggle<CR>
+map <leader>nb :NERDTreeFromBookmark 
 
 " Tab completion
 set wildmode=list:longest,list:full
