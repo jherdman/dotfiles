@@ -28,6 +28,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'slim-template/vim-slim'
+Bundle 'goatslacker/mango.vim'
 
 " Required for Vundle
 filetype plugin indent on
@@ -70,7 +71,7 @@ endif
 
 set t_Co=256
 set background=dark
-colorscheme Tomorrow-Night-Bright
+colorscheme mango
 
 " Disable ex mode
 map Q <Nop>
