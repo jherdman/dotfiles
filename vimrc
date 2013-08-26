@@ -71,7 +71,7 @@ endif
 
 set t_Co=256
 set background=dark
-colorscheme mango
+colorscheme Tomorrow-Night-Bright
 
 " Disable ex mode
 map Q <Nop>
