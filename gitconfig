@@ -27,7 +27,7 @@
 [difftool]
   prompt = false
 [push]
-  default = upstream
+  default = simple
 [status]
   submodulesummary = true
 [user]
