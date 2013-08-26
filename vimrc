@@ -157,3 +157,6 @@ au FocusGained * :set rnu
 
 " Search up in Dash
 nmap <silent> <leader>d <Plug>DashSearch
+
+" Additional auto complete keywords
+set iskeyword+=-
