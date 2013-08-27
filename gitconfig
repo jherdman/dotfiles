@@ -15,8 +15,6 @@
   lola = log --graph --decorate --oneline --all
 [merge]
   tool = opendiff
-[color]
-  ui = auto
 [mirror]
   summary = true
 [core]
