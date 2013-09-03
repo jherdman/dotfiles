@@ -29,6 +29,7 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'goatslacker/mango.vim'
+Bundle 'othree/html5.vim'
 
 " Required for Vundle
 filetype plugin indent on
