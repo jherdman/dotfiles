@@ -28,7 +28,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'slim-template/vim-slim'
-Bundle 'goatslacker/mango.vim'
+Bundle 'nanotech/jellybeans.vim'
 Bundle 'othree/html5.vim'
 
 " Required for Vundle
@@ -72,7 +72,7 @@ endif
 
 set t_Co=256
 set background=dark
-colorscheme Tomorrow-Night-Bright
+colorscheme jellybeans
 
 " Disable ex mode
 map Q <Nop>
