@@ -147,15 +147,15 @@ let g:ctrlp_extensions = ['tag']
 let g:Powerline_symbols = 'fancy'
 
 " Relative line numbers
-set rnu
-au BufEnter * :set rnu
-au BufLeave * :set nu
-au WinEnter * :set rnu
-au WinLeave * :set nu
-au InsertEnter * :set nu
-au InsertLeave * :set rnu
-au FocusLost * :set nu
-au FocusGained * :set rnu
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nmap <silent> <Leader>n :call NumberToggle()<CR>
 
 " Search up in Dash
 nmap <silent> <leader>d <Plug>DashSearch
