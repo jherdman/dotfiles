@@ -30,6 +30,7 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'othree/html5.vim'
+Bundle 'jnwhiteh/vim-golang'
 
 " Required for Vundle
 filetype plugin indent on
