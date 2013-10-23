@@ -3,7 +3,7 @@
 
 [alias]
   co = checkout
-  pr = pull --rebase
+  pr = pull --rebase --prune
   ci = commit -v
   rollback = reset --soft HEAD^
   st = status -sb
