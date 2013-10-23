@@ -14,7 +14,7 @@
   lol = log --graph --decorate --oneline
   lola = log --graph --decorate --oneline --all
 [merge]
-  tool = opendiff
+  tool = vimdiff
 [mirror]
   summary = true
 [core]
