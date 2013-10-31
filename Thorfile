@@ -7,7 +7,6 @@ class Sys < Thor
   def install
     setup_zsh
     setup_symlinks
-    copy_zsh_custom
     setup_directories
     setup_git
   end
@@ -24,18 +23,6 @@ class Sys < Thor
     Dir['*'].each do |entry|
       next if entry == File.basename(__FILE__) || entry == 'zsh-custom'
       create_link ".#{entry}", entry
-    end
-  end
-
-  desc "copy_zsh_custom", "Copies custom ZSH scripts into their home"
-  def copy_zsh_custom
-    # Can't seem to symlink all of these yet... Good thing they change so infrequently
-    require 'fileutils'
-
-    dest = "#{ENV['HOME']}/.oh-my-zsh/custom"
-
-    Dir['./zsh-custom/*'].each do |entry|
-      FileUtils.cp File.expand_path(entry), File.join(dest, File.basename(entry)), verbose: true
     end
   end
 
