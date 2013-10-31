@@ -14,7 +14,7 @@
   lol = log --graph --decorate --oneline
   lola = log --graph --decorate --oneline --all
 [merge]
-  tool = vimdiff
+  tool = opendiff
 [mirror]
   summary = true
 [core]
@@ -38,3 +38,5 @@
 [github]
 	user = jherdman
 	token = 8370bd5f002a6f2865fc19db8489068509eb6f80
+[color]
+	ui = auto
