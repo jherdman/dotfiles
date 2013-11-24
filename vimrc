@@ -13,7 +13,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-markdown'
-Bundle 'nono/vim-handlebars'
+Bundle 'mustache/vim-mode'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-liquid'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
@@ -162,3 +162,10 @@ nmap <silent> <leader>d <Plug>DashSearch
 
 " Additional auto complete keywords
 set iskeyword+=-
+
+" Mustache/Handlebars abbreviations
+let g:mustache_abbreviations = 1
+
+if has("autocmd")
+  au  BufNewFile,BufRead *.{mustache,handlebars,hbs,hogan,hulk,hjs}{,.erb} set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
+endif
