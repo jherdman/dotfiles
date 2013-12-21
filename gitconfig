@@ -35,8 +35,5 @@
   helper = osxkeychain
 [grep]
 	lineNumber = true
-[github]
-	user = jherdman
-	token = 8370bd5f002a6f2865fc19db8489068509eb6f80
 [color]
 	ui = auto
