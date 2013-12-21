@@ -28,6 +28,8 @@ Bundle 'slim-template/vim-slim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'othree/html5.vim'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'wting/rust.vim'
+Bundle 'elixir-lang/vim-elixir'
 
 " Required for Vundle
 filetype plugin indent on
