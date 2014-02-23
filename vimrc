@@ -68,9 +68,6 @@ set noswapfile
 set clipboard=unnamed          " Vim behaves with clipboard now
 set laststatus=2               " For Powerline
 
-" Now you can do ";w" instead of ":w"
-nnoremap ; :
-
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
