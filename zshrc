@@ -28,6 +28,7 @@ alias ta='tmux attach -t'
 alias tl='tmux ls'
 alias v='vagrant'
 alias vbox-restart='/Library/StartupItems/VirtualBox/VirtualBox restart'
+alias node="node --harmony"
 
 ## RVM
 unsetopt auto_name_dirs
