@@ -1,35 +1,42 @@
-set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle/
+end
 
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim.git'
-Bundle 'markabe/bufexplorer'
-Bundle 'edsono/vim-matchit'
-Bundle 'scrooloose/nerdtree'
-Bundle 'godlygeek/tabular'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-markdown'
-Bundle 'mustache/vim-mode'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-liquid'
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-surround'
-Bundle 'groenewege/vim-less'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'slim-template/vim-slim'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'othree/html5.vim'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'wting/rust.vim'
-Bundle 'elixir-lang/vim-elixir'
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'kien/ctrlp.vim.git'
+NeoBundle 'markabe/bufexplorer'
+NeoBundle 'edsono/vim-matchit'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'mustache/vim-mode'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-liquid'
+NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'walm/jshint.vim'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'tpope/vim-classpath'
+
+NeoBundleCheck
 
 " Required for Vundle
 filetype plugin indent on
