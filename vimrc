@@ -1,42 +1,39 @@
+set nocompatible
 filetype off
 
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle/
-end
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+Plugin 'gmarik/vundle'
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'markabe/bufexplorer'
+Plugin 'edsono/vim-matchit'
+Plugin 'scrooloose/nerdtree'
+Plugin 'godlygeek/tabular'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-markdown'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-liquid'
+Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-surround'
+Plugin 'groenewege/vim-less'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'othree/html5.vim'
+Plugin 'walm/jshint.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-classpath'
+Plugin 'airblade/vim-gitgutter'
 
-NeoBundle 'kien/ctrlp.vim.git'
-NeoBundle 'markabe/bufexplorer'
-NeoBundle 'edsono/vim-matchit'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'mustache/vim-mode'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-liquid'
-NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'Lokaltog/vim-powerline'
-NeoBundle 'tpope/vim-cucumber'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'walm/jshint.vim'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'tpope/vim-classpath'
-
-NeoBundleCheck
+" Plugin 'MattesGroeger/vim-bookmarks'
 
 " Required for Vundle
 filetype plugin indent on
@@ -66,7 +63,9 @@ set cursorline
 set nobackup
 set noswapfile
 set clipboard=unnamed          " Vim behaves with clipboard now
-set laststatus=2               " For Powerline
+set laststatus=2               " For Airline
+
+let g:airline_powerline_fonts = 1
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -117,15 +116,12 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 map <F2> :NERDTreeToggle<CR>
 map <leader>nb :NERDTreeFromBookmark 
 
+" Git Gutter conveniences
+map <leader>g :GitGutterToggle<CR>
+
 " Tab completion
 set wildmode=list:longest,list:full
 set complete=.,w,t
-
-" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
-" Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
 
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
@@ -141,27 +137,8 @@ endfunction
 " Treat Thor files like Ruby
 au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=ruby
 
-" Emblem, it's like Slim but for Ember
-autocmd BufNewFile,BufRead *.emblem set syntax=slim
-
 " CTRL-P settings
-let g:ctrlp_extensions = ['tag']
-
-let g:Powerline_symbols = 'fancy'
-
-" Relative line numbers
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-
-nmap <silent> <Leader>n :call NumberToggle()<CR>
-
-" Search up in Dash
-nmap <silent> <leader>d <Plug>DashSearch
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " Additional auto complete keywords
 set iskeyword+=-
