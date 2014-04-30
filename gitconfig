@@ -31,5 +31,6 @@
   helper = osxkeychain
 [grep]
 	lineNumber = true
+	extendRegexp = true
 [color]
 	ui = auto
