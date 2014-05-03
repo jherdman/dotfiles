@@ -6,3 +6,4 @@ vimprojects
 vim/bundle
 *.o
 *.log
+zprofile
