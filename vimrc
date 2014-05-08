@@ -152,3 +152,11 @@ let g:mustache_abbreviations = 1
 if has("autocmd")
   au  BufNewFile,BufRead *.{mustache,handlebars,hbs,hogan,hulk,hjs}{,.erb} set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 endif
+
+" Folds
+set foldenable          " enable folding
+set foldlevelstart=10   " open most folds by default
+set foldnestmax=10      " 10 nested fold max
+
+" space opens/closes folds
+nnoremap <space> za
