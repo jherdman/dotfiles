@@ -6,7 +6,7 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 
-Plugin 'kien/ctrlp.vim.git'
+Plugin 'kien/ctrlp.vim'
 Plugin 'markabe/bufexplorer'
 Plugin 'edsono/vim-matchit'
 Plugin 'scrooloose/nerdtree'
