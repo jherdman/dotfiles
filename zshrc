@@ -7,7 +7,7 @@ export ZSH_THEME="kolo"
 
 # We need to know this before oh-my-zsh goes to town
 
-plugins=(vi-mode brew)
+plugins=(brew colored-man)
 
 source $ZSH/oh-my-zsh.sh
 
