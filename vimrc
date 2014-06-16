@@ -18,7 +18,6 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-liquid'
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-cucumber'
@@ -31,9 +30,6 @@ Plugin 'walm/jshint.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-classpath'
-Plugin 'airblade/vim-gitgutter'
-
-" Plugin 'MattesGroeger/vim-bookmarks'
 
 " Required for Vundle
 filetype plugin indent on
@@ -57,7 +53,6 @@ set hlsearch                   " highlight search terms
 set incsearch                  " show search mates as you type
 set ignorecase                 " ignore case when searching, but...
 set smartcase                  " only when I'm using all lowercase search terms
-set tags=tags                  " look in root of project, and work your way up
 set number
 set cursorline
 set nobackup
@@ -115,9 +110,6 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 " NERDTree conveniences
 map <F2> :NERDTreeToggle<CR>
 map <leader>nb :NERDTreeFromBookmark 
-
-" Git Gutter conveniences
-map <leader>g :GitGutterToggle<CR>
 
 " Tab completion
 set wildmode=list:longest,list:full
