@@ -29,10 +29,6 @@ alias tl='tmux ls'
 alias v='vagrant'
 alias node="node --harmony"
 
-## RVM
-unsetopt auto_name_dirs
-if [[ -s /Users/james/.rvm/scripts/rvm ]] ; then source /Users/james/.rvm/scripts/rvm ; fi
-
 ## Opts
 unsetopt extended_glob
 
