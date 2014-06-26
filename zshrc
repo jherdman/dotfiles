@@ -32,9 +32,6 @@ alias node="node --harmony"
 ## Opts
 unsetopt extended_glob
 
-## zmv util
-autoload -U zmv
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 bindkey "^R" history-incremental-search-backward
