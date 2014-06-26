@@ -27,7 +27,6 @@ alias tn='tmux new -s'
 alias ta='tmux attach -t'
 alias tl='tmux ls'
 alias v='vagrant'
-alias vbox-restart='/Library/StartupItems/VirtualBox/VirtualBox restart'
 alias node="node --harmony"
 
 ## RVM
