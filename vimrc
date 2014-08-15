@@ -30,6 +30,7 @@ Plugin 'walm/jshint.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-classpath'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Required for Vundle
 filetype plugin indent on
@@ -45,8 +46,8 @@ set spell
 set nowrap
 set smarttab
 set autoindent
-set tabstop=2
-set shiftwidth=2
+"set tabstop=2
+"set shiftwidth=2
 set expandtab
 set backspace=eol,start,indent " backspacing over everything in insert mode
 set hlsearch                   " highlight search terms
