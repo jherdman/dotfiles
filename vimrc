@@ -109,7 +109,7 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " NERDTree conveniences
 map <F2> :NERDTreeToggle<CR>
-map <leader>nb :NERDTreeFromBookmark 
+nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 
 " Tab completion
 set wildmode=list:longest,list:full
