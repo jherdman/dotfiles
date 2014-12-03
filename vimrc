@@ -1,10 +1,10 @@
 set nocompatible
 filetype off
 
-set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'markabe/bufexplorer'
@@ -32,6 +32,8 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-classpath'
 Plugin 'editorconfig/editorconfig-vim'
 
+call vundle#end()
+
 " Required for Vundle
 filetype plugin indent on
 
@@ -46,8 +48,8 @@ set spell
 set nowrap
 set smarttab
 set autoindent
-"set tabstop=2
-"set shiftwidth=2
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set backspace=eol,start,indent " backspacing over everything in insert mode
 set hlsearch                   " highlight search terms
