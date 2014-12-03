@@ -17,7 +17,6 @@ Plugin 'tpope/vim-markdown'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-liquid'
-Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'tpope/vim-unimpaired'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-cucumber'
@@ -30,6 +29,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-classpath'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 call vundle#end()
 
@@ -71,8 +71,7 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
 endif
 
 set t_Co=256
-set background=dark
-colorscheme jellybeans
+colorscheme dracula
 
 " Disable ex mode
 map Q <Nop>
