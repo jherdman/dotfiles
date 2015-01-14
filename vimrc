@@ -22,13 +22,12 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-cucumber'
 Plugin 'tpope/vim-surround'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-fireplace'
+Plugin 'chriskempson/base16-vim'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-classpath'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 call vundle#end()
 
@@ -63,14 +62,12 @@ set laststatus=2               " For Airline
 
 let g:airline_powerline_fonts = 1
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-endif
-
 set t_Co=256
-colorscheme dracula
+let base16colorspace=256
+set background=dark
+colorscheme base16-ocean
+
+syntax on
 
 " Disable ex mode
 map Q <Nop>
