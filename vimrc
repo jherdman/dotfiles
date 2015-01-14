@@ -28,7 +28,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'guns/vim-sexp'
 "Plugin 'amdt/vim-niji'
 Plugin 'guns/vim-clojure-static'
-Plugin 'editorconfig/editorconfig-vim'
 Plugin 'guns/vim-clojure-highlight'
 
 call vundle#end()
