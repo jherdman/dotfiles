@@ -25,9 +25,11 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'chriskempson/base16-vim'
+Plugin 'guns/vim-sexp'
+"Plugin 'amdt/vim-niji'
 Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-classpath'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'guns/vim-clojure-highlight'
 
 call vundle#end()
 
