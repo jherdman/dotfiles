@@ -59,6 +59,7 @@ set nobackup
 set noswapfile
 set clipboard=unnamed          " Vim behaves with clipboard now
 set laststatus=2               " For Airline
+set ttyfast
 
 let g:airline_powerline_fonts = 1
 
