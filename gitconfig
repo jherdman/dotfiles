@@ -27,7 +27,7 @@
   submodulesummary = true
 [user]
   name = James Herdman
-  email = james.herdman@me.com
+	email = james.herdman@gmail.com
 [credential]
   helper = osxkeychain
 [grep]
@@ -36,5 +36,6 @@
 [color]
 	ui = auto
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
