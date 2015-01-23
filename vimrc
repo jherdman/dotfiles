@@ -1,38 +1,37 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'markabe/bufexplorer'
+Plug 'edsono/vim-matchit'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'godlygeek/tabular'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-markdown'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-liquid'
+Plug 'tpope/vim-unimpaired'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-surround'
+Plug 'kchmck/vim-coffee-script'
+Plug 'othree/html5.vim'
 
-Plugin 'kien/ctrlp.vim'
-Plugin 'markabe/bufexplorer'
-Plugin 'edsono/vim-matchit'
-Plugin 'scrooloose/nerdtree'
-Plugin 'godlygeek/tabular'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-markdown'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-liquid'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-surround'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'othree/html5.vim'
-Plugin 'tpope/vim-fireplace'
-Plugin 'chriskempson/base16-vim'
-Plugin 'guns/vim-sexp'
-"Plugin 'amdt/vim-niji'
-Plugin 'guns/vim-clojure-static'
-Plugin 'guns/vim-clojure-highlight'
+" Clojure Plugins
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure' }
+Plug 'guns/vim-sexp', { 'for': 'clojure' }
+Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 
-call vundle#end()
+call plug#end()
 
-" Required for Vundle
 filetype plugin indent on
 
 let mapleader=","
