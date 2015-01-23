@@ -151,3 +151,9 @@ set foldnestmax=10      " 10 nested fold max
 
 " space opens/closes folds
 nnoremap <space> za
+
+" Rainbows
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
