@@ -9,6 +9,7 @@
   st = status -sb
   br = branch
   unstage = reset HEAD
+  sui = submodule update --init
 [merge]
   tool = opendiff
 [mirror]
