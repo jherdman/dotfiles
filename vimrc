@@ -7,7 +7,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'markabe/bufexplorer'
 Plug 'edsono/vim-matchit'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'
