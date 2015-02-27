@@ -23,12 +23,12 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'othree/html5.vim'
 
 " Clojure Plugins
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
+Plug 'eapache/rainbow_parentheses.vim'
 
 call plug#end()
 
