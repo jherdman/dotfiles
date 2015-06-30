@@ -10,8 +10,6 @@
   br = branch
   unstage = reset HEAD
   sui = submodule update --init
-[merge]
-  tool = opendiff
 [mirror]
   summary = true
 [core]
@@ -21,7 +19,7 @@
   editor = /usr/bin/vim
 	trustctime = false
 [difftool]
-  prompt = false
+	prompt = false
 [push]
   default = simple
 [status]
@@ -37,6 +35,15 @@
 [color]
 	ui = auto
 [filter "media"]
+	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[diff]
+	tool = opendiff
+[mergetool]
+	prompt = false
+	keepBackup = false
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
 	required = true
