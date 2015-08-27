@@ -21,6 +21,7 @@ Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-surround'
 Plug 'kchmck/vim-coffee-script'
 Plug 'othree/html5.vim'
+Plug 'walm/jshint.vim'
 
 " Clojure Plugins
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
@@ -107,6 +108,9 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 " NERDTree conveniences
 map <F2> :NERDTreeToggle<CR>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
+
+" JSHint
+nnoremap <leader>js :JSHint<CR>
 
 " Tab completion
 set wildmode=list:longest,list:full
