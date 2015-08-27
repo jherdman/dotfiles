@@ -155,6 +155,9 @@ set foldnestmax=10      " 10 nested fold max
 " space opens/closes folds
 nnoremap <space> za
 
+" Git conveniences
+map <leader>g :Git<Space>
+
 " Rainbows
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
