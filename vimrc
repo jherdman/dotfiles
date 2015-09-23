@@ -9,19 +9,26 @@ Plug 'markabe/bufexplorer'
 Plug 'edsono/vim-matchit'
 Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-markdown'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
 Plug 'tpope/vim-unimpaired'
 Plug 'bling/vim-airline'
-Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-surround'
 Plug 'kchmck/vim-coffee-script'
 Plug 'othree/html5.vim'
-Plug 'walm/jshint.vim'
+
+" Elixir Plugins
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+
+" Ruby Plugins
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-cucumber'
+
+" JavaScript Plugins
+Plug 'walm/jshint.vim', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 
 " Clojure Plugins
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
