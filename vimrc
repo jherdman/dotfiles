@@ -4,7 +4,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'markabe/bufexplorer'
 Plug 'edsono/vim-matchit'
 Plug 'scrooloose/nerdtree'
