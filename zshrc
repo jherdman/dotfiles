@@ -31,6 +31,9 @@ alias node="node --harmony"
 alias peek='sips -g pixelWidth -g pixelHeight -g format'
 alias mt='file --mime-type -b'
 alias vim='nvim'
+alias nom="rm -rf node_modules && npm cache clear && npm i"
+alias bom="rm -rf bower_components && bower cache clean && bower install"
+alias nombom="nom && bom"
 
 ## Opts
 unsetopt extended_glob
