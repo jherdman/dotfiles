@@ -22,3 +22,15 @@ ln -s .vim $CONFIG_DIR/nvim
 ln -s .vimrc $CONFIG_DIR/nvim/init.vim
 
 #curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+unamestr = `uname`
+
+if [[ "$unamestr" == 'Darwin' ]]; then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install neovim/neovim/neovim
+elif [[ "$unamestr" == 'Linux' ]]; then
+  sudo apt-get install software-properties-common
+  sudo add-apt-repository ppa:neovim-ppa/unstable
+  sudo apt-get update
+  sudo apt-get install neovim
+fi
