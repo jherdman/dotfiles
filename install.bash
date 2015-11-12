@@ -32,7 +32,7 @@ elif [[ $UNAMESTR == 'Linux' ]]; then
   sudo add-apt-repository ppa:neovim-ppa/unstable
   sudo add-apt-repository -y ppa:pi-rho/dev
   sudo apt-get update
-  sudo apt-get install neovim silversearcher-ag tmux-next
+  sudo apt-get install neovim silversearcher-ag tmux
 else
   echo "Unknown platform ${UNAMESTR}! Packages not installed."
 fi
