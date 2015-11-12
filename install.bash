@@ -35,3 +35,6 @@ elif [[ $UNAMESTR == 'Linux' ]]; then
 else
   echo "Unknown platform ${UNAMESTR}! Packages not installed."
 fi
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source ~/.tmux.conf
