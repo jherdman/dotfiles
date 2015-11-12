@@ -24,7 +24,7 @@ if [[ $UNAMESTR == 'Darwin' ]]; then
 
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install neovim/neovim/neovim
-  brew install tmux the_silver_searcher
+  brew install tmux the_silver_searcher tmux-pasteboard reattach-to-user-namespace
 elif [[ $UNAMESTR == 'Linux' ]]; then
   echo "Installing packages for Linux..."
 
