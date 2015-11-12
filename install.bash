@@ -19,13 +19,19 @@ done
 
 UNAMESTR=`uname`
 
-if [[ "UNAMESTR" == 'Darwin' ]]; then
+if [[ $UNAMESTR == 'Darwin' ]]; then
+  echo "Installing packages for OS X..."
+
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install neovim/neovim/neovim
   brew install tmux the_silver_searcher
-elif [[ "UNAMESTR" == 'Linux' ]]; then
+elif [[ $UNAMESTR == 'Linux' ]]; then
+  echo "Installing packages for Linux..."
+
   sudo apt-get install software-properties-common
   sudo add-apt-repository ppa:neovim-ppa/unstable
   sudo apt-get update
   sudo apt-get install neovim silversearcher-ag tmux
+else
+  echo "Unknown platform ${UNAMESTR}! Packages not installed."
 fi
