@@ -22,9 +22,10 @@ UNAMESTR=`uname`
 if [[ "UNAMESTR" == 'Darwin' ]]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install neovim/neovim/neovim
+  brew install tmux the_silver_searcher
 elif [[ "UNAMESTR" == 'Linux' ]]; then
   sudo apt-get install software-properties-common
   sudo add-apt-repository ppa:neovim-ppa/unstable
   sudo apt-get update
-  sudo apt-get install neovim
+  sudo apt-get install neovim silversearcher-ag tmux
 fi
