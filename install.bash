@@ -15,12 +15,6 @@ do
   fi
 done
 
-CONFIG_DIR="${HOME}/.config"
-
-mkdir -p $CONFIG_DIR/nvim
-ln -sf .vim $CONFIG_DIR/nvim
-ln -sf .vimrc $CONFIG_DIR/nvim/init.vim
-
 #curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 UNAMESTR=`uname`
