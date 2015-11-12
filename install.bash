@@ -12,6 +12,9 @@ do
   if [[ -f $file ]] && [[ $file != *"${THIS}" ]]; then
     bn=`basename $file`
     ln -sfv $file "${HOME}/.${bn}"
+  elif [[ -d $file ]] && [[ $file != *"${THIS}" ]]; then
+    bn=`basename $file`
+    ln -sfv $file "${HOME}/.${bn}"
   fi
 done
 
