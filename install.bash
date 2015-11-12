@@ -17,18 +17,18 @@ done
 
 CONFIG_DIR="${HOME}/.config"
 
-mkdir -p $CONFIG_DIR
+mkdir -p $CONFIG_DIR/nvim
 ln -s .vim $CONFIG_DIR/nvim
 ln -s .vimrc $CONFIG_DIR/nvim/init.vim
 
 #curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
-unamestr = `uname`
+UNAMESTR=`uname`
 
-if [[ "$unamestr" == 'Darwin' ]]; then
+if [[ "UNAMESTR" == 'Darwin' ]]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install neovim/neovim/neovim
-elif [[ "$unamestr" == 'Linux' ]]; then
+elif [[ "UNAMESTR" == 'Linux' ]]; then
   sudo apt-get install software-properties-common
   sudo add-apt-repository ppa:neovim-ppa/unstable
   sudo apt-get update
