@@ -11,7 +11,7 @@ for file in $DIR/*
 do
   if [[ -f $file ]] && [[ $file != *"${THIS}" ]]; then
     bn=`basename $file`
-    ln -sf $file "${HOME}/.${bn}"
+    ln -sfv $file "${HOME}/.${bn}"
   fi
 done
 
