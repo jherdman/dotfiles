@@ -17,7 +17,6 @@ export LC_CTYPE="en_US.UTF-8"
 export PAGER=less
 export EDITOR=vim
 
-export NODE_PATH="/usr/local/lib/node_modules"
 export PATH="/usr/local/bin:/usr/local/share/npm/bin:$HOME/.lein/bin:/usr/local/sbin:$PATH"
 
 alias ls="ls -G"
