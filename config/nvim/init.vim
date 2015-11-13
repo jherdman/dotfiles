@@ -65,7 +65,7 @@ set number
 set cursorline
 set nobackup
 set noswapfile
-set clipboard=unnamed          " Vim behaves with clipboard now
+set clipboard+=unnamedplus     " Always interact with the clipboard
 set laststatus=2               " For Airline
 
 let g:airline_powerline_fonts = 1
