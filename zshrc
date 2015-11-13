@@ -15,7 +15,7 @@ source $ZSH/oh-my-zsh.sh
 
 export LC_CTYPE="en_US.UTF-8"
 export PAGER=less
-export EDITOR=vim
+export EDITOR=nvim
 
 export PATH="/usr/local/bin:/usr/local/share/npm/bin:$HOME/.lein/bin:/usr/local/sbin:$PATH"
 
