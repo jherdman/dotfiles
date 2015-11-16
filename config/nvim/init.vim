@@ -16,7 +16,6 @@ Plug 'tpope/vim-liquid'
 Plug 'tpope/vim-unimpaired'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
-Plug 'kchmck/vim-coffee-script'
 Plug 'othree/html5.vim'
 
 " Elixir Plugins
@@ -37,6 +36,9 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'eapache/rainbow_parentheses.vim'
+
+" CoffeeScript... sigh
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
 
 call plug#end()
 
