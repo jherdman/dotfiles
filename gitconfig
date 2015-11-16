@@ -16,7 +16,7 @@
   autocrl = true
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesfile = /Users/james/.gitignore
-  editor = /usr/bin/vim
+	editor = nvim
 	trustctime = false
 [difftool]
 	prompt = false
