@@ -1,9 +1,4 @@
 .DS_Store
-vim/view/*
-vim/.netrwhist
-vim/spell
-vimprojects
-vim/bundle
 *.o
 *.log
-zprofile
+profile
