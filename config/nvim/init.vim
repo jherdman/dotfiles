@@ -4,7 +4,6 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'markabe/bufexplorer'
 Plug 'edsono/vim-matchit'
 Plug 'scrooloose/nerdtree'
@@ -140,19 +139,6 @@ endfunction
 
 " Treat Thor files like Ruby
 au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=ruby
-
-" CTRL-P settings
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-else
-  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-end
-
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_clear_cache_on_exit = 0 " preserve cache on exit -- should speed it up
 
 " Additional auto complete keywords
 set iskeyword+=-
