@@ -6,3 +6,5 @@ node_modules
 bower_components
 .gitignore
 .gitkeep
+tmp/
+dist/
