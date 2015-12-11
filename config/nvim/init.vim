@@ -17,6 +17,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'othree/html5.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Elixir Plugins
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
