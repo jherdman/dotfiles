@@ -17,7 +17,7 @@ export LC_CTYPE="en_US.UTF-8"
 export PAGER=less
 export EDITOR=nvim
 
-export NODE_PATH="/usr/local/lib/node_modules:$HOME/.npm-global"
+export NODE_PATH="/usr/local/lib/node_modules:$HOME/.npm-global:./node_modules/.bin"
 export PATH="/usr/local/bin:/usr/local/share/npm/bin:$HOME/.lein/bin:/usr/local/sbin:$PATH"
 
 alias ls="ls -G"
