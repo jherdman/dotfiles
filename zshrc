@@ -27,7 +27,6 @@ alias tn='tmux new -s'
 alias ta='tmux attach -t'
 alias tl='tmux ls'
 alias v='vagrant'
-alias node="node --harmony"
 alias peek='sips -g pixelWidth -g pixelHeight -g format'
 alias mt='file --mime-type -b'
 alias vim='nvim'
