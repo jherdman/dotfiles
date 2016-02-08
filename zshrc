@@ -7,7 +7,7 @@ export ZSH_THEME="kolo"
 
 # We need to know this before oh-my-zsh goes to town
 
-plugins=(brew colored-man)
+plugins=(brew colored-man tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -22,9 +22,6 @@ export PATH="/usr/local/bin:/usr/local/share/npm/bin:$HOME/.lein/bin:/usr/local/
 
 alias ls="ls -G"
 alias curl='noglob curl'
-alias tn='tmux new -s'
-alias ta='tmux attach -t'
-alias tl='tmux ls'
 alias v='vagrant'
 alias peek='sips -g pixelWidth -g pixelHeight -g format'
 alias mt='file --mime-type -b'
