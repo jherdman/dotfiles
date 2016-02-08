@@ -21,7 +21,6 @@ export NODE_PATH="/usr/local/lib/node_modules:$HOME/.npm-global"
 export PATH="/usr/local/bin:/usr/local/share/npm/bin:$HOME/.lein/bin:/usr/local/sbin:./node_modules/.bin:$HOME/.ansible-env/bin:$PATH"
 
 alias ls="ls -G"
-alias be='bundle exec'
 alias curl='noglob curl'
 alias tn='tmux new -s'
 alias ta='tmux attach -t'
