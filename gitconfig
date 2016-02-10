@@ -10,6 +10,7 @@
   br = branch
   unstage = reset HEAD
   sui = submodule update --init
+  undo-ammend = reset --soft HEAD@{1}
 [mirror]
   summary = true
 [core]
