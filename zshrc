@@ -18,7 +18,7 @@ export PAGER=less
 export EDITOR=nvim
 
 export NODE_PATH="/usr/local/lib/node_modules:$HOME/.npm-global"
-export PATH="/usr/local/bin:/usr/local/share/npm/bin:$HOME/.lein/bin:/usr/local/sbin:./node_modules/.bin:$HOME/.ansible-env/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/share/npm/bin:$HOME/.lein/bin:/usr/local/sbin:./node_modules/.bin:$HOME/.ansible-env/bin:$PATH:$HOME/.npm-global/bin"
 
 alias ls="ls -G"
 alias curl='noglob curl'
