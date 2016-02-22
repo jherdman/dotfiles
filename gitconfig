@@ -29,7 +29,7 @@
   name = James Herdman
 	email = james.herdman@gmail.com
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 [grep]
 	lineNumber = true
 	extendRegexp = true
