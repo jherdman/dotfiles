@@ -84,9 +84,6 @@ syntax on
 " Disable ex mode
 map Q <Nop>
 
-" Always use UNIX format
-set fileformats=unix,dos
-
 " Remove extra whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
