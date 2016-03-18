@@ -84,6 +84,9 @@ syntax on
 " Disable ex mode
 map Q <Nop>
 
+" Disable keyword lookup
+map K <Nop>
+
 " Remove extra whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
