@@ -31,14 +31,6 @@ Plug 'tpope/vim-cucumber'
 Plug 'walm/jshint.vim', { 'for': 'javascript' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 
-" Clojure Plugins
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'guns/vim-sexp', { 'for': 'clojure' }
-Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
-Plug 'eapache/rainbow_parentheses.vim'
-
 " CoffeeScript... sigh
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
 
