@@ -154,12 +154,6 @@ nnoremap <space> za
 " Git conveniences
 map <leader>g :Git<Space>
 
-" Rainbows
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
 " FZF shit
 "
 " Mapping selecting mappings
