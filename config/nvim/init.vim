@@ -17,8 +17,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'othree/html5.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 
 " Elixir Plugins
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
@@ -30,9 +28,6 @@ Plug 'tpope/vim-cucumber'
 " JavaScript Plugins
 Plug 'walm/jshint.vim', { 'for': 'javascript' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
-
-" CoffeeScript... sigh
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
 
 call plug#end()
 
