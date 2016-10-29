@@ -16,6 +16,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'othree/html5.vim'
+Plug 'tpope/vim-unimpaired'
 
 " Elixir Plugins
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
