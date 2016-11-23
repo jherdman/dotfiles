@@ -24,7 +24,7 @@ export EDITOR=nvim
 export NODE_PATH="/usr/local/lib/node_modules:$HOME/.npm-global"
 export PATH="/usr/local/bin:/usr/local/share/npm/bin:$HOME/.lein/bin:/usr/local/sbin:./node_modules/.bin:$HOME/.ansible-env/bin:$PATH:$HOME/.npm-global/bin"
 
-alias ls="ls -G"
+alias ls="ls -G --color=auto"
 alias curl='noglob curl'
 alias v='vagrant'
 alias peek='sips -g pixelWidth -g pixelHeight -g format'
