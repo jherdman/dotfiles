@@ -5,7 +5,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
 Plug 'markabe/bufexplorer'
-Plug 'edsono/vim-matchit'
 Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-markdown'
