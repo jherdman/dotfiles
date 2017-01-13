@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 if [[ -d $HOME/.oh-my-zsh ]] ; then
   export ZSH=$HOME/.oh-my-zsh
-else 
+else
   export ZSH=/usr/local/share/ohmyzsh
 fi
 
@@ -11,7 +11,7 @@ export ZSH_THEME="kolo"
 
 # We need to know this before oh-my-zsh goes to town
 
-plugins=(brew colored-man tmux)
+plugins=(brew colored-man tmux mix)
 
 source $ZSH/oh-my-zsh.sh
 
