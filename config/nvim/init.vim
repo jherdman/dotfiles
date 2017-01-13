@@ -18,7 +18,7 @@ Plug 'othree/html5.vim'
 Plug 'tpope/vim-unimpaired'
 
 " Elixir Plugins
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'elixir-lang/vim-elixir'
 
 " Ruby Plugins
 Plug 'tpope/vim-rails'
