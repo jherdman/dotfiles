@@ -160,3 +160,7 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
+" Fugitive Mappings
+
+" Auto-delete Fugitive buffers once I leave them
+autocmd BufReadPost fugitive://* set bufhidden=delete
