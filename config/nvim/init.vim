@@ -6,15 +6,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'chriskempson/base16-vim'
 Plug 'markabe/bufexplorer'
 Plug 'scrooloose/nerdtree'
-Plug 'godlygeek/tabular'
-Plug 'tpope/vim-markdown'
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-liquid'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
-Plug 'othree/html5.vim'
 Plug 'tpope/vim-unimpaired'
 
 " Elixir Plugins
