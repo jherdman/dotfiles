@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Elixir Plugins
 Plug 'elixir-lang/vim-elixir'
@@ -148,3 +149,8 @@ map <leader>g :Git<Space>
 
 " Auto-delete Fugitive buffers once I leave them
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+set wildmenu
+
+" FZF Stuff
+nnoremap <leader>f :FZF<CR>
