@@ -22,10 +22,6 @@ Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-cucumber'
 
-" JavaScript Plugins
-Plug 'walm/jshint.vim', { 'for': 'javascript' }
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
-
 call plug#end()
 
 filetype plugin indent on
