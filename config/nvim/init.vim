@@ -99,13 +99,6 @@ nmap <silent> <leader>/ :let @/=""<CR>
 " http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-" NERDTree conveniences
-map <F2> :NERDTreeToggle<CR>
-nnoremap <leader>nb :NERDTreeFromBookmark<Space>
-
-" JSHint
-nnoremap <leader>js :JSHint<CR>
-
 " Tab completion
 set wildmode=list:longest,list:full
 set complete=.,w,t
@@ -126,13 +119,6 @@ au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=rub
 
 " Additional auto complete keywords
 set iskeyword+=-
-
-" Mustache/Handlebars abbreviations
-let g:mustache_abbreviations = 1
-
-if has("autocmd")
-  au  BufNewFile,BufRead *.{mustache,handlebars,hbs,hogan,hulk,hjs}{,.erb} set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
-endif
 
 " Folds
 set foldenable          " enable folding
