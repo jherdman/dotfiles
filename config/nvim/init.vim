@@ -14,6 +14,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-syntastic/syntastic'
+Plug 'janko-m/vim-test'
+Plug 'tpope/vim-dispatch'
 
 " Elixir Plugins
 Plug 'elixir-lang/vim-elixir'
@@ -140,9 +142,6 @@ set foldnestmax=10      " 10 nested fold max
 " space opens/closes folds
 nnoremap <space> za
 
-" Git conveniences
-map <leader>g :Git<Space>
-
 " Fugitive Mappings
 
 " Auto-delete Fugitive buffers once I leave them
@@ -165,3 +164,19 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
+
+" Test runner shit
+
+let test#strategy = "neovim"
+
+" Press this with terminal output to enter normal mode so you can scroll
+" through terminal output
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+end
+
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
