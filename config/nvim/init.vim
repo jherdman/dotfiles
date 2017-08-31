@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
 
@@ -138,19 +138,6 @@ set wildmenu
 " FZF Stuff
 nnoremap <leader>f :FZF<CR>
 
-" Syntastic
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers = ['eslint']
-
 " Test runner shit
 
 let test#strategy = "neovim"
@@ -166,3 +153,10 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+
+" Ale
+
+let g:ale_sign_column_always = 1
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_linters = {'javascript': ['eslint']}
+let g:airline#extensions#ale#enabled = 1
