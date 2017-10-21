@@ -8,8 +8,7 @@ Plug 'markabe/bufexplorer'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -53,9 +52,13 @@ set cursorline
 set nobackup
 set noswapfile
 set clipboard+=unnamedplus     " Always interact with the clipboard
-set laststatus=2               " For Airline
+set laststatus=2               " For Lightline
+set fileencoding=utf-8
 
-let g:airline_powerline_fonts = 1
+set noshowmode " Tell Vim to not show the mode, we have a plugin for that
+let g:lightline = {
+  \ 'colorscheme': 'wombat',
+  \ }
 
 set t_Co=256
 let base16colorspace=256
@@ -159,4 +162,3 @@ nmap <silent> <leader>g :TestVisit<CR>
 let g:ale_sign_column_always = 1
 let g:ale_javascript_eslint_use_global = 1
 let g:ale_linters = {'javascript': ['eslint']}
-let g:airline#extensions#ale#enabled = 1
