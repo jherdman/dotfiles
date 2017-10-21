@@ -11,7 +11,7 @@ export ZSH_THEME="kolo"
 
 # We need to know this before oh-my-zsh goes to town
 
-plugins=(brew colored-man tmux mix)
+plugins=(brew colored-man tmux mix-fast)
 
 source $ZSH/oh-my-zsh.sh
 
