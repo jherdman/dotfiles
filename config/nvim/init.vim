@@ -17,12 +17,10 @@ Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
 
 " Elixir Plugins
-Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
 " Ruby Plugins
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-cucumber'
 
 call plug#end()
 
