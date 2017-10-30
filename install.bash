@@ -41,16 +41,16 @@ elif [[ $UNAMESTR == 'Linux' ]]; then
   TMUX_VERSION=2.6
   sudo apt-get -y remove tmux
   sudo apt-get -y install wget tar libevent-dev libncurses-dev
-  wget https://github.com/tmux/tmux/releases/download/${VERSION}/tmux-${VERSION}.tar.gz
-  tar xf tmux-${VERSION}.tar.gz
-  rm -f tmux-${VERSION}.tar.gz
-  cd tmux-${VERSION}
+  wget https://github.com/tmux/tmux/releases/download/${TMUX_VERSION}/tmux-${TMUX_VERSION}.tar.gz
+  tar xf tmux-${TMUX_VERSION}.tar.gz
+  rm -f tmux-${TMUX_VERSION}.tar.gz
+  cd tmux-${TMUX_VERSION}
   ./configure
   make
   sudo make install
   cd -
   sudo rm -rf /usr/local/src/tmux-*
-  sudo mv tmux-${VERSION} /usr/local/sr
+  sudo mv tmux-${TMUX_VERSION} /usr/local/sr
 else
   echo "Unknown platform ${UNAMESTR}! Packages not installed."
 fi
