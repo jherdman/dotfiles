@@ -35,7 +35,22 @@ elif [[ $UNAMESTR == 'Linux' ]]; then
   sudo add-apt-repository ppa:neovim-ppa/unstable
   sudo add-apt-repository -y ppa:pi-rho/dev
   sudo apt-get update
-  sudo apt-get install neovim tmux
+  sudo apt-get install neovim
+
+  # https://gist.github.com/P7h/91e14096374075f5316e
+  TMUX_VERSION=2.6
+  sudo apt-get -y remove tmux
+  sudo apt-get -y install wget tar libevent-dev libncurses-dev
+  wget https://github.com/tmux/tmux/releases/download/${VERSION}/tmux-${VERSION}.tar.gz
+  tar xf tmux-${VERSION}.tar.gz
+  rm -f tmux-${VERSION}.tar.gz
+  cd tmux-${VERSION}
+  ./configure
+  make
+  sudo make install
+  cd -
+  sudo rm -rf /usr/local/src/tmux-*
+  sudo mv tmux-${VERSION} /usr/local/sr
 else
   echo "Unknown platform ${UNAMESTR}! Packages not installed."
 fi
