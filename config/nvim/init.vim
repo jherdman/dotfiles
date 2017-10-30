@@ -15,6 +15,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
+Plug 'mileszs/ack.vim'
 
 " Elixir Plugins
 Plug 'slashmili/alchemist.vim'
@@ -159,4 +160,9 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 let g:ale_sign_column_always = 1
 let g:ale_javascript_eslint_use_global = 1
-let g:ale_linters = {'javascript': ['eslint']}
+
+" Ack
+
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+endif
