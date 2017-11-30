@@ -2,7 +2,6 @@
 *.swp
 *.swo
 tags
-.sublime-project
-.sublime-workspace
 ._.DS_Store
 Session.vim
+.mix_tasks

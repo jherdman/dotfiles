@@ -16,7 +16,7 @@
 [core]
   autocrl = true
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = $HOME/.gitignore
+  excludesfile = ~/.gitignore
   editor = nvim
   trustctime = false
 [difftool]
