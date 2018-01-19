@@ -143,7 +143,10 @@ nnoremap <leader>f :FZF<CR>
 
 " Test runner shit
 
-let test#strategy = "neovim"
+let test#strategy = {
+  \ 'nearest': 'neovim',
+  \ 'suite': 'dispatch',
+  \}
 
 " Press this with terminal output to enter normal mode so you can scroll
 " through terminal output
@@ -153,7 +156,7 @@ end
 
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>S :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
