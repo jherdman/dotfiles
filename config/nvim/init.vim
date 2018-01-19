@@ -18,6 +18,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'mileszs/ack.vim'
 
 " Elixir Plugins
+Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
 " Ruby Plugins
