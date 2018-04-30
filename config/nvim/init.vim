@@ -56,14 +56,14 @@ set laststatus=2               " For Lightline
 set fileencoding=utf-8
 
 set noshowmode " Tell Vim to not show the mode, we have a plugin for that
-let g:lightline = {
-  \ 'colorscheme': 'wombat',
-  \ }
+"let g:lightline = {
+"  \ 'colorscheme': 'wombat',
+"  \ }
 
 set t_Co=256
 let base16colorspace=256
 set background=dark
-colorscheme base16-monokai
+colorscheme base16-dracula
 
 syntax on
 
