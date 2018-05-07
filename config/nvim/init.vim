@@ -60,10 +60,10 @@ set noshowmode " Tell Vim to not show the mode, we have a plugin for that
 "  \ 'colorscheme': 'wombat',
 "  \ }
 
-set t_Co=256
+"set t_Co=256
 let base16colorspace=256
 set background=dark
-colorscheme base16-dracula
+colorscheme base16-materia
 
 syntax on
 
