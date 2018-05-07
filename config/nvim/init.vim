@@ -164,6 +164,8 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 let g:ale_sign_column_always = 1
 let g:ale_javascript_eslint_use_global = 1
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Ack
 
