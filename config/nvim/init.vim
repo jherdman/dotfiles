@@ -1,5 +1,3 @@
-filetype off
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'markabe/bufexplorer'
