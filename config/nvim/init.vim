@@ -38,7 +38,6 @@ let mapleader=","
 set nocompatible               " Use Vim settings, not Vi
 set ruler                      " show cursor position all of the time
 set showcmd                    " display incomplete commands
-set spell
 set nowrap
 set smarttab
 set autoindent
@@ -57,6 +56,9 @@ set noswapfile
 set clipboard+=unnamedplus     " Always interact with the clipboard
 set laststatus=2               " For Lightline
 set fileencoding=utf-8
+
+" Spellchecking crap
+autocmd FileType gitcommit setlocal spell
 
 " Editor specific config (e.g. Oni vs. Terminal)
 if exists('g:gui_oni')
