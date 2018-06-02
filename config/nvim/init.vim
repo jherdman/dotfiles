@@ -3,12 +3,10 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'chriskempson/base16-vim'
 Plug 'markabe/bufexplorer'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
-Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -23,6 +21,11 @@ Plug 'slashmili/alchemist.vim'
 
 " Ruby Plugins
 Plug 'tpope/vim-rails'
+
+if !exists('g:gui_oni')
+  Plug 'chriskempson/base16-vim'
+  Plug 'itchyny/lightline.vim'
+endif
 
 call plug#end()
 
@@ -55,15 +58,15 @@ set clipboard+=unnamedplus     " Always interact with the clipboard
 set laststatus=2               " For Lightline
 set fileencoding=utf-8
 
-set noshowmode " Tell Vim to not show the mode, we have a plugin for that
-"let g:lightline = {
-"  \ 'colorscheme': 'wombat',
-"  \ }
+" Editor specific config (e.g. Oni vs. Terminal)
+if exists('g:gui_oni')
+else " terminal
+  set noshowmode " Tell Vim to not show the mode, we have a plugin for that
 
-"set t_Co=256
-let base16colorspace=256
-set background=dark
-colorscheme base16-materia
+  let base16colorspace=256
+  set background=dark
+  colorscheme base16-materia
+endif
 
 syntax on
 
