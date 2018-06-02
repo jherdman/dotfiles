@@ -108,9 +108,6 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 set wildmode=list:longest,list:full
 set complete=.,w,t
 
-" Treat Thor files like Ruby
-au BufRead,BufNewFile {Capfile,Thorfile,Guardfile,*.thor,*.rabl,*.ru} set ft=ruby
-
 " Additional auto complete keywords
 set iskeyword+=-
 
