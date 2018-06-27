@@ -32,10 +32,11 @@ elif [[ $UNAMESTR == 'Linux' ]]; then
   echo "Installing packages for Linux..."
 
   sudo apt-get install software-properties-common
-  sudo add-apt-repository ppa:neovim-ppa/unstable
-  sudo add-apt-repository -y ppa:pi-rho/dev
-  sudo apt-get update
-  sudo apt-get install neovim
+
+  # Install NeoVim
+  curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+  chmod u+x nvim.appimage
+  sudo mv nvim.appimage /usr/local/bin/nvim
 
   # https://gist.github.com/P7h/91e14096374075f5316e
   TMUX_VERSION=2.6
