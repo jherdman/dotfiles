@@ -51,7 +51,7 @@ elif [[ $UNAMESTR == 'Linux' ]]; then
   sudo make install
   cd -
   sudo rm -rf /usr/local/src/tmux-*
-  sudo mv tmux-${TMUX_VERSION} /usr/local/sr
+  sudo mv tmux-${TMUX_VERSION} /usr/local/src
 
   # Install ripgrep
   RIPGREP_VERSION="0.7.1"
