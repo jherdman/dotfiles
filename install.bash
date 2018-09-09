@@ -54,12 +54,11 @@ elif [[ $UNAMESTR == 'Linux' ]]; then
   sudo mv tmux-${TMUX_VERSION} /usr/local/src
 
   # Install ripgrep
-  RIPGREP_VERSION="0.7.1"
-  RIPGREP_FILE_NAME="ripgrep-${RIPGREP_VERSION}-x86_64-unknown-linux-musl"
+  RIPGREP_VERSION="0.10.0"
+  RIPGREP_FILE_NAME="ripgrep-${RIPGREP_VERSION}-amd64.deb"
   cd $HOME
   curl -LO https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VERSION}/${RIPGREP_FILE_NAME}.tar.gz
-  tar xvzf ${RIPGREP_FILE_NAME}.tar.gz
-  sudo mv ${RIPGREP_FILE_NAME}/rg /usr/local/bin/
+  sudo dpkg -i $RIPGREP_FILE_NAME
 else
   echo "Unknown platform ${UNAMESTR}! Packages not installed."
 fi
