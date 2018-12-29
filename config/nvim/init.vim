@@ -59,6 +59,8 @@ if exists('g:gui_oni')
 else " terminal
   set noshowmode " Tell Vim to not show the mode, we have a plugin for that
 
+  set termguicolors
+
   let base16colorspace=256
   set background=dark
   colorscheme base16-materia
