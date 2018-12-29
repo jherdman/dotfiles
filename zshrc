@@ -11,7 +11,7 @@ export ZSH_THEME="kolo"
 
 # We need to know this before oh-my-zsh goes to town
 
-plugins=(brew colored-man tmux mix-fast)
+plugins=(brew colored-man tmux mix-fast zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,3 +60,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Enable history in IEX
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
