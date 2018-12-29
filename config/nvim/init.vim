@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'chriskempson/base16-vim'
+Plug 'itchyny/lightline.vim'
 Plug 'markabe/bufexplorer'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
@@ -18,11 +20,6 @@ Plug 'slashmili/alchemist.vim'
 
 " Ruby Plugins
 Plug 'tpope/vim-rails'
-
-if !exists('g:gui_oni')
-  Plug 'chriskempson/base16-vim'
-  Plug 'itchyny/lightline.vim'
-endif
 
 call plug#end()
 
