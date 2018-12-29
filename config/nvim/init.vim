@@ -64,6 +64,8 @@ else " terminal
   let base16colorspace=256
   set background=dark
   colorscheme base16-materia
+
+  set mouse=n
 endif
 
 syntax on
