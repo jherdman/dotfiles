@@ -27,7 +27,7 @@ if [[ $UNAMESTR == 'Darwin' ]]; then
 
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install neovim/neovim/neovim
-  brew install tmux tmux-pasteboard reattach-to-user-namespace ripgrep
+  brew install tmux tmux-pasteboard reattach-to-user-namespace ripgrep hub
 elif [[ $UNAMESTR == 'Linux' ]]; then
   echo "Installing packages for Linux..."
 
@@ -39,7 +39,7 @@ elif [[ $UNAMESTR == 'Linux' ]]; then
   sudo mv nvim.appimage /usr/local/bin/nvim
 
   # https://gist.github.com/P7h/91e14096374075f5316e
-  TMUX_VERSION=2.6
+  TMUX_VERSION=2.8
   sudo apt-get -y remove tmux
   sudo apt-get -y install wget tar libevent-dev libncurses-dev
   wget https://github.com/tmux/tmux/releases/download/${TMUX_VERSION}/tmux-${TMUX_VERSION}.tar.gz
@@ -58,7 +58,16 @@ elif [[ $UNAMESTR == 'Linux' ]]; then
   RIPGREP_FILE_NAME="ripgrep-${RIPGREP_VERSION}-amd64.deb"
   cd $HOME
   curl -LO https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VERSION}/${RIPGREP_FILE_NAME}.tar.gz
+  tar xvzf ${RIPGREP_FILE_NAME}.tar.gz
   sudo dpkg -i $RIPGREP_FILE_NAME
+
+  # Install hub
+  HUB_VERSION="2.7.0"
+  HUB_FILE_NAME="hub-linux-amd64-${HUB_VERSION}"
+  cd $HOME
+  curl -LO https://github.com/github/hub/releases/download/v${HUB_VERSION}/${HUB_FILE_NAME}.tgz
+  tar xvzf ${HUB_FILE_NAME}.tgz
+  sudo bash ${HUB_FILE_NAME}/install
 else
   echo "Unknown platform ${UNAMESTR}! Packages not installed."
 fi
