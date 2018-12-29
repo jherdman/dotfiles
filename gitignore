@@ -5,3 +5,4 @@ tags
 ._.DS_Store
 Session.vim
 .mix_tasks
+.elixir_ls/
