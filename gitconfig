@@ -49,6 +49,6 @@
   smudge = git hawser smudge %f
   required = true
 [mergetool "fugitive"]
-  cmd = nvim -f -c \"Gvdiff\" \"$MERGED\"
+  cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
 [merge]
   tool = fugitive
