@@ -61,3 +61,7 @@ export NVM_DIR="$HOME/.nvm"
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
