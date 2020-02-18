@@ -35,7 +35,7 @@ export LC_CTYPE="en_US.UTF-8"
 export PAGER=less
 export EDITOR=nvim
 
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.ansible-env/bin:$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.ansible-env/bin:$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin:$HOME/bin"
 
 alias curl='noglob curl'
 alias vim='nvim'
