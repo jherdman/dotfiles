@@ -13,7 +13,7 @@ Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'mileszs/ack.vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Elixir Plugins
 Plug 'elixir-editors/vim-elixir'
@@ -175,3 +175,11 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+let g:coc_global_extensions = [
+  \ 'coc-ember',
+  \ 'coc-elixir',
+  \ 'coc-eslint',
+  \ 'coc-marketplace',
+  \ 'coc-tsserver'
+\ ]
