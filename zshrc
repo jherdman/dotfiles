@@ -62,6 +62,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
-. $HOME/.asdf/asdf.sh
+if [ -e /Users/james/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/james/.nix-profile/etc/profile.d/nix.sh; fi
 
-. $HOME/.asdf/completions/asdf.bash
+eval "$(jump shell zsh)"
