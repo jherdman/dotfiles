@@ -63,7 +63,6 @@ else " terminal
   set termguicolors
 
   let base16colorspace=256
-  set background=dark
   colorscheme base16-materia
 
   set mouse=n
