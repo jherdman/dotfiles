@@ -9,15 +9,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
-Plug 'tpope/vim-dispatch'
 Plug 'mileszs/ack.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'honza/vim-snippets'
+Plug 'kassio/neoterm'
 
 " Elixir Plugins
 Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
 
 " Ruby Plugins
 Plug 'tpope/vim-rails'
@@ -51,6 +51,8 @@ set noswapfile
 set clipboard+=unnamedplus     " Always interact with the clipboard
 set laststatus=2               " For Lightline
 set fileencoding=utf-8
+
+set inccommand=nosplit " Live substitution
 
 " Spellchecking crap
 autocmd FileType gitcommit setlocal spell
@@ -131,7 +133,7 @@ nnoremap <leader>f :FZF<CR>
 
 let test#strategy = {
   \ 'nearest': 'neovim',
-  \ 'suite': 'dispatch',
+  \ 'suite': 'neoterm',
   \}
 
 " Press this with terminal output to enter normal mode so you can scroll
@@ -150,6 +152,8 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 let g:ale_sign_column_always = 1
 let g:ale_javascript_eslint_use_global = 1
+let g:ale_fixers = { 'elixir': ['mix_format'] }
+let g:ale_fix_on_save = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
@@ -161,8 +165,24 @@ endif
 
 " COC
 
+" Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
 vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> <leader>co  :<C-u>CocList outline<CR>
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -175,10 +195,31 @@ function! s:show_documentation()
   endif
 endfunction
 
+" use <tab> for trigger completion and navigate to the next complete item
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 let g:coc_global_extensions = [
   \ 'coc-ember',
   \ 'coc-elixir',
   \ 'coc-eslint',
   \ 'coc-marketplace',
-  \ 'coc-tsserver'
+  \ 'coc-prettier',
+  \ 'coc-snippets',
+  \ 'coc-tsserver',
+  \ 'coc-json'
 \ ]
