@@ -54,9 +54,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 # Enable history in IEX
 export ERL_AFLAGS="-kernel shell_history enabled"
 
