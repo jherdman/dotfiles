@@ -53,7 +53,7 @@ set clipboard+=unnamedplus     " Always interact with the clipboard
 set laststatus=2               " For Lightline
 set fileencoding=utf-8
 
-set inccommand=nosplit " Live substitution
+set inccommand=split " Live substitution
 
 " Spellchecking crap
 autocmd FileType gitcommit setlocal spell
