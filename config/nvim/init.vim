@@ -219,7 +219,6 @@ let g:coc_global_extensions = [
   \ 'coc-elixir',
   \ 'coc-eslint',
   \ 'coc-marketplace',
-  \ 'coc-prettier',
   \ 'coc-snippets',
   \ 'coc-tsserver',
   \ 'coc-json'
