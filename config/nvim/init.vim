@@ -16,6 +16,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'kassio/neoterm'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'kevinoid/vim-jsonc'
 
 " Elixir Plugins
 Plug 'elixir-editors/vim-elixir'
@@ -57,6 +58,9 @@ set inccommand=split " Live substitution
 
 " Spellchecking crap
 autocmd FileType gitcommit setlocal spell
+
+" Ensure jsonc is correctly highlighted
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " Editor specific config (e.g. Oni vs. Terminal)
 if exists('g:gui_oni')
