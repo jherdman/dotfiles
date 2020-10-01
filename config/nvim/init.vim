@@ -74,7 +74,7 @@ else " terminal
   let base16colorspace=256
   colorscheme base16-materia
 
-  set mouse=n
+  set mouse=a
 
   let g:lightline = {
         \ 'colorscheme': 'materia'
@@ -195,6 +195,17 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" mappings
+nnoremap <silent> <space><space> :<C-u>CocFzfList<CR>
+nnoremap <silent> <space>a       :<C-u>CocFzfList diagnostics<CR>
+nnoremap <silent> <space>b       :<C-u>CocFzfList diagnostics --current-buf<CR>
+nnoremap <silent> <space>c       :<C-u>CocFzfList commands<CR>
+nnoremap <silent> <space>e       :<C-u>CocFzfList extensions<CR>
+nnoremap <silent> <space>l       :<C-u>CocFzfList location<CR>
+nnoremap <silent> <space>o       :<C-u>CocFzfList outline<CR>
+nnoremap <silent> <space>s       :<C-u>CocFzfList symbols<CR>
+nnoremap <silent> <space>p       :<C-u>CocFzfListResume<CR>
+
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
@@ -208,6 +219,8 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 " use <tab> for trigger completion and navigate to the next complete item
 inoremap <silent><expr> <TAB>
@@ -234,5 +247,6 @@ let g:coc_global_extensions = [
   \ 'coc-marketplace',
   \ 'coc-snippets',
   \ 'coc-tsserver',
-  \ 'coc-json'
+  \ 'coc-json',
+  \ 'coc-yank'
 \ ]
