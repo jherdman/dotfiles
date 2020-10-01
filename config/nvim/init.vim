@@ -75,6 +75,10 @@ else " terminal
   colorscheme base16-materia
 
   set mouse=n
+
+  let g:lightline = {
+        \ 'colorscheme': 'materia'
+        \ }
 endif
 
 syntax on
