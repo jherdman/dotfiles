@@ -23,6 +23,8 @@ if [[ "$unamestr" == 'Linux' ]]; then
   platform='linux'
 
   alias ls="ls -G --color=auto"
+  alias cat='batcat'
+  alias ccat='/usr/bin/cat'
 elif [[ "$unamestr" == 'FreeBSD' ]]; then
   platform='freebsd'
 
