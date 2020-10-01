@@ -7,7 +7,7 @@
   ci = commit -v
   rollback = reset --soft HEAD^
   st = status -sb
-  br = branch
+  br = branch -vv
   unstage = reset HEAD
   undo-ammend = reset --soft HEAD@{1}
   wdiff = diff -w --word-diff=color
