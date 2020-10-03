@@ -16,19 +16,16 @@ plugins=(tmux mix-fast)
 source $ZSH/oh-my-zsh.sh
 
 # Because sometimes things suck
-platform='unknown'
 unamestr=`uname`
 
 if [[ "$unamestr" == 'Linux' ]]; then
-  platform='linux'
-
   alias ls="ls -G --color=auto"
   alias cat='batcat'
   alias ccat='/usr/bin/cat'
-elif [[ "$unamestr" == 'FreeBSD' ]]; then
-  platform='freebsd'
-
+elif [[ "$unamestr" == 'Darwin' ]]; then
   alias ls="ls -G"
+  alias cat='bat'
+  alias ccat='/usr/bin/cat'
 fi
 
 # Customize to your needs...
