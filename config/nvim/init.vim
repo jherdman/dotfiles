@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'markabe/bufexplorer'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
@@ -141,6 +140,13 @@ set wildmenu
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 nnoremap <leader>f :FZF<CR>
+nnoremap <silent><leader>be :Buffers<CR>
+
+" Press this with terminal output to enter normal mode so you can scroll
+" through terminal output
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+end
 
 " Test runner shit
 
@@ -149,14 +155,8 @@ let test#strategy = {
   \ 'suite': 'neoterm',
   \}
 
-" Press this with terminal output to enter normal mode so you can scroll
-" through terminal output
-if has('nvim')
-  tmap <C-o> <C-\><C-n>
-end
-
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>t :TestNearest -strategy=neovim<CR>
+nmap <silent> <leader>T :TestFil -strategy=neovim<CR>
 nmap <silent> <leader>S :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
