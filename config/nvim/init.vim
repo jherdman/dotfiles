@@ -95,9 +95,6 @@ endfunction
 
 nnoremap <silent> <F6> :call <SID>StripTrailingWhitespaces()<CR>
 
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-
 command! -nargs=* Wrap set wrap linebreak nolist
 
 set showbreak=…
