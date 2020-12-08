@@ -62,22 +62,18 @@ autocmd FileType gitcommit setlocal spell
 " Ensure jsonc is correctly highlighted
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
-" Editor specific config (e.g. Oni vs. Terminal)
-if exists('g:gui_oni')
-else " terminal
-  set noshowmode " Tell Vim to not show the mode, we have a plugin for that
+set noshowmode " Tell Vim to not show the mode, we have a plugin for that
 
-  set termguicolors
+set termguicolors
 
-  let base16colorspace=256
-  colorscheme base16-materia
+let base16colorspace=256
+colorscheme base16-material
 
-  set mouse=a
+set mouse=a
 
-  let g:lightline = {
-        \ 'colorscheme': 'materia'
-        \ }
-endif
+let g:lightline = {
+      \ 'colorscheme': 'material'
+      \ }
 
 syntax on
 
