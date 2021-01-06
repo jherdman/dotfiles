@@ -67,13 +67,9 @@ set noshowmode " Tell Vim to not show the mode, we have a plugin for that
 set termguicolors
 
 let base16colorspace=256
-colorscheme base16-material
+colorscheme base16-monokai
 
 set mouse=a
-
-let g:lightline = {
-      \ 'colorscheme': 'material'
-      \ }
 
 syntax on
 
