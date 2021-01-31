@@ -1,4 +1,13 @@
-*.ex diff=elixir
+*.css diff=css
+
+*.html  diff=html
+*.xhtml diff=html
+
+*.md diff=markdown
+
+*.ex  diff=elixir
 *.exs diff=elixir
 
-*.rb diff=ruby
+*.rb       diff=ruby
+*.rake     diff=ruby
+*_spec.rb  diff=rspec
