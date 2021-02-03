@@ -26,6 +26,10 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
   alias ls="ls -G"
   alias cat='bat'
   alias ccat='/bin/cat'
+
+  # ASDF
+  . $HOME/.asdf/asdf.sh
+  fpath=(${ASDF_DIR}/completions $fpath)
 fi
 
 # Customize to your needs...
@@ -61,7 +65,3 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=1
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
 
 eval "$(jump shell zsh)"
-
-# ASDF
-. $HOME/.asdf/asdf.sh
-fpath=(${ASDF_DIR}/completions $fpath)
