@@ -28,6 +28,7 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
   alias ccat='/bin/cat'
 
   # ASDF
+  # ----
   . $HOME/.asdf/asdf.sh
   fpath=(${ASDF_DIR}/completions $fpath)
 fi
@@ -48,14 +49,8 @@ unsetopt extended_glob
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-bindkey "^R" history-incremental-search-backward
-
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 
 # Enable history in IEX
 export ERL_AFLAGS="-kernel shell_history enabled"
@@ -65,3 +60,10 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=1
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
 
 eval "$(jump shell zsh)"
+
+# FZF CONFIG
+# ----------
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
