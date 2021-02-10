@@ -11,8 +11,6 @@ export ZSH_THEME="kolo"
 
 # We need to know this before oh-my-zsh goes to town
 
-plugins=(tmux mix-fast)
-
 source $ZSH/oh-my-zsh.sh
 
 # Because sometimes things suck
@@ -22,16 +20,17 @@ if [[ "$unamestr" == 'Linux' ]]; then
   alias ls="ls -G --color=auto"
   alias cat='batcat'
   alias ccat='/usr/bin/cat'
+
+  # ASDF
+  # ----
+  export ASDF_DIR=${HOME}/tools/asdf
 elif [[ "$unamestr" == 'Darwin' ]]; then
   alias ls="ls -G"
   alias cat='bat'
   alias ccat='/bin/cat'
-
-  # ASDF
-  # ----
-  . $HOME/.asdf/asdf.sh
-  fpath=(${ASDF_DIR}/completions $fpath)
 fi
+
+plugins=(asdf tmux mix-fast)
 
 # Customize to your needs...
 
