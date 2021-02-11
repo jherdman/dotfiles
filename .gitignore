@@ -2,7 +2,8 @@
 *.o
 *.log
 profile
-config/yarn/global/
-config/coc/
-config/configstore/
-config/base16-shell/
+/config/yarn/global/
+/config/coc/
+/config/configstore/
+/config/base16-shell/
+/config/iterm2
