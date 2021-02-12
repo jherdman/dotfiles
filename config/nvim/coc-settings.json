@@ -1,4 +1,4 @@
 {
-  "solargraph.bundlerPath": true,
+  "solargraph.useBundler": true,
   "elixir.pathToElixirLS": "~/tools/elixir-ls/release/language_server.sh"
 }
