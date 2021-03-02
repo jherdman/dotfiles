@@ -78,3 +78,5 @@ fi
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+
+curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
