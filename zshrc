@@ -65,3 +65,8 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
   alias cat='bat'
   alias ccat='/bin/cat'
 fi
+
+# iTerm2 Integration
+# ------------------
+
+[ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
