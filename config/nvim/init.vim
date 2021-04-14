@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'chriskempson/base16-vim'
+Plug 'fnune/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
@@ -14,7 +14,6 @@ Plug 'mileszs/ack.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 Plug 'honza/vim-snippets'
-Plug 'kassio/neoterm'
 Plug 'kevinoid/vim-jsonc'
 
 " Elixir Plugins
@@ -139,7 +138,7 @@ end
 
 let test#strategy = {
   \ 'nearest': 'neovim',
-  \ 'suite': 'neoterm',
+  \ 'suite': 'neovim',
   \}
 
 nmap <silent> <leader>t :TestNearest -strategy=neovim<CR>
