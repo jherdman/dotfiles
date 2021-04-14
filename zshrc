@@ -60,6 +60,7 @@ if [[ "$unamestr" == 'Linux' ]]; then
   alias cat='batcat'
   alias ccat='/usr/bin/cat'
 
+  export BROWSER=/usr/bin/firefox
 elif [[ "$unamestr" == 'Darwin' ]]; then
   alias ls="ls -G"
   alias cat='bat'
