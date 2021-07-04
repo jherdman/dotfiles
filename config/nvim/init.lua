@@ -1,5 +1,6 @@
 -- ALIASES
 
+local cmd = vim.cmd
 local g = vim.g      -- a table to access global variables
 local opt = vim.opt  -- to set options
 local map = vim.api.nvim_set_keymap -- see :h :map-arguments
@@ -27,6 +28,33 @@ opt.wildmode = {'list', 'longest'} -- tab completion
 opt.wrap = false                   -- disable line wrapping
 
 g.mapleader = ','
+
+-- PLUGINS
+
+require('plugins')
+
+-- MATERIAL
+
+require('material').set()
+g.material_style = 'palenight'
+g.material_italic_comments = true
+
+-- TELESCOPE
+
+map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true })
+map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', { noremap = true })
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', { noremap = true })
+map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', { noremap = true })
+
+-- TREE-SITTER
+local ts = require 'nvim-treesitter.configs'
+ts.setup {
+  ensure_installed = 'maintained',
+  highlight = {enable = true}
+}
+
+-- LIGHTBULB
+cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
 
 -- MAPPINGS
 
