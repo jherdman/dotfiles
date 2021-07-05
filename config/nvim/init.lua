@@ -40,6 +40,7 @@ cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there 
 require('material').set()
 g.material_style = 'palenight'
 g.material_italic_comments = true
+g.material_borders = true
 
 -- TELESCOPE
 
