@@ -47,11 +47,8 @@ return require('packer').startup(function()
 
   use 'kyazdani42/nvim-web-devicons'
 
-  -- NEOGIT
-  use {
-    'TimUntersberger/neogit',
-    requires = 'nvim-lua/plenary.nvim'
-  }
+  -- Fugitive
+  use 'tpope/vim-fugitive'
 
   -- DASHBOARD
   use 'glepnir/dashboard-nvim'

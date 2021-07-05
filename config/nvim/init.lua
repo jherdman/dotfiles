@@ -75,9 +75,9 @@ require'nvim-web-devicons'.setup {
 -- DASHBOARD
 g.dashboard_default_executive = 'telescope'
 
--- TREE
---g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
---g.nvim_tree_gitignore = true
+-- FUGITIVE
+cmd [[autocmd BufReadPost fugitive://* set bufhidden=delete]] -- Auto-delete Fugitive buffers once I leave them
+
 
 -- MAPPINGS
 

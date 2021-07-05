@@ -116,7 +116,7 @@ nnoremap <space> za
 " Fugitive Mappings
 
 " Auto-delete Fugitive buffers once I leave them
-autocmd BufReadPost fugitive://* set bufhidden=delete
+"autocmd BufReadPost fugitive://* set bufhidden=delete
 
 "set wildmenu
 
