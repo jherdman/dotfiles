@@ -1,18 +1,18 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'fnune/base16-vim'
-Plug 'itchyny/lightline.vim'
+"Plug 'fnune/base16-vim'
+"Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-unimpaired'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-unimpaired'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
-Plug 'janko-m/vim-test'
-Plug 'mileszs/ack.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+"Plug 'janko-m/vim-test'
+"Plug 'mileszs/ack.vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'kevinoid/vim-jsonc'
 
