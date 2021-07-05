@@ -62,6 +62,13 @@ require'nvim-web-devicons'.setup {
   default = true
 }
 
+-- DASHBOARD
+g.dashboard_default_executive = 'telescope'
+
+-- TREE
+--g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
+--g.nvim_tree_gitignore = true
+
 -- MAPPINGS
 
 -- Press this with terminal output to enter normal mode so you can scroll
@@ -73,3 +80,5 @@ map('n', '<leader>/', ':nohlsearch<cr>', { noremap = true })
 
 -- Find and replace under cursor
 map('n', '<leader>s', ':%s/\\<<C-r><C-w>\\>/', { noremap = true })
+
+map('n', '<F2>', ':NvimTreeToggle<cr>', { noremap = true })

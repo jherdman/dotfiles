@@ -47,4 +47,13 @@ return require('packer').startup(function()
     'TimUntersberger/neogit',
     requires = 'nvim-lua/plenary.nvim'
   }
+
+  -- DASHBOARD
+  use 'glepnir/dashboard-nvim'
+
+  -- TREE
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons'
+  }
 end)
