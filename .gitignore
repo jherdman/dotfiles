@@ -8,3 +8,4 @@ profile
 /config/base16-shell/
 /config/iterm2
 /config/gtk-2.0/
+config/nvim/plugin/packer_compiled.lua
