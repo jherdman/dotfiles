@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 "Plug 'fnune/base16-vim'
 "Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 "Plug 'sheerun/vim-polyglot'
 "Plug 'tpope/vim-fugitive'
 "Plug 'tpope/vim-unimpaired'
@@ -24,7 +24,7 @@ Plug 'tpope/vim-rails'
 
 call plug#end()
 
-filetype plugin indent on
+" filetype plugin indent on
 
 "let mapleader=","
 
@@ -121,10 +121,10 @@ set iskeyword+=-
 "set wildmenu
 
 " FZF Stuff
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+" let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
-nnoremap <leader>f :FZF<CR>
-nnoremap <silent><leader>be :Buffers<CR>
+" nnoremap <leader>f :FZF<CR>
+" nnoremap <silent><leader>be :Buffers<CR>
 
 " Press this with terminal output to enter normal mode so you can scroll
 " through terminal output
@@ -147,12 +147,12 @@ nnoremap <silent><leader>be :Buffers<CR>
 
 " Ale
 
-let g:ale_sign_column_always = 1
-let g:ale_javascript_eslint_use_global = 1
-let g:ale_fixers = { 'elixir': ['mix_format'] }
-let g:ale_fix_on_save = 1
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" let g:ale_sign_column_always = 1
+" let g:ale_javascript_eslint_use_global = 1
+" let g:ale_fixers = { 'elixir': ['mix_format'] }
+" let g:ale_fix_on_save = 1
+" nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+" nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Ack
 
@@ -163,32 +163,32 @@ endif
 " COC
 
 " Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
+" imap <C-l> <Plug>(coc-snippets-expand)
 
 " Use <C-j> for select text for visual placeholder of snippet.
-vmap <C-j> <Plug>(coc-snippets-select)
+" vmap <C-j> <Plug>(coc-snippets-select)
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
+" let g:coc_snippet_next = '<c-j>'
 
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
+" let g:coc_snippet_prev = '<c-k>'
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
 
 " mappings
-nnoremap <silent> <space><space> :<C-u>CocFzfList<CR>
-nnoremap <silent> <space>a       :<C-u>CocFzfList diagnostics<CR>
-nnoremap <silent> <space>b       :<C-u>CocFzfList diagnostics --current-buf<CR>
-nnoremap <silent> <space>c       :<C-u>CocFzfList commands<CR>
-nnoremap <silent> <space>e       :<C-u>CocFzfList extensions<CR>
-nnoremap <silent> <space>l       :<C-u>CocFzfList location<CR>
-nnoremap <silent> <space>o       :<C-u>CocFzfList outline<CR>
-nnoremap <silent> <space>s       :<C-u>CocFzfList symbols<CR>
-nnoremap <silent> <space>p       :<C-u>CocFzfListResume<CR>
+" nnoremap <silent> <space><space> :<C-u>CocFzfList<CR>
+" nnoremap <silent> <space>a       :<C-u>CocFzfList diagnostics<CR>
+" nnoremap <silent> <space>b       :<C-u>CocFzfList diagnostics --current-buf<CR>
+" nnoremap <silent> <space>c       :<C-u>CocFzfList commands<CR>
+" nnoremap <silent> <space>e       :<C-u>CocFzfList extensions<CR>
+" nnoremap <silent> <space>l       :<C-u>CocFzfList location<CR>
+" nnoremap <silent> <space>o       :<C-u>CocFzfList outline<CR>
+" nnoremap <silent> <space>s       :<C-u>CocFzfList symbols<CR>
+" nnoremap <silent> <space>p       :<C-u>CocFzfListResume<CR>
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
