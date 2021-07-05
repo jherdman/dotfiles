@@ -56,6 +56,12 @@ ts.setup {
 -- LIGHTBULB
 cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
 
+-- DEVICONS
+
+require'nvim-web-devicons'.setup {
+  default = true
+}
+
 -- MAPPINGS
 
 -- Press this with terminal output to enter normal mode so you can scroll
