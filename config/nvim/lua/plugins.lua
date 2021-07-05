@@ -22,6 +22,11 @@ return require('packer').startup(function()
     run = ':TSUpdate'
   }
 
+  use {
+    'p00f/nvim-ts-rainbow',
+    requires = 'nvim-treesitter/nvim-treesitter'
+  }
+
   -- LSP Config
   use { 'neovim/nvim-lspconfig', as = 'lspconfig' }
 

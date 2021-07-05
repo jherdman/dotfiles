@@ -53,7 +53,14 @@ map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', { noremap = true })
 local ts = require 'nvim-treesitter.configs'
 ts.setup {
   ensure_installed = 'maintained',
-  highlight = {enable = true}
+  highlight = {
+    enable = true
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
+    max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
+  }
 }
 
 -- LIGHTBULB
