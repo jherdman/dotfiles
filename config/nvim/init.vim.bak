@@ -134,16 +134,16 @@ nnoremap <silent><leader>be :Buffers<CR>
 
 " Test runner shit
 
-let test#strategy = {
-  \ 'nearest': 'neovim',
-  \ 'suite': 'neovim',
-  \}
+" let test#strategy = {
+"   \ 'nearest': 'neovim',
+"   \ 'suite': 'neovim',
+"   \}
 
-nmap <silent> <leader>t :TestNearest -strategy=neovim<CR>
-nmap <silent> <leader>T :TestFil -strategy=neovim<CR>
-nmap <silent> <leader>S :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+"nmap <silent> <leader>t :TestNearest -strategy=neovim<CR>
+"nmap <silent> <leader>T :TestFil -strategy=neovim<CR>
+"nmap <silent> <leader>S :TestSuite<CR>
+"nmap <silent> <leader>l :TestLast<CR>
+"nmap <silent> <leader>g :TestVisit<CR>
 
 " Ale
 

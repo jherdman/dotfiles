@@ -81,4 +81,13 @@ map('n', '<leader>/', ':nohlsearch<cr>', { noremap = true })
 -- Find and replace under cursor
 map('n', '<leader>s', ':%s/\\<<C-r><C-w>\\>/', { noremap = true })
 
+-- Tree plugin
 map('n', '<F2>', ':NvimTreeToggle<cr>', { noremap = true })
+
+-- vim-test
+
+map('n', '<silent> <leader>t', ':TestNearest -strategy=neovim<CR>', {})
+map('n', '<silent> <leader>T', ':TestFile -strategy=neovim<CR>', {})
+map('n', '<silent> <leader>S', ':TestSuite -strategy=neovim<CR>', {})
+map('n', '<silent> <leader>l', ':TestLast<CR>', {})
+map('n', '<silent> <leader>g', ':TestVisit<CR>', {})
