@@ -62,8 +62,8 @@ set noshowmode " Tell Vim to not show the mode, we have a plugin for that
 
 "set termguicolors
 
-let base16colorspace=256
-colorscheme base16-monokai
+" let base16colorspace=256
+" colorscheme base16-monokai
 
 "set mouse=a
 
@@ -107,11 +107,11 @@ set iskeyword+=-
 
 " Folds
 "set foldenable          " enable folding
-set foldlevelstart=10   " open most folds by default
-set foldnestmax=10      " 10 nested fold max
+"set foldlevelstart=10   " open most folds by default
+"set foldnestmax=10      " 10 nested fold max
 
 " space opens/closes folds
-nnoremap <space> za
+"nnoremap <space> za
 
 " Fugitive Mappings
 

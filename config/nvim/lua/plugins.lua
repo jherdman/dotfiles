@@ -28,7 +28,10 @@ return require('packer').startup(function()
   }
 
   -- LSP Config
-  use { 'neovim/nvim-lspconfig', as = 'lspconfig' }
+  use {
+    'neovim/nvim-lspconfig',
+    as = 'lspconfig'
+  }
 
   -- TELESCOPE
   use {
