@@ -140,7 +140,7 @@ require 'lspsaga'.init_lsp_saga()
 map('t', '<C-o>', '<C-\\><C-n>', {})
 
 -- Clear highlighted search
-map('n', '<leader>/', '<cmd>:nohlsearch<cr>', { noremap = true })
+map('n', '<leader>/', '<cmd>:let @/=""<cr>', { noremap = true })
 
 -- Find and replace under cursor
 map('n', '<leader>s', ':%s/\\<<C-r><C-w>\\>/', { noremap = true })
