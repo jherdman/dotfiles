@@ -156,6 +156,12 @@ map('n', '<silent> <leader>S', ':TestSuite -strategy=neovim<CR>', {})
 map('n', '<silent> <leader>l', ':TestLast<CR>', {})
 map('n', '<silent> <leader>g', ':TestVisit<CR>', {})
 
+-- Completion menu navigation
+
+map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { noremap = true })
+map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<S-Tab>"', { noremap = true })
+map('i', '<cr>', 'pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"', { noremap = true })
+
 -- LSP SAGA
 
 -- map('n', '<silent> gh', ':Lspsaga lsp_finder<CR>', { noremap = true })
