@@ -78,6 +78,9 @@ g.dashboard_default_executive = 'telescope'
 -- FUGITIVE
 cmd [[autocmd BufReadPost fugitive://* set bufhidden=delete]] -- Auto-delete Fugitive buffers once I leave them
 
+-- HIGHLIGHT ON YANK
+cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'  -- disabled in visual mode
+
 
 -- MAPPINGS
 
