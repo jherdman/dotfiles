@@ -27,11 +27,18 @@ return require('packer').startup(function()
     requires = 'nvim-treesitter/nvim-treesitter'
   }
 
+  -- LSP RELATED --------------------------------------------------------------
+
   -- LSP Config
   use {
     'neovim/nvim-lspconfig',
     as = 'lspconfig'
   }
+
+  -- LSPSAGA
+  use { 'glepnir/lspsaga.nvim', requires = 'lspconfig' }
+
+  use { 'kabouzeid/nvim-lspinstall', requires = 'lspconfig' }
 
   -- TELESCOPE
   use {
