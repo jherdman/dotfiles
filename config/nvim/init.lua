@@ -116,12 +116,19 @@ local on_attach = function (client, bufnr)
   buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
--- nvim_lsp.ember.setup {
---   on_attach = on_attach
---   cmd = { "npx", "ember-language-server", "--stdio" }
--- }
+-- TODO https://github.com/kabouzeid/nvim-lspinstall/pull/106
+nvim_lsp.ember.setup {
+  on_attach = on_attach,
+  cmd = { "npx", "ember-language-server", "--stdio" }
+}
 
 require'lspinstall'.setup()
+
+local servers = require'lspinstall'.installed_servers()
+for _, server in pairs(servers) do
+  nvim_lsp[server].setup{}
+end
+
 
 -- LSPSAGA
 require 'lspsaga'.init_lsp_saga()
