@@ -1,11 +1,11 @@
--- ALIASES
+-- ALIASES --------------------------------------------------------------------
 
 local cmd = vim.cmd
 local g = vim.g      -- a table to access global variables
 local opt = vim.opt  -- to set options
 local map = vim.api.nvim_set_keymap -- see :h :map-arguments
 
--- SETTINGS
+-- SETTINGS -------------------------------------------------------------------
 
 opt.backup = false                 -- no need to backup before overwriting
 opt.backspace = 'eol,start,indent' -- backspacing over everything in insert mode
@@ -29,7 +29,7 @@ opt.wrap = false                   -- disable line wrapping
 
 g.mapleader = ','
 
--- PLUGINS
+-- PLUGIN CONFIGURATION -------------------------------------------------------
 
 require('plugins')
 
@@ -102,18 +102,18 @@ local on_attach = function (client, bufnr)
   buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  buf_set_keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  buf_set_keymap('n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+  buf_set_keymap('n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+  buf_set_keymap('n', '<leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+  buf_set_keymap("n", '<leader>f', "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
 -- TODO https://github.com/kabouzeid/nvim-lspinstall/pull/106
@@ -131,9 +131,9 @@ end
 
 
 -- LSPSAGA
-require 'lspsaga'.init_lsp_saga()
+-- require 'lspsaga'.init_lsp_saga()
 
--- MAPPINGS
+-- MAPPINGS -------------------------------------------------------------------
 
 -- Press this with terminal output to enter normal mode so you can scroll
 -- through terminal output
@@ -155,3 +155,13 @@ map('n', '<silent> <leader>T', ':TestFile -strategy=neovim<CR>', {})
 map('n', '<silent> <leader>S', ':TestSuite -strategy=neovim<CR>', {})
 map('n', '<silent> <leader>l', ':TestLast<CR>', {})
 map('n', '<silent> <leader>g', ':TestVisit<CR>', {})
+
+-- LSP SAGA
+
+-- map('n', '<silent> gh', ':Lspsaga lsp_finder<CR>', { noremap = true })
+-- map('n', '<silent><leader>ca', ':Lspsaga code_action<CR>', { noremap = true })
+-- map('v', '<silent><leader>ca', ':<C-U>Lspsaga range_code_action<CR>', { noremap = true })
+-- map('n', '<silent>K', ':Lspsaga hover_doc<CR>', { noremap = true }) -- show hover doc
+-- map('n', '<silent> <C-f>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", { noremap = true }) -- scroll down hover doc or scroll in definition preview
+-- map('n', '<silent> <C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", { noremap = true }) -- scroll up hover doc
+-- map('n', '<silent> gs', ':Lspsaga signature_help<CR>', { noremap = true }) -- show signature help
