@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'tpope/vim-unimpaired'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'junegunn/fzf.vim'
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 "Plug 'janko-m/vim-test'
 "Plug 'mileszs/ack.vim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -17,10 +17,10 @@ Plug 'honza/vim-snippets'
 Plug 'kevinoid/vim-jsonc'
 
 " Elixir Plugins
-Plug 'elixir-editors/vim-elixir'
+" Plug 'elixir-editors/vim-elixir'
 
 " Ruby Plugins
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 
 call plug#end()
 
@@ -53,7 +53,7 @@ call plug#end()
 "set inccommand=split " Live substitution
 
 " Spellchecking crap
-autocmd FileType gitcommit setlocal spell
+" autocmd FileType gitcommit setlocal spell
 
 " Ensure jsonc is correctly highlighted
 autocmd FileType json syntax match Comment +\/\/.\+$+
@@ -70,7 +70,7 @@ set noshowmode " Tell Vim to not show the mode, we have a plugin for that
 "syntax on
 
 " Disable ex mode
-map Q <Nop>
+" map Q <Nop>
 
 " Remove extra whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -99,11 +99,11 @@ set showbreak=…
 "nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " Tab completion
-set wildmode=list:longest,list:full
-set complete=.,w,t
+"set wildmode=list:longest,list:full
+" set complete=.,w,t
 
 " Additional auto complete keywords
-set iskeyword+=-
+" set iskeyword+=-
 
 " Folds
 "set foldenable          " enable folding
@@ -156,9 +156,9 @@ set iskeyword+=-
 
 " Ack
 
-if executable('rg')
-  let g:ackprg = 'rg --vimgrep'
-endif
+" if executable('rg')
+"   let g:ackprg = 'rg --vimgrep'
+" endif
 
 " COC
 
@@ -220,17 +220,17 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-let g:coc_global_extensions = [
-  \ 'coc-ember',
-  \ 'coc-elixir',
-  \ 'coc-eslint',
-  \ 'coc-marketplace',
-  \ 'coc-snippets',
-  \ 'coc-tsserver',
-  \ 'coc-json',
-  \ 'coc-yank'
-\ ]
+" let g:coc_global_extensions = [
+"   \ 'coc-ember',
+"   \ 'coc-elixir',
+"   \ 'coc-eslint',
+"   \ 'coc-marketplace',
+"   \ 'coc-snippets',
+"   \ 'coc-tsserver',
+"   \ 'coc-json',
+"   \ 'coc-yank'
+" \ ]
