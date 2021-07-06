@@ -15,8 +15,8 @@ return require('packer').startup(function()
   -- https://github.com/wbthomason/packer.nvim
   use 'wbthomason/packer.nvim'
 
-  -- TREESITTER
-  -- https://github.com/nvim-treesitter/nvim-treesitter
+  -- TREESITTER RELATED -------------------------------------------------------
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -38,9 +38,17 @@ return require('packer').startup(function()
   -- LSPSAGA
   use { 'glepnir/lspsaga.nvim', requires = 'lspconfig' }
 
+  -- LSPINSTALL
   use { 'kabouzeid/nvim-lspinstall', requires = 'lspconfig' }
 
-  -- TELESCOPE
+  -- LIGHTBULB
+  use 'kosayoda/nvim-lightbulb'
+
+  -- AUTOCOMPLETION
+  use 'hrsh7th/nvim-compe'
+
+  -- TELESCOPE ----------------------------------------------------------------
+
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
@@ -49,16 +57,13 @@ return require('packer').startup(function()
     }
   }
 
-  -- LIGHTBULB
-  use 'kosayoda/nvim-lightbulb'
+  -- THEME RELATED ------------------------------------------------------------
 
   -- MATERIAL THEME
   use 'marko-cerovac/material.nvim'
 
+  -- ICONS
   use 'kyazdani42/nvim-web-devicons'
-
-  -- Fugitive
-  use 'tpope/vim-fugitive'
 
   -- DASHBOARD
   use 'glepnir/dashboard-nvim'
@@ -68,6 +73,11 @@ return require('packer').startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'
   }
+
+  -- OTHER --------------------------------------------------------------------
+
+  -- Fugitive
+  use 'tpope/vim-fugitive'
 
   -- vim-test
   use 'vim-test/vim-test'

@@ -129,6 +129,68 @@ for _, server in pairs(servers) do
   nvim_lsp[server].setup{}
 end
 
+-- AUTOCOMPLETION
+-- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
+
+vim.o.completeopt = "menuone,noselect"
+
+require'compe'.setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = true;
+
+  source = {
+    path = true;
+    nvim_lsp = true;
+  };
+}
+
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+    local col = vim.fn.col('.') - 1
+    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        return true
+    else
+        return false
+    end
+end
+
+-- Use (s-)tab to:
+--- move to prev/next item in completion menuone
+--- jump to prev/next snippet's placeholder
+_G.tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-n>"
+  elseif check_back_space() then
+    return t "<Tab>"
+  else
+    return vim.fn['compe#complete']()
+  end
+end
+_G.s_tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-p>"
+  else
+    return t "<S-Tab>"
+  end
+end
+
+map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 -- LSPSAGA
 -- require 'lspsaga'.init_lsp_saga()
@@ -156,12 +218,6 @@ map('n', '<silent> <leader>S', ':TestSuite -strategy=neovim<CR>', {})
 map('n', '<silent> <leader>l', ':TestLast<CR>', {})
 map('n', '<silent> <leader>g', ':TestVisit<CR>', {})
 
--- Completion menu navigation
-
-map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { noremap = true })
-map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<S-Tab>"', { noremap = true })
-map('i', '<cr>', 'pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"', { noremap = true })
-
 -- LSP SAGA
 
 -- map('n', '<silent> gh', ':Lspsaga lsp_finder<CR>', { noremap = true })
@@ -171,3 +227,7 @@ map('i', '<cr>', 'pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"', { noremap = true
 -- map('n', '<silent> <C-f>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", { noremap = true }) -- scroll down hover doc or scroll in definition preview
 -- map('n', '<silent> <C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", { noremap = true }) -- scroll up hover doc
 -- map('n', '<silent> gs', ':Lspsaga signature_help<CR>', { noremap = true }) -- show signature help
+
+-- RESOURCES ------------------------------------------------------------------
+-- https://github.com/nanotee/nvim-lua-guide
+-- https://oroques.dev/notes/neovim-init/
