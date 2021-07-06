@@ -88,8 +88,8 @@ cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'  -- disabl
 -- through terminal output
 map('t', '<C-o>', '<C-\\><C-n>', {})
 
--- Clear hilighted search
-map('n', '<leader>/', ':nohlsearch<cr>', { noremap = true })
+-- Clear highlighted search
+map('n', '<leader>/', '<cmd>:nohlsearch<cr>', { noremap = true })
 
 -- Find and replace under cursor
 map('n', '<leader>s', ':%s/\\<<C-r><C-w>\\>/', { noremap = true })
