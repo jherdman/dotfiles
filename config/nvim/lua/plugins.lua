@@ -35,9 +35,6 @@ return require('packer').startup(function()
     as = 'lspconfig'
   }
 
-  -- LSPSAGA
-  use { 'glepnir/lspsaga.nvim', requires = 'lspconfig' }
-
   -- LSPINSTALL
   use { 'kabouzeid/nvim-lspinstall', requires = 'lspconfig' }
 

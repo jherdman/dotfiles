@@ -192,9 +192,6 @@ map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
--- LSPSAGA
--- require 'lspsaga'.init_lsp_saga()
-
 -- MAPPINGS -------------------------------------------------------------------
 
 -- Press this with terminal output to enter normal mode so you can scroll
@@ -217,16 +214,6 @@ map('n', '<silent> <leader>T', ':TestFile -strategy=neovim<CR>', {})
 map('n', '<silent> <leader>S', ':TestSuite -strategy=neovim<CR>', {})
 map('n', '<silent> <leader>l', ':TestLast<CR>', {})
 map('n', '<silent> <leader>g', ':TestVisit<CR>', {})
-
--- LSP SAGA
-
--- map('n', '<silent> gh', ':Lspsaga lsp_finder<CR>', { noremap = true })
--- map('n', '<silent><leader>ca', ':Lspsaga code_action<CR>', { noremap = true })
--- map('v', '<silent><leader>ca', ':<C-U>Lspsaga range_code_action<CR>', { noremap = true })
--- map('n', '<silent>K', ':Lspsaga hover_doc<CR>', { noremap = true }) -- show hover doc
--- map('n', '<silent> <C-f>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", { noremap = true }) -- scroll down hover doc or scroll in definition preview
--- map('n', '<silent> <C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", { noremap = true }) -- scroll up hover doc
--- map('n', '<silent> gs', ':Lspsaga signature_help<CR>', { noremap = true }) -- show signature help
 
 -- RESOURCES ------------------------------------------------------------------
 -- https://github.com/nanotee/nvim-lua-guide
