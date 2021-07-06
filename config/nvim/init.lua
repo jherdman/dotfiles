@@ -24,7 +24,7 @@ opt.swapfile = false               -- no need for swapfiles
 opt.tabstop = 2                    -- number of spaces a <Tab> counts for
 opt.termguicolors = true           -- 24-bit RGP colors
 opt.wildmenu = true                -- tab completion on command line
-opt.wildmode = {'list', 'longest'} -- tab completion
+opt.wildmode = {'list:longest', 'list:full'} -- tab completion
 opt.wrap = false                   -- disable line wrapping
 
 g.mapleader = ','
