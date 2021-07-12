@@ -71,6 +71,11 @@ require'nvim-web-devicons'.setup {
   default = true
 }
 
+-- COLOURIZER
+require'colorizer'.setup {
+  css = { css = true };
+}
+
 -- DASHBOARD
 g.dashboard_default_executive = 'telescope'
 

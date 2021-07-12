@@ -81,4 +81,7 @@ return require('packer').startup(function()
 
   -- vim-unimpaired
   use 'tpope/vim-unimpaired'
+
+  -- Super sexy colour highlighter
+  use 'norcalli/nvim-colorizer.lua'
 end)
