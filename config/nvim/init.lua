@@ -67,7 +67,6 @@ ts.setup {
 cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
 
 -- DEVICONS
-
 require'nvim-web-devicons'.setup {
   default = true
 }
