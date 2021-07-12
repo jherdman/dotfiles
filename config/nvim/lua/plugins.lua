@@ -78,4 +78,7 @@ return require('packer').startup(function()
 
   -- vim-test
   use 'vim-test/vim-test'
+
+  -- vim-unimpaired
+  use 'tpope/vim-unimpaired'
 end)
