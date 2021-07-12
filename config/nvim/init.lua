@@ -79,7 +79,7 @@ g.dashboard_default_executive = 'telescope'
 cmd [[autocmd BufReadPost fugitive://* set bufhidden=delete]] -- Auto-delete Fugitive buffers once I leave them
 
 -- HIGHLIGHT ON YANK
-cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'  -- disabled in visual mode
+cmd 'au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=false}' 
 
 -- LSP Configuration
 -- @see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
