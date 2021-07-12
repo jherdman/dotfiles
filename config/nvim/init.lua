@@ -8,7 +8,6 @@ local map = vim.api.nvim_set_keymap -- see :h :map-arguments
 -- SETTINGS -------------------------------------------------------------------
 
 opt.backup = false                 -- no need to backup before overwriting
-opt.backspace = 'eol,start,indent' -- backspacing over everything in insert mode
 opt.clipboard = 'unnamedplus'      -- mega clipboard
 opt.cursorline = true              -- highlight line cursor is on
 opt.expandtab = true               -- spaces, not tabs
@@ -23,7 +22,6 @@ opt.smartindent = true             -- insert indents automatically
 opt.swapfile = false               -- no need for swapfiles
 opt.tabstop = 2                    -- number of spaces a <Tab> counts for
 opt.termguicolors = true           -- 24-bit RGP colors
-opt.wildmenu = true                -- tab completion on command line
 opt.wildmode = {'list:longest', 'list:full'} -- tab completion
 opt.wrap = false                   -- disable line wrapping
 
