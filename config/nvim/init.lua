@@ -203,11 +203,11 @@ map('n', '<F2>', ':NvimTreeToggle<cr>', { noremap = true })
 
 -- vim-test
 
-map('n', '<silent> <leader>t', ':TestNearest -strategy=neovim<CR>', {})
-map('n', '<silent> <leader>T', ':TestFile -strategy=neovim<CR>', {})
-map('n', '<silent> <leader>S', ':TestSuite -strategy=neovim<CR>', {})
-map('n', '<silent> <leader>l', ':TestLast<CR>', {})
-map('n', '<silent> <leader>g', ':TestVisit<CR>', {})
+map('n', '<leader>t', ':TestNearest -strategy=neovim<CR>', {})
+map('n', '<leader>T', ':TestFile -strategy=neovim<CR>', {})
+map('n', '<leader>S', ':TestSuite -strategy=neovim<CR>', {})
+map('n', '<leader>l', ':TestLast<CR>', {})
+map('n', '<leader>g', ':TestVisit<CR>', {})
 
 -- RESOURCES ------------------------------------------------------------------
 -- https://github.com/nanotee/nvim-lua-guide
