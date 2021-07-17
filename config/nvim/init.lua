@@ -13,6 +13,7 @@ opt.cursorline = true              -- highlight line cursor is on
 opt.expandtab = true               -- spaces, not tabs
 opt.ignorecase = true              -- ignore case in search patterns, see "smartcase" below
 opt.inccommand = 'split'           -- live substitution
+opt.iskeyword:append {'-'}         -- helpful in Ember
 opt.mouse = 'a'                    -- mouse in all mode
 opt.number = true                  -- show line numbers
 opt.ruler = true                   -- show position all of the time
