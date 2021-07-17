@@ -8,7 +8,7 @@ local map = vim.api.nvim_set_keymap -- see :h :map-arguments
 -- SETTINGS -------------------------------------------------------------------
 
 opt.backup = false                 -- no need to backup before overwriting
-opt.clipboard = 'unnamedplus'      -- mega clipboard
+--opt.clipboard:append {'unnamedplus'} -- mega clipboard FIXME https://github.com/neovim/neovim/pull/14962
 opt.cursorline = true              -- highlight line cursor is on
 opt.expandtab = true               -- spaces, not tabs
 opt.ignorecase = true              -- ignore case in search patterns, see "smartcase" below
