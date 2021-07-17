@@ -84,4 +84,7 @@ return require('packer').startup(function()
 
   -- Super sexy colour highlighter
   use 'norcalli/nvim-colorizer.lua'
+
+  -- Elixir support
+  use 'elixir-editors/vim-elixir'
 end)
