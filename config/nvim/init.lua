@@ -216,3 +216,4 @@ map('n', '<leader>g', ':TestVisit<CR>', {})
 -- RESOURCES ------------------------------------------------------------------
 -- https://github.com/nanotee/nvim-lua-guide
 -- https://oroques.dev/notes/neovim-init/
+-- https://neovim.io/doc/user/lua.html
