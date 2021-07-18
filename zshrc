@@ -38,8 +38,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 # Enable history in IEX
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
-
 # JUMP
 # ----
 eval "$(jump shell zsh)"
@@ -73,3 +71,6 @@ fi
 [ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
 
 alias yeet="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --write-thumbnail -o \"%(title)s-%(id)s.%(ext)s\""
+
+# NIX
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
