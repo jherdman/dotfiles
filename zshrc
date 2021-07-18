@@ -65,6 +65,10 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
   alias ccat='/bin/cat'
 fi
 
+# NIX
+# ---
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
+
 # iTerm2 Integration
 # ------------------
 
@@ -72,5 +76,8 @@ fi
 
 alias yeet="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --write-thumbnail -o \"%(title)s-%(id)s.%(ext)s\""
 
-# NIX
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
+# Get external IP address
+# https://unix.stackexchange.com/a/81699/37512
+alias wanip='dig @resolver4.opendns.com myip.opendns.com +short' 
+alias wanip4='dig @resolver4.opendns.com myip.opendns.com +short -4'
+alias wanip6='dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6'
