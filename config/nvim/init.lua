@@ -43,6 +43,12 @@ g.material_style = 'palenight'
 g.material_italic_comments = true
 g.material_borders = true
 
+require('lualine').setup {
+  options = {
+    theme = 'material-nvim'
+  }
+}
+
 -- TELESCOPE
 
 map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true })
