@@ -157,8 +157,11 @@ require'compe'.setup {
   documentation = true;
 
   source = {
-    path = true;
+    buffer = true;
+    calc = false;
+    lua_snip = true;
     nvim_lsp = true;
+    path = true;
   };
 }
 
@@ -178,27 +181,39 @@ end
 -- Use (s-)tab to:
 --- move to prev/next item in completion menuone
 --- jump to prev/next snippet's placeholder
+local luasnip = require 'luasnip'
+
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then
-    return t "<C-n>"
+    return t '<C-n>'
+  elseif luasnip.expand_or_jumpable() then
+    return t '<Plug>luasnip-expand-or-jump'
   elseif check_back_space() then
-    return t "<Tab>"
+    return t '<Tab>'
   else
     return vim.fn['compe#complete']()
   end
 end
+
 _G.s_tab_complete = function()
   if vim.fn.pumvisible() == 1 then
-    return t "<C-p>"
+    return t '<C-p>'
+  elseif luasnip.jumpable(-1) then
+    return t '<Plug>luasnip-jump-prev'
   else
-    return t "<S-Tab>"
+    return t '<S-Tab>'
   end
 end
 
-map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+-- Map tab to the above tab complete functiones
+map('i', '<Tab>', 'v:lua.tab_complete()', { expr = true })
+map('s', '<Tab>', 'v:lua.tab_complete()', { expr = true })
+map('i', '<S-Tab>', 'v:lua.s_tab_complete()', { expr = true })
+map('s', '<S-Tab>', 'v:lua.s_tab_complete()', { expr = true })
+
+-- Map compe confirm and complete functions
+map('i', '<cr>', 'compe#confirm("<cr>")', { expr = true })
+map('i', '<c-space>', 'compe#complete()', { expr = true })
 
 -- MAPPINGS -------------------------------------------------------------------
 
@@ -227,3 +242,4 @@ map('n', '<leader>g', ':TestVisit<CR>', {})
 -- https://github.com/nanotee/nvim-lua-guide
 -- https://oroques.dev/notes/neovim-init/
 -- https://neovim.io/doc/user/lua.html
+-- https://github.com/mjlbach/defaults.nvim/blob/064da3f173dc42d72c6a5ff49e0e2533e76b80a7/init.lua
