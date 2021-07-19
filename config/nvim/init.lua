@@ -35,6 +35,7 @@ require('plugins')
 cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
 cmd 'autocmd BufNewFile,BufRead *.hbs setfiletype handlebars'
 cmd 'autocmd BufRead,BufNewFile *.json,*.json5 setfiletype jsonc' -- tsconfig.json is actually jsonc, help TypeScript set the correct filetype
+cmd 'autocmd BufRead,BufNewFile *.nix setfiletype nix' -- Nix
 
 -- MATERIAL
 
@@ -173,6 +174,7 @@ end
 --- move to prev/next item in completion menuone
 --- jump to prev/next snippet's placeholder
 local luasnip = require 'luasnip'
+require("luasnip/loaders/from_vscode").lazy_load({ paths = { "~/.local/share/nvim/site/pack/packer/start/friendly-snippets" } })
 
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then

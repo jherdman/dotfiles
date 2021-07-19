@@ -53,6 +53,7 @@ return require('packer').startup(function()
   -- AUTOCOMPLETION
   use 'hrsh7th/nvim-compe'
   use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
 
   -- TELESCOPE ----------------------------------------------------------------
 
