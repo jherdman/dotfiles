@@ -50,9 +50,6 @@ return require('packer').startup(function()
   -- LSPINSTALL
   use { 'kabouzeid/nvim-lspinstall', requires = 'lspconfig' }
 
-  -- LIGHTBULB
-  use 'kosayoda/nvim-lightbulb'
-
   -- AUTOCOMPLETION
   use 'hrsh7th/nvim-compe'
   use 'L3MON4D3/LuaSnip'
