@@ -126,7 +126,9 @@ require'lspinstall'.setup()
 
 local servers = require'lspinstall'.installed_servers()
 for _, server in pairs(servers) do
-  nvim_lsp[server].setup{}
+  nvim_lsp[server].setup {
+    on_attach = on_attach
+  }
 end
 
 -- AUTOCOMPLETION
