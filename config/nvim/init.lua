@@ -122,12 +122,16 @@ local on_attach = function (client, bufnr)
   buf_set_keymap("n", '<leader>f', "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 require'lspinstall'.setup()
 
 local servers = require'lspinstall'.installed_servers()
 for _, server in pairs(servers) do
   nvim_lsp[server].setup {
-    on_attach = on_attach
+    on_attach = on_attach,
+    capabilities = capabilities
   }
 end
 
@@ -153,7 +157,7 @@ require'compe'.setup {
   source = {
     buffer = true;
     calc = false;
-    lua_snip = true;
+    luasnip = true;
     nvim_lsp = true;
     path = true;
   };
