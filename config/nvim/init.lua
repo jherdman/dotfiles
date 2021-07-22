@@ -89,7 +89,19 @@ cmd 'au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=1
 
 -- LSP Configuration
 -- @see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
+-- @see https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
 local nvim_lsp = require 'lspconfig'
+
+vim.o.updatetime = 250
+cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
+
+local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+
+for type, icon in pairs(signs) do
+  local hl = "LspDiagnosticsSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
 
 -- NB: This is the config displayed on the README. May need to tweak.
 local on_attach = function (client, bufnr)
