@@ -11,7 +11,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/Applications/Postgres.app/Con
 # I install to a weird location
 export ASDF_DIR=$HOME/tools/asdf
 
-plugins=(asdf tmux mix-fast)
+plugins=(asdf gitfast tmux mix-fast)
 
 # Path to your oh-my-zsh configuration.
 if [[ -d $HOME/.oh-my-zsh ]] ; then
