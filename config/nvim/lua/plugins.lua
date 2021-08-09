@@ -66,10 +66,6 @@ return require('packer').startup(function()
   use 'glepnir/dashboard-nvim'
 
   -- TREE
-  --use {
-  --  'kyazdani42/nvim-tree.lua',
-  --  requires = 'kyazdani42/nvim-web-devicons'
-  --}
   use 'preservim/nerdtree'
 
   use {
