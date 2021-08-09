@@ -268,9 +268,6 @@ map('n', '<leader>/', '<cmd>:let @/=""<cr>', { noremap = true })
 map('n', '<leader>s', ':%s/\\<<C-r><C-w>\\>/', { noremap = true })
 
 -- Tree plugin
---map('n', '<F2>', ':NvimTreeToggle<cr>', { noremap = true })
---g.nvim_tree_hijack_netrw = false
---g.nvim_tree_hide_dotfiles = true
 map('n', '<F2>', ':NERDTreeToggle<cr>', { noremap = true })
 
 -- vim-test
