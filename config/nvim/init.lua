@@ -134,7 +134,7 @@ local on_attach = function (client, bufnr)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap("n", '<leader>f', "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+  buf_set_keymap('n', '<leader>df', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -175,6 +175,8 @@ require'lspinstall'.post_install_hook = function ()
   setup_servers() -- reload installed servers
   vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
+
+cmd 'autocmd BufWritePre *.exs,*.ex lua vim.lsp.buf.formatting_sync(nil, 1000)'
 
 -- AUTOCOMPLETION
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
