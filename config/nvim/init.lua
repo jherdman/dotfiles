@@ -38,10 +38,15 @@ cmd 'autocmd BufRead,BufNewFile *.json,*.json5 setfiletype jsonc' -- tsconfig.js
 
 -- MATERIAL
 
-require('material').set()
 g.material_style = 'palenight'
-g.material_italic_comments = true
-g.material_borders = true
+require('material').setup({
+  borders = true,
+  italics = {
+    comments = false
+  }
+})
+
+vim.cmd[[colorscheme material]]
 
 -- TELESCOPE
 
