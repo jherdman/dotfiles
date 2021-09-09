@@ -35,7 +35,6 @@ require('plugins')
 cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
 cmd 'autocmd BufNewFile,BufRead *.hbs setfiletype handlebars'
 cmd 'autocmd BufRead,BufNewFile *.json,*.json5 setfiletype jsonc' -- tsconfig.json is actually jsonc, help TypeScript set the correct filetype
-cmd 'autocmd BufRead,BufNewFile *.heex setfiletype elixir' -- Elixir liveview
 
 -- MATERIAL
 
