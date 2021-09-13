@@ -62,9 +62,6 @@ return require('packer').startup(function()
   -- ICONS
   use 'kyazdani42/nvim-web-devicons'
 
-  -- DASHBOARD
-  use 'glepnir/dashboard-nvim'
-
   -- TREE
   use 'preservim/nerdtree'
 

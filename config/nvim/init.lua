@@ -85,9 +85,6 @@ require'colorizer'.setup {
   css = { css = true };
 }
 
--- DASHBOARD
-g.dashboard_default_executive = 'telescope'
-
 -- FUGITIVE
 cmd [[autocmd BufReadPost fugitive://* set bufhidden=delete]] -- Auto-delete Fugitive buffers once I leave them
 
