@@ -37,7 +37,7 @@ return require('packer').startup(function()
   }
 
   -- LSPINSTALL
-  use { 'kabouzeid/nvim-lspinstall', requires = 'lspconfig' }
+  use { 'williamboman/nvim-lsp-installer', require = 'lspconfig' }
 
   -- AUTOCOMPLETION
   use 'hrsh7th/nvim-compe'
