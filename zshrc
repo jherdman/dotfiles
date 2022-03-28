@@ -3,7 +3,7 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # Customize to your needs...
 
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin:$HOME/bin"
+export PATH="/opt/homebrew/bin:/usr/local/sbin:$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin:$HOME/bin"
 
 # ASDF
 # ----
@@ -69,15 +69,6 @@ fi
 # ---
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
 
-# iTerm2 Integration
-# ------------------
-
-[ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
-
 alias yeet="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --write-thumbnail -o \"%(title)s-%(id)s.%(ext)s\""
 
-# Get external IP address
-# https://unix.stackexchange.com/a/81699/37512
-alias wanip='dig @resolver4.opendns.com myip.opendns.com +short' 
-alias wanip4='dig @resolver4.opendns.com myip.opendns.com +short -4'
-alias wanip6='dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6'
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
